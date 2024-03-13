@@ -17,7 +17,14 @@ function DarkFooter() {
       <Container>
         <nav>
           <ul>
-            <li></li>
+            <li>
+              <a
+                href="#partners"
+                onClick={(e) => handleFooterLinkClick("about-us-section", e)}
+              >
+                Partners
+              </a>
+            </li>
             <li>
               <a
                 href="#about-us"

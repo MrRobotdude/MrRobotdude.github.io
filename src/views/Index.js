@@ -5,9 +5,9 @@ import React from "react";
 // } from "reactstrap";
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import HomeHeader from "components/Headers/HomeHeader";
+import DarkFooter from "components/Footers/DarkFooter";
 
 // sections for this page
 import Images from "./index-sections/Images.js";
@@ -41,7 +41,7 @@ function Index() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <IndexHeader />
+        <HomeHeader />
         <div className="main">
           <Images />
           <BasicElements />

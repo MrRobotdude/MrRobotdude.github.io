@@ -1,14 +1,14 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 // reactstrap components
 import { Container } from "reactstrap";
 // core components
 
-function IndexHeader() {
-  let pageHeader = React.createRef();
+function HomeHeader() {
+  const pageHeader = useRef(null);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
         let windowScrollTop = window.pageYOffset / 3;
@@ -28,6 +28,7 @@ function IndexHeader() {
         className="page-header clear-filter"
         filter-color="blue"
         id="header-section"
+        style={{ height: "100vh" }}
       >
         <div
           className="page-header-image"
@@ -38,7 +39,7 @@ function IndexHeader() {
         ></div>
         <Container>
           <div
-            className="content-center brand pt-5"
+            className="content-center brand pt-5 mt-5"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
           >
             <img
@@ -46,30 +47,32 @@ function IndexHeader() {
               className="n-logo"
               src={require("assets/img/ats-logo-only.png")}
             ></img>
-            <h1 className="h1-seo">Alam Tehnik Semesta</h1>
-            <h3>Air Specialist Company</h3>
+            <h1 className="h1-seo slide-in-bottom">Alam Tehnik Semesta</h1>
+            <h3 className="slide-in-bottom">Air Specialist Company</h3>
           </div>
-          <h6
+        </Container>
+        <div className="text-center">
+          <h4
             className="category category-absolute"
-            style={{ backgroundColor: "rgba(0, 0, 0, 1)" }}
+            style={{
+              backgroundColor: "rgba(0, 0, 0, 1)",
+              zIndex: 999,
+              bottom: "10vh",
+              top: "auto",
+              fontWeight: "normal",
+            }}
           >
             Call Center
-            <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
+            <a href="http://invisionapp.com/?ref=creativetim">
               &nbsp;(021) 3803072 - 3500586
             </a>
             . or Contact Us
-            <a
-              href="https://www.creative-tim.com?ref=nukr-index-header"
-              target="_blank"
-            >
-              &nbsp;Now
-            </a>
-            .
-          </h6>
-        </Container>
+            <a href="contact-us">&nbsp;Now</a>.
+          </h4>
+        </div>
       </div>
     </>
   );
 }
 
-export default IndexHeader;
+export default HomeHeader;

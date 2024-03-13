@@ -1,0 +1,10 @@
+.header-image img {
+  min-width: 100vw;
+  min-height: 60vh;
+  max-height: 640px;
+  object-fit: contain;
+}
+
+.bg-header-carousel {
+    filter: blur(0);
+}

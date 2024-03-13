@@ -25,13 +25,15 @@ import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 // pages for this kit
-import Index from "views/Index.js";
+import Index from "views/Index";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/examples/LoginPage.js";
 import LandingPage from "views/examples/LandingPage.js";
 import ProfilePage from "views/examples/ProfilePage.js";
-import Home from "views/home/Home";
-import Products from "views/index-sections/Products";
+import Home from "views/pages/Home";
+import Product from "views/pages/Product";
+import AboutUs from "views/pages/AboutUs";
+import ContactUs from "views/pages/ContactUs";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -44,7 +46,11 @@ root.render(
       <Route path="/profile-page" element={<ProfilePage />} />
       <Route path="/login-page" element={<LoginPage />} />
       <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Products />} />
+      <Route path="/products" element={<Product />} />
+      <Route path="/products/:productId" element={<Product />} />
+      <Route path="/about-us" element={<AboutUs />} />
+      <Route path="/contact-us" element={<ContactUs />} />
+      
 
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>

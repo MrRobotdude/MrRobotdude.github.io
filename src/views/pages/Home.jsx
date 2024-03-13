@@ -1,18 +1,19 @@
-import React from "react";
+import { useEffect } from "react";
 
 // reactstrap components
 // import {
 // } from "reactstrap";
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import IndexHeader from "components/Headers/IndexHeader.js";
-import DarkFooter from "components/Footers/DarkFooter.js";
-import AboutUs from "views/index-sections/AboutUs.js";
-import Products from "views/index-sections/Products.js";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import HomeHeader from "components/Headers/HomeHeader";
+import DarkFooter from "components/Footers/DarkFooter";
+import AboutUs from "views/home-sections/AboutUs";
+import Products from "views/home-sections/Products";
+// import LandingPageHeader from "components/Headers/LandingPageHeader";
 
 function Home() {
-  React.useEffect(() => {
+  useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
     document.documentElement.classList.remove("nav-open");
@@ -27,10 +28,10 @@ function Home() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <IndexHeader />
+        <HomeHeader />
         <div className="main">
           <AboutUs />
-          <Products/>
+          <Products />
         </div>
         <DarkFooter />
       </div>
