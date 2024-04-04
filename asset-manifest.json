@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.44792c9e.css",
+    "main.js": "/static/js/main.fff82a0c.js",
+    "static/media/bg6.jpg": "/static/media/bg6.dc603b7416966b84ac68.jpg",
+    "static/media/contact-us-header.jpg": "/static/media/contact-us-header.00e0f605aafeaedef103.jpg",
+    "static/media/ats-logo-only.png": "/static/media/ats-logo-only.935e74f97b82e9052f26.png",
+    "static/media/nucleo-outline.eot": "/static/media/nucleo-outline.56814a6b7240045e1494.eot",
+    "static/media/nucleo-outline.ttf": "/static/media/nucleo-outline.1102ed9b2d16dccdec05.ttf",
+    "static/media/not-found.png": "/static/media/not-found.e4803bbf3b19afcfc078.png",
+    "static/media/nucleo-outline.woff": "/static/media/nucleo-outline.1a1036e643f97457ec5f.woff",
+    "static/media/nucleo-outline.woff2": "/static/media/nucleo-outline.802141dd0dcc63b21cbb.woff2",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
+    "index.html": "/index.html"
+  },
+  "entrypoints": [
+    "static/css/main.44792c9e.css",
+    "static/js/main.fff82a0c.js"
+  ]
+}
