@@ -2,7 +2,7 @@
   "name": "now-ui-kit-react",
   "version": "1.5.2",
   "private": true,
-  "homepage": "https://MrRobotDude.github.io/",
+  "homepage": "https://MrRobotDude.github.io/ats-kit-react",
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
     "gh-pages": "^6.1.1",
