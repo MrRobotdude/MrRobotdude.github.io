@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 
-import AboutUsHeader from "components/Headers/AboutUsHeader";
-import IndexNavbar from "components/Navbars/IndexNavbar";
-import DarkFooter from "components/Footers/DarkFooter";
-import About from "views/about-sections/About";
+import ContactUsHeader from "components/Headers/ContactUsHeader";
+import Contact from "views/contact-sections/Contact";
 
 function AboutUs() {
   useEffect(() => {
@@ -19,12 +17,10 @@ function AboutUs() {
   });
   return (
     <>
-      <IndexNavbar />
       <div className="wrapper">
-        <AboutUsHeader />
-        <About />
+        <ContactUsHeader />
+        <Contact />
       </div>
-      <DarkFooter />
     </>
   );
 }

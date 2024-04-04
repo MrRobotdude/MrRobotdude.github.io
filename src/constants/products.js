@@ -27,9 +27,15 @@ const products = [
         value: "Galvanil Powder Coating",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=1",
-      "https://picsum.photos/1280/720?random=26",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=1",
+        caption: "Air Conditioner Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=26",
+        caption: "Air Conditioner Sample 2",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -65,10 +71,19 @@ const products = [
         value: "Chiller / Direct Expansion",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=2",
-      "https://picsum.photos/1280/720?random=3",
-      "https://picsum.photos/1280/720?random=4",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=2",
+        caption: "Dehumidifier Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=3",
+        caption: "Dehumidifier Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=4",
+        caption: "Dehumidifier Sample 3",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -99,10 +114,19 @@ const products = [
         value: "Chiller / Direct Expansion",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=5",
-      "https://picsum.photos/1280/720?random=6",
-      "https://picsum.photos/1280/720?random=7",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=5",
+        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=6",
+        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=7",
+        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 3",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -127,10 +151,19 @@ const products = [
         value: "Hot Gas / Steam Coil / Hot Water  Coil / Electric Heater",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=8",
-      "https://picsum.photos/1280/720?random=9",
-      "https://picsum.photos/1280/720?random=10",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=8",
+        caption: "Cool & Dry Storage Refrigeration Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=9",
+        caption: "Cool & Dry Storage Refrigeration Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=10",
+        caption: "Cool & Dry Storage Refrigeration Sample 3",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -159,12 +192,27 @@ const products = [
         value: "± 5% RH",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=11",
-      "https://picsum.photos/1280/720?random=12",
-      "https://picsum.photos/1280/720?random=13",
-      "https://picsum.photos/1280/720?random=14",
-      "https://picsum.photos/1280/720?random=15",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=11",
+        caption: "Stability Test Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=12",
+        caption: "Stability Test Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=13",
+        caption: "Stability Test Sample 3",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=14",
+        caption: "Stability Test Sample 4",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=15",
+        caption: "Stability Test Sample 5",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -191,9 +239,17 @@ const products = [
         value: "Stainless Steel 304 / Powder Coating",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=16",
-      "https://picsum.photos/1280/720?random=17",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=16",
+        caption:
+          "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem) Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=17",
+        caption:
+          "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem) Sample 2",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -223,10 +279,19 @@ const products = [
         value: "Modular",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=18",
-      "https://picsum.photos/1280/720?random=19",
-      "https://picsum.photos/1280/720?random=20",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=18",
+        caption: "Water / Brine Chiller Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=19",
+        caption: "Water / Brine Chiller Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=20",
+        caption: "Water / Brine Chiller Sample 3",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -238,9 +303,15 @@ const products = [
       "In our product, the dust collector will give a very strong air flow in order to make sure that dust which is stucked in the ducting will be least.",
     ],
     generalSpecification: null,
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=21",
-      "https://picsum.photos/1280/720?random=24",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=21",
+        caption: "Bag / Scrubber Dust Collector Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=24",
+        caption: "Bag / Scrubber Dust Collector Sample 2",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },
@@ -273,10 +344,19 @@ const products = [
         value: "Chiller / Direct Expansion",
       },
     ],
-    productImageUrl: [
-      "https://picsum.photos/1280/720?random=22",
-      "https://picsum.photos/1280/720?random=23",
-      "https://picsum.photos/1280/720?random=24",
+    imageUrl: [
+      {
+        url: "https://picsum.photos/1280/720?random=22",
+        caption: "Timber Kiln / Dryer Sample 1",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=23",
+        caption: "Timber Kiln / Dryer Sample 2",
+      },
+      {
+        url: "https://picsum.photos/1280/720?random=24",
+        caption: "Timber Kiln / Dryer Sample 3",
+      },
     ],
     pdfUrl: "https://lorempdf.com/140/85/1",
   },

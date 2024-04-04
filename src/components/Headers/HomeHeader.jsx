@@ -1,26 +1,99 @@
 /*eslint-disable*/
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, createRef, Component } from "react";
 
 // reactstrap components
-import { Container } from "reactstrap";
+import { Container, UncontrolledTooltip } from "reactstrap";
 // core components
 
+class CopyToClipboard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstNumber: "0213803072",
+      secondNumber: "0213500586",
+      clicked: "Click to Copy Number",
+    };
+  }
+
+  copyFirstNumber = () => {
+    navigator.clipboard
+      .writeText(this.state.firstNumber)
+      .then(() => {
+        this.setState({ clicked: "Phone number copied to clipboard" });
+      })
+      .catch((err) => {
+        this.setState({ clicked: "Failed to copy phone number" });
+        console.error("Failed to copy first number: ", err);
+      });
+  };
+
+  copySecondNumber = () => {
+    navigator.clipboard
+      .writeText(this.state.secondNumber)
+      .then(() => {
+        this.setState({ clicked: "Phone number copied to clipboard" });
+      })
+      .catch((err) => {
+        this.setState({ clicked: "Failed to copy phone number" });
+        console.error("Failed to copy second number: ", err);
+      });
+  };
+
+  resetTooltip = () => {
+    
+        this.setState({ clicked: "Click to Copy Number" });
+  }
+
+  render() {
+    return (
+      <>
+        <a
+          href="#"
+          onClick={this.copyFirstNumber}
+          id="tooltipPhoneNumber"
+          onMouseLeave={this.resetTooltip}
+        >
+          &nbsp;(021) 3803072
+        </a>{" "}
+        -{" "}
+        <a
+          href="#"
+          onClick={this.copySecondNumber}
+          id="tooltipPhoneNumber"
+          onMouseLeave={this.resetTooltip}
+        >
+          3500586
+        </a>
+        <UncontrolledTooltip
+          delay={0}
+          placement="bottom"
+          target="tooltipPhoneNumber"
+        >
+          {this.state.clicked}
+        </UncontrolledTooltip>
+      </>
+    );
+  }
+}
+
 function HomeHeader() {
-  const pageHeader = useRef(null);
+  let pageHeader = createRef();
 
   useEffect(() => {
     if (window.innerWidth > 991) {
       const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
+        if (pageHeader.current) {
+          let windowScrollTop = window.pageYOffset / 3;
+          pageHeader.current.style.transform =
+            "translate3d(0," + windowScrollTop + "px,0)";
+        }
       };
       window.addEventListener("scroll", updateScroll);
       return function cleanup() {
         window.removeEventListener("scroll", updateScroll);
       };
     }
-  });
+  }, []);
 
   return (
     <>
@@ -29,6 +102,7 @@ function HomeHeader() {
         filter-color="blue"
         id="header-section"
         style={{ height: "100vh" }}
+        ref={pageHeader}
       >
         <div
           className="page-header-image"
@@ -63,10 +137,7 @@ function HomeHeader() {
             }}
           >
             Call Center
-            <a href="http://invisionapp.com/?ref=creativetim">
-              &nbsp;(021) 3803072 - 3500586
-            </a>
-            . or Contact Us
+            <CopyToClipboard />. or Contact Us
             <a href="contact-us">&nbsp;Now</a>.
           </h4>
         </div>

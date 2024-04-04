@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 
 // reactstrap components
 import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 
-const defaultProduct = {
-  productImageUrl: ["https://picsum.photos/1280/720?random=25"],
-  productName: "All Products",
+const allItems = {
+  imageUrl: [
+    {
+      url: "https://picsum.photos/1280/720?random=25",
+      caption: null,
+    },
+  ],
 };
 
-function HeaderCarousel({ product }) {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [animating, setAnimating] = React.useState(false);
+function HeaderCarousel({ item }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
 
-  const { productImageUrl, productName } = product ? product : defaultProduct;
+  const imageUrl = item ? item.imageUrl : allItems.imageUrl;
 
   const onExiting = () => {
     setAnimating(true);
@@ -24,15 +28,13 @@ function HeaderCarousel({ product }) {
 
   const next = () => {
     if (animating) return;
-    const nextIndex =
-      activeIndex === productImageUrl.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === imageUrl.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex =
-      activeIndex === 0 ? productImageUrl.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? imageUrl.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -41,16 +43,18 @@ function HeaderCarousel({ product }) {
     setActiveIndex(newIndex);
   };
 
-  const carouselItems = productImageUrl.map((item, index) => ({
-    src: item,
-    altText: productName,
+  const carouselItems = imageUrl.map((item, index) => ({
+    src: item.url,
+    altText: item.caption,
     key: index,
   }));
 
   return (
     <div
+      className="clear-filter"
+      filter-color="blue"
       style={{
-        backgroundImage: `url(${productImageUrl[activeIndex]})`,
+        backgroundImage: `url(${imageUrl[activeIndex]?.url || setActiveIndex(0)})`,
         backgroundSize: "cover",
         minWidth: "100vw",
       }}
@@ -61,14 +65,14 @@ function HeaderCarousel({ product }) {
           activeIndex={activeIndex}
           onClickHandler={goToIndex}
         />
-        {productImageUrl.map((item, index) => (
+        {imageUrl.map((item, index) => (
           <CarouselItem
             onExiting={onExiting}
             onExited={onExited}
             key={index}
             className="header-image"
           >
-            <img src={item} alt={productName} />
+            <img src={item.url} alt={item.caption} />
           </CarouselItem>
         ))}
         <a

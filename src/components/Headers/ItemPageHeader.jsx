@@ -2,19 +2,26 @@ import HeaderCarousel from "components/Carousels/HeaderCarousel";
 import React from "react";
 import { Container } from "reactstrap";
 
-function ProductPageHeader({ activeProduct }) {
+function ItemPageHeader({ activeItem, itemType }) {
+  console.log(itemType)
   return (
     <>
       <div className="page-header page-header-small" id="header-section">
-        <HeaderCarousel product={activeProduct}></HeaderCarousel>
-
+        <HeaderCarousel item={activeItem} />
         <div className="content-center">
           <Container
             className="p-5"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
           >
             <h1 className="title">
-              {activeProduct ? activeProduct.productName : "All Products"}
+              {itemType &&
+                (itemType === "products"
+                  ? activeItem
+                    ? activeItem.productName
+                    : "All Products"
+                  : activeItem
+                  ? activeItem.serviceName
+                  : "All Services")}
             </h1>
           </Container>
         </div>
@@ -23,4 +30,4 @@ function ProductPageHeader({ activeProduct }) {
   );
 }
 
-export default ProductPageHeader;
+export default ItemPageHeader;

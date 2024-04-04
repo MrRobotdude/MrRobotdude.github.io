@@ -1,58 +1,88 @@
-/*
-
-=========================================================
-* Now UI Kit React - v1.5.2
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/now-ui-kit-react
-* Copyright 2023 Creative Tim (http://www.creative-tim.com)
-* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/main/LICENSE.md)
-
-* Designed by www.invisionapp.com Coded by www.creative-tim.com
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-import React from "react";
+import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 
-// styles for this kit
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
-// pages for this kit
-import Index from "views/Index";
-import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
-import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
+
+// Import page components
+// import Index from "views/Index";
+// import NucleoIcons from "views/NucleoIcons";
+// import LandingPage from "views/LandingPage";
+// import ProfilePage from "views/ProfilePage";
+// import LoginPage from "views/LoginPage";
 import Home from "views/pages/Home";
+import Service from "views/pages/Service";
 import Product from "views/pages/Product";
 import AboutUs from "views/pages/AboutUs";
 import ContactUs from "views/pages/ContactUs";
+import NotFound from "views/pages/NotFound";
+import IndexNavbar from "components/Navbars/IndexNavbar";
+import DarkFooter from "components/Footers/DarkFooter";
+
+const routes = [
+  // { path: "/index", component: Index },
+  // { path: "/nucleo-icons", component: NucleoIcons },
+  // { path: "/landing-page", component: LandingPage },
+  // { path: "/profile-page", component: ProfilePage },
+  // { path: "/login-page", component: LoginPage },
+  { path: "/", component: Home },
+  { path: "/products/", component: Product },
+  { path: "/products/:activeId", component: Product },
+  { path: "/services/", component: Service },
+  { path: "/services/:activeId", component: Service },
+  { path: "/about-us", component: AboutUs },
+  { path: "/contact-us", component: ContactUs },
+  { path: "/not-found", component: NotFound },
+];
+
+const Content = () => {
+  const [loadedPages, setLoadedPages] = useState({});
+
+  const handleLoad = (pageName) => {
+    setLoadedPages((prevPages) => ({
+      ...prevPages,
+      [pageName]: true,
+    }));
+  };
+
+  return (
+    <>
+      <BrowserRouter>
+        <IndexNavbar />
+        <Routes>
+          {routes.map((route, index) => (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Suspense fallback={<div>Loading...</div>}>
+                  {loadedPages[route.component.name]
+                    ? React.createElement(route.component, null, null)
+                    : React.createElement(
+                        route.component,
+                        { onLoad: () => handleLoad(route.component.name) },
+                        null
+                      )}
+                </Suspense>
+              }
+            />
+          ))}
+          <Route path="*" element={<Navigate to="/not-found" />} />
+        </Routes>
+        <DarkFooter />
+      </BrowserRouter>
+    </>
+  );
+};
+
+const App = () => (
+  <>
+    <Content />
+  </>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/index" element={<Index />} />
-      <Route path="/nucleo-icons" element={<NucleoIcons />} />
-      <Route path="/landing-page" element={<LandingPage />} />
-      <Route path="/profile-page" element={<ProfilePage />} />
-      <Route path="/login-page" element={<LoginPage />} />
-      <Route path="/" element={<Home />} />
-      <Route path="/products" element={<Product />} />
-      <Route path="/products/:productId" element={<Product />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      
-
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
-  </BrowserRouter>
-);
+root.render(<App />);

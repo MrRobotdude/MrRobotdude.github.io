@@ -5,12 +5,10 @@ import { useEffect } from "react";
 // } from "reactstrap";
 
 // core components
-import IndexNavbar from "components/Navbars/IndexNavbar";
 import HomeHeader from "components/Headers/HomeHeader";
-import DarkFooter from "components/Footers/DarkFooter";
 import AboutUs from "views/home-sections/AboutUs";
 import Products from "views/home-sections/Products";
-// import LandingPageHeader from "components/Headers/LandingPageHeader";
+import Services from "views/home-sections/Services";
 
 function Home() {
   useEffect(() => {
@@ -26,14 +24,14 @@ function Home() {
   });
   return (
     <>
-      <IndexNavbar />
+      {/* <IndexNavbar /> */}
       <div className="wrapper">
         <HomeHeader />
         <div className="main">
           <AboutUs />
+          <Services />
           <Products />
         </div>
-        <DarkFooter />
       </div>
     </>
   );

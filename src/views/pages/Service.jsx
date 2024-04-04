@@ -6,9 +6,9 @@ import ItemPageHeader from "components/Headers/ItemPageHeader";
 import ItemSidebar from "components/Navbars/ItemSidebar";
 import ItemCard from "components/Items/ItemCard";
 
-import { products } from "constants/products";
+import { services } from "constants/services";
 
-function Product() {
+function Service() {
   const { activeId } = useParams();
   const [activeItem, setActiveItem] = useState(null);
   useEffect(() => {
@@ -24,21 +24,21 @@ function Product() {
   });
 
   useEffect(() => {
-    const product = products.find(
-      (product) => product.productId === Number(activeId)
+    const service = services.find(
+      (service) => service.serviceId === Number(activeId)
     );
 
-    setActiveItem(product);
+    setActiveItem(service);
   }, [activeId]); // Add products to dependencies array to ensure it's updated
 
-  const handleItemClick = (product) => {
-    setActiveItem(product);
+  const handleItemClick = (service) => {
+    setActiveItem(service);
   };
 
   return (
     <>
       <div className="wrapper">
-        <ItemPageHeader activeItem={activeItem} itemType="products" />
+        <ItemPageHeader activeItem={activeItem} itemType="services" />
         <div className="main" style={{ backgroundColor: "#eee" }}>
           <Row>
             <Col
@@ -47,14 +47,18 @@ function Product() {
               className="bg-dark text-white"
             >
               <ItemSidebar
-                items={products}
+                items={services}
                 activeItem={activeItem}
                 handleItemClick={handleItemClick}
-                itemType="products"
+                itemType="services"
               />
             </Col>
             <Col sm={9}>
-              <ItemCard activeItem={activeItem} items={products} itemType="products" />
+              <ItemCard
+                activeItem={activeItem}
+                items={services}
+                itemType="services"
+              />
             </Col>
           </Row>
         </div>
@@ -63,4 +67,4 @@ function Product() {
   );
 }
 
-export default Product;
+export default Service;

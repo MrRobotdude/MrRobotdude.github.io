@@ -18,7 +18,7 @@ function AboutUs() {
       <Container>
         <Row>
           <Col className="ml-auto mr-auto text-center" md="8">
-            <h2 className="title">Who we are?</h2>
+            <h2 className="title">Who We Are?</h2>
             <h5 className="description">
               Alam Tehnik Semesta is a top customized compliance AHU
               manufacturer in Indonesia. Established in 1978 as a contractor and
@@ -31,11 +31,12 @@ function AboutUs() {
               PICS and even for Hazardous Facility or Non-Hazardous Facility
               based on WHO standard Appendix 3.
             </h5>
-            <Link to="/about-us">
-              <h5>
-                Learn more{" "}
-                <i className="now-ui-icons arrows-1_minimal-right"></i>
-              </h5>
+            <Link
+              to="/about-us"
+              className="d-flex align-items-center justify-content-center text-info text-bold"
+            >
+              <h5 className="m-0">Learn More </h5>
+              <i className="now-ui-icons arrows-1_minimal-right ml-1"></i>
             </Link>
           </Col>
         </Row>

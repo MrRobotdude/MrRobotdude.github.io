@@ -36,46 +36,6 @@ function IndexNavbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleNavLinkClick = (sectionId) => {
-    if (
-      sectionId.startsWith("/products/") ||
-      sectionId.startsWith("/services/")
-    ) {
-      window.location.href = sectionId;
-    }
-    if (window.location.pathname === "/") {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    } else {
-      switch (sectionId) {
-        case "header-section":
-          window.location.href = "/";
-          break;
-        case "about-us-section":
-          window.location.href = "/about-us";
-          break;
-        case "products-section":
-          window.location.href = "/products";
-          break;
-        case "services-section":
-          window.location.href = "/services";
-          break;
-        case "news-section":
-          window.location.href = "/news";
-          break;
-        case "partners-section":
-          window.location.href = "/partners";
-          break;
-        case "contact-us-section":
-          window.location.href = "/contact-us";
-          break;
-        default:
-          break;
-      }
-    }
-  };
   const scrollToTop = () => {
     const section = document.getElementById("header-section");
     section.scrollIntoView({ behavior: "smooth" });
@@ -96,7 +56,8 @@ function IndexNavbar() {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="/"
+              to="/"
+              tag={Link}
               id="navbar-brand"
               style={{ fontSize: "20px", fontWeight: "bold" }}
             >
@@ -129,18 +90,12 @@ function IndexNavbar() {
           >
             <Nav navbar>
               <NavItem>
-                <NavLink
-                  href="#"
-                  onClick={() => handleNavLinkClick("header-section")}
-                >
+                <NavLink tag={Link} to="/">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>Home</p>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  href="#"
-                  onClick={() => handleNavLinkClick("about-us-section")}
-                >
+                <NavLink tag={Link} to="/about-us">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>
                     About Us
                   </p>
@@ -150,18 +105,15 @@ function IndexNavbar() {
                 <DropdownToggle
                   caret
                   color="default"
-                  href="#"
                   nav
-                  onClick={(e) => e.preventDefault()}
                   style={{ fontSize: "14px", fontWeight: "bold" }}
                 >
                   <p>Services</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem
-                    to="#"
                     tag={Link}
-                    onClick={() => handleNavLinkClick("services-section")}
+                    to="/services"
                     style={{ fontSize: "14px", fontWeight: "bold" }}
                   >
                     All services
@@ -169,9 +121,8 @@ function IndexNavbar() {
                   {services.map((service) => (
                     <DropdownItem
                       key={service.serviceId}
-                      onClick={() =>
-                        handleNavLinkClick(`/services/${service.serviceId}`)
-                      }
+                      tag={Link}
+                      to={`/services/${service.serviceId}`}
                       style={{ fontSize: "14px", fontWeight: "bold" }}
                     >
                       {service.serviceName}
@@ -183,29 +134,24 @@ function IndexNavbar() {
                 <DropdownToggle
                   caret
                   color="default"
-                  href="#"
                   nav
-                  onClick={(e) => e.preventDefault()}
                   style={{ fontSize: "14px", fontWeight: "bold" }}
                 >
                   <p>Products</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem
-                    to="#"
                     tag={Link}
-                    onClick={() => handleNavLinkClick("products-section")}
+                    to="/products"
                     style={{ fontSize: "14px", fontWeight: "bold" }}
                   >
                     All products
                   </DropdownItem>
                   {products.map((product) => (
                     <DropdownItem
-                      to={`/products/${product.productId}`}
                       key={product.productId}
-                      onClick={() =>
-                        handleNavLinkClick(`/products/${product.productId}`)
-                      }
+                      tag={Link}
+                      to={`/products/${product.productId}`}
                       style={{ fontSize: "14px", fontWeight: "bold" }}
                     >
                       {product.productName}
@@ -214,18 +160,12 @@ function IndexNavbar() {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                <NavLink
-                  href="#"
-                  onClick={() => handleNavLinkClick("news-section")}
-                >
+                <NavLink tag={Link} to="/news">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>News</p>
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  href="#"
-                  onClick={() => handleNavLinkClick("partners-section")}
-                >
+                <NavLink tag={Link} to="/partners">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>
                     Partners
                   </p>
@@ -235,7 +175,8 @@ function IndexNavbar() {
                 <Button
                   className="nav-link btn-neutral p-2 px-3"
                   color="info"
-                  onClick={() => handleNavLinkClick("contact-us-section")}
+                  tag={Link}
+                  to="/contact-us"
                 >
                   <i
                     className="now-ui-icons ui-1_send mr-2 "
@@ -252,7 +193,6 @@ function IndexNavbar() {
       </Navbar>
       {showScrollTopButton && (
         <Button
-          Button
           className="btn-icon btn-round"
           color="info"
           type="button"

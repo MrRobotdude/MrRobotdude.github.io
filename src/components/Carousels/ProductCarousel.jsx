@@ -20,12 +20,11 @@ const responsive = {
   tablet: {
     breakpoint: { max: 1024, min: 464 },
     items: 2,
-    partialVisibilityGutter: 30,
+    partialVisibilityGutter: 20,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
     items: 1,
-    partialVisibilityGutter: 30,
   },
 };
 
@@ -95,18 +94,19 @@ function ProductCarousel() {
       swipeable={true}
       draggable={true}
       showDots={true}
-      partialVisible={true}
+      partialVisible={false}
       responsive={responsive}
       ssr={true}
       infinite={true}
       autoPlay={true}
       keyBoardControl={true}
       transitionDuration={500}
-      containerClass="carousel-container p-5 "
+      containerClass="carousel-container"
       removeArrowOnDeviceType={["tablet", "mobile"]}
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px mx-2 "
+      centerMode={true}
     >
       {products.map((product, index) => {
         const isHovered = hoveredCardIndex === index;
@@ -119,7 +119,7 @@ function ProductCarousel() {
             >
               <CardHeader>
                 <CardImg
-                  src={product.productImageUrl[0]}
+                  src={product.imageUrl[0].url}
                   alt={product.productName}
                   className="preview-img"
                   ref={cardRef}
