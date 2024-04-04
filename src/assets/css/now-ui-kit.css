@@ -3754,7 +3754,7 @@ Created using IcoMoon - icomoon.io
   width: 17px;
 }
 .navbar.navbar-transparent {
-  background-color: transparent !important;
+  background-color: rgba(44, 44, 44, 0.3) !important;
   box-shadow: none;
   color: #FFFFFF;
   padding-top: 20px !important;
@@ -7041,8 +7041,15 @@ td.rdtYear:hover {
     transform-origin: bottom;
   }
 }
-.header-carousel {
-  min-height: 100vh;
+.header-image img {
+  min-width: 100vw;
+  min-height: 60vh;
+  max-height: 640px;
+  object-fit: contain;
+}
+
+.bg-header-carousel {
+  filter: blur(0);
 }
 
 /*# sourceMappingURL=now-ui-kit.css.map */
