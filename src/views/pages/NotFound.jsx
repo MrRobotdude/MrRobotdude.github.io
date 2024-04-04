@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Row, Col } from "reactstrap";
+import { Container, Row } from "reactstrap";
 
 const PageNotFound = () => {
   return (
@@ -17,7 +17,7 @@ const PageNotFound = () => {
           <Row>
             <div className="mx-auto">
               <h3>
-                This page is not available yet! {" "}
+                This page is not available yet!{" "}
                 <Link to={"/"}>Back to Home</Link>
               </h3>
             </div>

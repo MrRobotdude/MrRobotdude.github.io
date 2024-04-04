@@ -39,7 +39,12 @@ const Content = () => {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh", maxWidth: "100vw"}}
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100vh",
+        maxWidth: "100vw",
+      }}
     >
       <BrowserRouter>
         <IndexNavbar />
@@ -62,6 +67,7 @@ const Content = () => {
                 }
               />
             ))}
+            <Route path="/ats-kit-react" element={<Navigate to="/" />} />
             <Route path="*" element={<Navigate to="/not-found" />} />
           </Routes>
         </div>
