@@ -7,12 +7,6 @@ import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 
-// Import page components
-// import Index from "views/Index";
-// import NucleoIcons from "views/NucleoIcons";
-// import LandingPage from "views/LandingPage";
-// import ProfilePage from "views/ProfilePage";
-// import LoginPage from "views/LoginPage";
 import Home from "views/pages/Home";
 import Service from "views/pages/Service";
 import Product from "views/pages/Product";
@@ -23,11 +17,6 @@ import IndexNavbar from "components/Navbars/IndexNavbar";
 import DarkFooter from "components/Footers/DarkFooter";
 
 const routes = [
-  // { path: "/index", component: Index },
-  // { path: "/nucleo-icons", component: NucleoIcons },
-  // { path: "/landing-page", component: LandingPage },
-  // { path: "/profile-page", component: ProfilePage },
-  // { path: "/login-page", component: LoginPage },
   { path: "/", component: Home },
   { path: "/products/", component: Product },
   { path: "/products/:activeId", component: Product },
@@ -49,32 +38,36 @@ const Content = () => {
   };
 
   return (
-    <>
+    <div
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh", maxWidth: "100vw"}}
+    >
       <BrowserRouter>
         <IndexNavbar />
-        <Routes>
-          {routes.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              element={
-                <Suspense fallback={<div>Loading...</div>}>
-                  {loadedPages[route.component.name]
-                    ? React.createElement(route.component, null, null)
-                    : React.createElement(
-                        route.component,
-                        { onLoad: () => handleLoad(route.component.name) },
-                        null
-                      )}
-                </Suspense>
-              }
-            />
-          ))}
-          <Route path="*" element={<Navigate to="/not-found" />} />
-        </Routes>
+        <div style={{ flex: 1 }}>
+          <Routes>
+            {routes.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <Suspense fallback={<div>Loading...</div>}>
+                    {loadedPages[route.component.name]
+                      ? React.createElement(route.component, null, null)
+                      : React.createElement(
+                          route.component,
+                          { onLoad: () => handleLoad(route.component.name) },
+                          null
+                        )}
+                  </Suspense>
+                }
+              />
+            ))}
+            <Route path="*" element={<Navigate to="/not-found" />} />
+          </Routes>
+        </div>
         <DarkFooter />
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 
