@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
 
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
@@ -46,7 +46,7 @@ const Content = () => {
         maxWidth: "100vw",
       }}
     >
-      <BrowserRouter>
+      <HashRouter>
         <IndexNavbar />
         <div style={{ flex: 1 }}>
           <Routes>
@@ -67,12 +67,11 @@ const Content = () => {
                 }
               />
             ))}
-            <Route path="/ats-kit-react" element={<Navigate to="/" />} />
             <Route path="*" element={<Navigate to="/not-found" />} />
           </Routes>
         </div>
         <DarkFooter />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 };
