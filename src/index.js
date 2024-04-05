@@ -12,6 +12,7 @@ import Service from "views/pages/Service";
 import Product from "views/pages/Product";
 import AboutUs from "views/pages/AboutUs";
 import ContactUs from "views/pages/ContactUs";
+import Partners from "views/pages/Partners";
 import NotFound from "views/pages/NotFound";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import DarkFooter from "components/Footers/DarkFooter";
@@ -24,6 +25,7 @@ const routes = [
   { path: "/services/:activeId", component: Service },
   { path: "/about-us", component: AboutUs },
   { path: "/contact-us", component: ContactUs },
+  { path: "/partners", component: Partners },
   { path: "/not-found", component: NotFound },
 ];
 

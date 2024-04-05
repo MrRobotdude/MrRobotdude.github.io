@@ -208,6 +208,24 @@ function IndexNavbar() {
           <i className="now-ui-icons arrows-1_minimal-up" />
         </Button>
       )}
+      <Button
+        className="btn-icon"
+        color="success"
+        type="button"
+        onClick={scrollToTop}
+        style={{
+          position: "fixed",
+          bottom: "50%",
+          right: "0px",
+          zIndex: 9999,
+          color: "white",
+          fontSize: "30px",
+          padding: "20px",
+          paddingRight: "40px"
+        }}
+      >
+        <i className="fab fa-whatsapp mr-2" />
+      </Button>
     </>
   );
 }

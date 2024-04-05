@@ -2,7 +2,7 @@ import React from "react";
 import { Nav, NavItem, NavLink } from "reactstrap";
 import { Link, useLocation } from "react-router-dom";
 
-function ItemSidebar({ items, activeItem, handleItemClick, itemType }) {
+function ItemSidebar({ items, handleItemClick, itemType }) {
   const location = useLocation();
 
   const handleClick = (item) => {
@@ -10,7 +10,7 @@ function ItemSidebar({ items, activeItem, handleItemClick, itemType }) {
   };
 
   return (
-    <Nav vertical tabs>
+    <Nav vertical tabs className="d-none d-md-block">
       <NavItem className="mx-auto mt-3">
         <NavLink
           tag={Link}

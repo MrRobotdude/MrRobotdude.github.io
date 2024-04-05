@@ -35,7 +35,7 @@ function Contact() {
             </Col>
           </Row>
           <Row>
-            <Col md="4">
+            <Col md="4" className="d-flex flex-column">
               <div className="team-player">
                 <h4 className="title">Our Head Office</h4>
                 <i
@@ -47,17 +47,26 @@ function Contact() {
                   Villa, Jl. Pintu Besi I No.31 Blok A, Ps. Baru, Kecamatan
                   Sawah Besar, Jakarta, Daerah Khusus Ibukota Jakarta 10710
                 </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.788968027642!2d106.83287!3d-6.159012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5c3b9605c0f%3A0x36c47167b84057b0!2sPT.%20Alam%20Tehnik%20Semesta!5e0!3m2!1sen!2sid!4v1710492436802!5m2!1sen!2sid" style={{border: 0}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="head-office"/>
+                <div className="d-flex flex-column">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3966.788968027642!2d106.83287!3d-6.159012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5c3b9605c0f%3A0x36c47167b84057b0!2sPT.%20Alam%20Tehnik%20Semesta!5e0!3m2!1sen!2sid!4v1710492436802!5m2!1sen!2sid"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="head-office"
+                  />
 
-
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="https://maps.app.goo.gl/JvDqstaxoKsz7vv39"
-                  target="_blank"
-                >
-                  <i className="now-ui-icons location_map-big mr-2" /> Open Map
-                </Button>
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="https://maps.app.goo.gl/JvDqstaxoKsz7vv39"
+                    target="_blank"
+                  >
+                    <i className="now-ui-icons location_map-big mr-2" /> Open
+                    Map
+                  </Button>
+                </div>
               </div>
             </Col>
             <Col md="4">
@@ -74,22 +83,24 @@ function Contact() {
                   the buttons below, as we're here to assist you with anything
                   you need.
                 </p>
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={handleMarketingButtonClick}
-                >
-                  Marketing
-                </Button>
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="#pablo"
-                  onClick={handleCustomerServiceButtonClick}
-                >
-                  Customer Service
-                </Button>
+                <div className="d-flex flex-column">
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="#pablo"
+                    onClick={handleMarketingButtonClick}
+                  >
+                    Marketing
+                  </Button>
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="#pablo"
+                    onClick={handleCustomerServiceButtonClick}
+                  >
+                    Customer Service
+                  </Button>
+                </div>
               </div>
             </Col>
             <Col md="4">
@@ -111,14 +122,16 @@ function Contact() {
                 <p className="description m-0">
                   Marketing: marketing@alamtehnik.com
                 </p>
-                <Button
-                  className="btn-round"
-                  color="info"
-                  href="https://wa.me/628159088829"
-                  target="_blank"
-                >
-                  <i className="fab fa-whatsapp mr-2" /> Whatsapp
-                </Button>
+                <div className="d-flex flex-column">
+                  <Button
+                    className="btn-round"
+                    color="info"
+                    href="https://wa.me/628159088829"
+                    target="_blank"
+                  >
+                    <i className="fab fa-whatsapp mr-2" /> Whatsapp
+                  </Button>
+                </div>
               </div>
             </Col>
           </Row>

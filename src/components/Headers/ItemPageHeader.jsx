@@ -3,7 +3,6 @@ import React from "react";
 import { Container } from "reactstrap";
 
 function ItemPageHeader({ activeItem, itemType }) {
-  console.log(itemType)
   return (
     <>
       <div className="page-header page-header-small" id="header-section">
