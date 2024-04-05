@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-import Contact from "views/contact-sections/Contact";
 import PartnerHeader from "components/Headers/PartnerHeader";
 import Partner from "views/partner-sections/Partner";
 

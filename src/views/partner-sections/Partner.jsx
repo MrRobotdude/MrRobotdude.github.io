@@ -1,27 +1,7 @@
-import ContactModal from "components/Modals/ContactModal";
-import React, { useCallback, useState } from "react";
-import { Container, Row, Col, Button } from "reactstrap";
+import React from "react";
+import { Container, Row, Col } from "reactstrap";
 
 function Partner() {
-  const [modal, setModal] = useState(false);
-  const [selectedEmail, setSelectedEmail] = useState("");
-
-  const toggleModal = useCallback(
-    (title) => {
-      setModal(!modal);
-      setSelectedEmail(title);
-    },
-    [modal]
-  );
-
-  const handleMarketingButtonClick = useCallback(() => {
-    toggleModal("marketing");
-  }, [toggleModal]);
-
-  const handleCustomerServiceButtonClick = useCallback(() => {
-    toggleModal("customer_service");
-  }, [toggleModal]);
-
   return (
     <>
       <div className="section section-partner text-center">
