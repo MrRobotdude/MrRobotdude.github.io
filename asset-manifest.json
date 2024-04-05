@@ -1,7 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.44792c9e.css",
-    "main.js": "/static/js/main.4b24796a.js",
+    "main.js": "/static/js/main.7fff55c7.js",
+    "static/media/partners-header.jpg": "/static/media/partners-header.6f2ac87a20bcd9c4dbd7.jpg",
     "static/media/bg6.jpg": "/static/media/bg6.dc603b7416966b84ac68.jpg",
     "static/media/contact-us-header.jpg": "/static/media/contact-us-header.00e0f605aafeaedef103.jpg",
     "static/media/ats-logo-only.png": "/static/media/ats-logo-only.935e74f97b82e9052f26.png",
@@ -17,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.44792c9e.css",
-    "static/js/main.4b24796a.js"
+    "static/js/main.7fff55c7.js"
   ]
 }
