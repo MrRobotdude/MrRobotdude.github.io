@@ -19,13 +19,13 @@ function AboutUs() {
         <Row>
           <Col className="ml-auto mr-auto text-center" md="8">
             <h2 className="title">Who We Are?</h2>
-            <h5 className="description">
+            <h5 className="description text-justify">
               Alam Tehnik Semesta is a top customized compliance AHU
               manufacturer in Indonesia. Established in 1978 as a contractor and
               started manufacturing in 2008, now has been supplying more than
               1000 units across the country.
             </h5>
-            <h5 className="description">
+            <h5 className="description text-justify">
               We supply clean room HVAC, which comply with HVAC regulation based
               on CPOB (Indonesia BPOM standard), ISO standard, ISPE Standard,
               PICS and even for Hazardous Facility or Non-Hazardous Facility

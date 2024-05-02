@@ -17,7 +17,7 @@ function ItemCard({ activeItem, items, itemType }) {
         <TabContent activeTab={activeItem ? activeItem.productId : "0"}>
           {activeItem ? (
             <TabPane tabId={activeItem.productId}>
-                  <Card body className="p-5">
+                  <Card body className="p-5 text-justify">
                     <CardTitle tag="h3" className="font-weight-bold">
                       {activeItem.productName}
                     </CardTitle>
@@ -42,13 +42,15 @@ function ItemCard({ activeItem, items, itemType }) {
                       Photo of Products
                     </CardTitle>
                     {activeItem.imageUrl.map((image, index) => (
+                      <>
                       <CardText key={index} tag={"h5"}>
                         {image.caption}
-                        <CardImg src={image.url} alt="" />
                       </CardText>
+                        <CardImg src={image.url} alt="" className="mb-4"/>
+                      </>
                     ))}
 
-                    <CardTitle tag="h3" className="font-weight-bold mt-3">
+                    <CardTitle tag="h3" className="font-weight-bold">
                       For detailed information
                     </CardTitle>
                     <CardText tag={"h5"}>

@@ -35,7 +35,7 @@ function Contact() {
             </Col>
           </Row>
           <Row>
-            <Col md="4" className="d-flex flex-column">
+            <Col lg="4" className="d-flex flex-column">
               <div className="team-player">
                 <h4 className="title">Our Head Office</h4>
                 <i
@@ -69,7 +69,7 @@ function Contact() {
                 </div>
               </div>
             </Col>
-            <Col md="4">
+            <Col lg="4">
               <div className="team-player">
                 <h4 className="title">Message Us</h4>
                 <i
@@ -77,7 +77,7 @@ function Contact() {
                   style={{ fontSize: "64px", marginBottom: "5px" }}
                 ></i>
                 <p className="category text-info">Contact Form</p>
-                <p className="description">
+                <p className="description text-justify">
                   We warmly welcome you to utilize our dedicated form for any
                   inquiries you may have. Please feel free to click on any of
                   the buttons below, as we're here to assist you with anything
@@ -101,7 +101,7 @@ function Contact() {
                 </div>
               </div>
             </Col>
-            <Col md="4">
+            <Col lg="4">
               <div className="team-player">
                 <h4 className="title">Our Contact Info</h4>
                 <i

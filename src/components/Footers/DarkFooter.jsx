@@ -25,16 +25,10 @@ function DarkFooter() {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <span className="mb-0">
-                  Villa, Jl. Pintu Besi I No.31 Blok A,
+                <span className="mb-0 text-justify">
+                  Villa, Jl. Pintu Besi I No.31 Blok A, Ps. Baru, Kecamatan
+                  Sawah Besar, Jakarta, Daerah Khusus Ibukota Jakarta 10710
                 </span>
-                <br />
-                <span className="mb-0"> Ps. Baru, Kecamatan Sawah Besar,</span>
-                <br />
-                <span className="mb-0">
-                  Jakarta, Daerah Khusus Ibukota Jakarta 10710
-                </span>
-                <br />
               </AccordionItemPanel>
             </AccordionItem>
             <AccordionItem>
@@ -79,13 +73,16 @@ function DarkFooter() {
           <Col xs={12} lg={4}>
             <span className="category mb-0">PT. Alam Tehnik Semesta</span>
             <br />
-            <span className="mb-0">Villa, Jl. Pintu Besi I No.31 Blok A,</span>
-            <br />
-            <span className="mb-0"> Ps. Baru, Kecamatan Sawah Besar,</span>
+            <span className="mb-0">
+              Villa, Jl. Pintu Besi I No.31 Blok A, Ps. Baru,{" "}
+            </span>
             <br />
             <span className="mb-0">
-              Jakarta, Daerah Khusus Ibukota Jakarta 10710
+              {" "}
+              Kecamatan Sawah Besar, Jakarta, Daerah
             </span>
+            <br />
+            <span className="mb-0">Khusus Ibukota Jakarta 10710</span>
             <br />
           </Col>
           <Col xs={12} lg={4} className="text-lg-center">

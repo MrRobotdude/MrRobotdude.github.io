@@ -81,7 +81,7 @@ function ServiceCarousel() {
               </CardTitle>
               <div>
                 {service.serviceSummary && (
-                  <h5 className={`px-5 ${textDesc}`}>
+                  <h5 className={`px-5 text-justify ${textDesc}`}>
                     {service.serviceSummary}
                   </h5>
                 )}
