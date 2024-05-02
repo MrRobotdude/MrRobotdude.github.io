@@ -2,8 +2,6 @@ import React from "react";
 import {
   TabContent,
   TabPane,
-  Row,
-  Col,
   Card,
   CardTitle,
   CardText,
@@ -19,9 +17,7 @@ function ItemCard({ activeItem, items, itemType }) {
         <TabContent activeTab={activeItem ? activeItem.productId : "0"}>
           {activeItem ? (
             <TabPane tabId={activeItem.productId}>
-              <Row>
-                <Col sm="10">
-                  <Card body className="my-5 ml-5 p-5">
+                  <Card body className="p-5">
                     <CardTitle tag="h3" className="font-weight-bold">
                       {activeItem.productName}
                     </CardTitle>
@@ -63,16 +59,10 @@ function ItemCard({ activeItem, items, itemType }) {
                       </CardLink>
                     </CardText>
                   </Card>
-                </Col>
-              </Row>
             </TabPane>
           ) : (
             <TabPane tabId="0">
-              <Row>
-                <Col sm="12">
                   <AllItems itemType={"products"} items={items} />
-                </Col>
-              </Row>
             </TabPane>
           )}
         </TabContent>
@@ -82,9 +72,7 @@ function ItemCard({ activeItem, items, itemType }) {
         <TabContent activeTab={activeItem ? activeItem.serviceId : "0"}>
           {activeItem ? (
             <TabPane tabId={activeItem.serviceId}>
-              <Row>
-                <Col sm="10">
-                  <Card body className="my-5 ml-5 p-5">
+                  <Card body className="p-5">
                     <CardTitle tag="h3" className="font-weight-bold">
                       {activeItem.serviceName}
                     </CardTitle>
@@ -100,16 +88,10 @@ function ItemCard({ activeItem, items, itemType }) {
                       </CardText>
                     ))}
                   </Card>
-                </Col>
-              </Row>
             </TabPane>
           ) : (
             <TabPane tabId="0">
-              <Row>
-                <Col sm="12">
                   <AllItems itemType={"services"} items={items} />
-                </Col>
-              </Row>
             </TabPane>
           )}
         </TabContent>

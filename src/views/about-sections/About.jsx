@@ -27,7 +27,7 @@ function About() {
           <div className="separator separator-primary"></div>
           <div className="section-story-overview">
             <Row>
-              <Col md="6">
+              <Col sm="6" className="mb-5">
                 <div
                   className="image-container image-left"
                   style={{
@@ -41,7 +41,7 @@ function About() {
                   </p>
                 </div>
               </Col>
-              <Col md="5">
+              <Col sm="5">
                 <div
                   className="image-container image-right"
                   style={{
@@ -49,8 +49,10 @@ function About() {
                       "url(https://picsum.photos/1049/880?random=3)",
                   }}
                 ></div>
-                <h3 className="mb-0">Your satisfaction is our priority</h3>
-                <h5 className="description">
+                <h3 className="mb-0 mt-5 text-center text-sm-left">
+                  Your satisfaction is our priority
+                </h3>
+                <h5 className="description text-center text-sm-left">
                   As we do most of our design customized to our customer's
                   needs, therefore we ensure that we will work together to
                   achieve the best product, without compromising any regulation

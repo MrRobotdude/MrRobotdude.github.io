@@ -54,12 +54,20 @@ function HeaderCarousel({ item }) {
       className="clear-filter"
       filter-color="blue"
       style={{
-        backgroundImage: `url(${imageUrl[activeIndex]?.url || setActiveIndex(0)})`,
+        backgroundImage: `url(${
+          imageUrl[activeIndex]?.url || setActiveIndex(0)
+        })`,
         backgroundSize: "cover",
         minWidth: "100vw",
+        minHeight: "100vh",
       }}
     >
-      <Carousel activeIndex={activeIndex} next={next} previous={previous}>
+      <Carousel
+        activeIndex={activeIndex}
+        next={next}
+        previous={previous}
+        className="carousel-height"
+      >
         <CarouselIndicators
           items={carouselItems}
           activeIndex={activeIndex}

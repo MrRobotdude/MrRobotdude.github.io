@@ -87,7 +87,6 @@ function Contact() {
                   <Button
                     className="btn-round"
                     color="info"
-                    href="#pablo"
                     onClick={handleMarketingButtonClick}
                   >
                     Marketing
@@ -95,7 +94,6 @@ function Contact() {
                   <Button
                     className="btn-round"
                     color="info"
-                    href="#pablo"
                     onClick={handleCustomerServiceButtonClick}
                   >
                     Customer Service

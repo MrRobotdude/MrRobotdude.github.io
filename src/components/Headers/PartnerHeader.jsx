@@ -47,10 +47,10 @@ function PartnerHeader() {
               style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
             >
               <h1 className="slide-in-bottom">
-                Discover our network of trusted partners
+                Discover Our Network Of Trusted Partners
               </h1>
               <h3 className="slide-in-bottom mb-0">
-                Unlock new Opportunities and drive mutual success
+                Unlock new opportunities and drive mutual success
               </h3>
             </div>
           </Container>

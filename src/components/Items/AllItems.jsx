@@ -7,7 +7,7 @@ function AllItems({ itemType, items }) {
     <Row className="my-5 mx-5">
       {items &&
         items.map((item, index) => (
-          <Col key={index} lg="4">
+          <Col key={index} lg="4" md="12">
             <Link
               className="h6 text-dark"
               to={`/${itemType}/${

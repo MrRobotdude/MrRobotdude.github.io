@@ -108,35 +108,6 @@ function IndexNavbar() {
                   nav
                   style={{ fontSize: "14px", fontWeight: "bold" }}
                 >
-                  <p>Services</p>
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem
-                    tag={Link}
-                    to="/services"
-                    style={{ fontSize: "14px", fontWeight: "bold" }}
-                  >
-                    All services
-                  </DropdownItem>
-                  {services.map((service) => (
-                    <DropdownItem
-                      key={service.serviceId}
-                      tag={Link}
-                      to={`/services/${service.serviceId}`}
-                      style={{ fontSize: "14px", fontWeight: "bold" }}
-                    >
-                      {service.serviceName}
-                    </DropdownItem>
-                  ))}
-                </DropdownMenu>
-              </UncontrolledDropdown>
-              <UncontrolledDropdown nav>
-                <DropdownToggle
-                  caret
-                  color="default"
-                  nav
-                  style={{ fontSize: "14px", fontWeight: "bold" }}
-                >
                   <p>Products</p>
                 </DropdownToggle>
                 <DropdownMenu>
@@ -159,11 +130,40 @@ function IndexNavbar() {
                   ))}
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
+              <UncontrolledDropdown nav>
+                <DropdownToggle
+                  caret
+                  color="default"
+                  nav
+                  style={{ fontSize: "14px", fontWeight: "bold" }}
+                >
+                  <p>Services</p>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem
+                    tag={Link}
+                    to="/services"
+                    style={{ fontSize: "14px", fontWeight: "bold" }}
+                  >
+                    All services
+                  </DropdownItem>
+                  {services.map((service) => (
+                    <DropdownItem
+                      key={service.serviceId}
+                      tag={Link}
+                      to={`/services/${service.serviceId}`}
+                      style={{ fontSize: "14px", fontWeight: "bold" }}
+                    >
+                      {service.serviceName}
+                    </DropdownItem>
+                  ))}
+                </DropdownMenu>
+              </UncontrolledDropdown>
+              {/* <NavItem>
                 <NavLink tag={Link} to="/news">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>News</p>
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               <NavItem>
                 <NavLink tag={Link} to="/partners">
                   <p style={{ fontSize: "14px", fontWeight: "bold" }}>
@@ -221,7 +221,7 @@ function IndexNavbar() {
           color: "white",
           fontSize: "30px",
           padding: "20px",
-          paddingRight: "40px"
+          paddingRight: "40px",
         }}
       >
         <i className="fab fa-whatsapp mr-2" />

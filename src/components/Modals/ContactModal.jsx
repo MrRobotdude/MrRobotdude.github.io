@@ -82,7 +82,6 @@ export default function ContactModal(props) {
       <ModalBody>
         <form onSubmit={handleSubmit}>
           <FormGroup>
-            <Label for="emailSelect">Choose Email</Label>
             <Input
               type="select"
               name="select"

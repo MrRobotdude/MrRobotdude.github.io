@@ -28,6 +28,14 @@ const responsive = {
   },
 };
 
+const ForwardedCardImg = React.forwardRef((props, ref) => (
+  <CardImg {...props} innerref={ref} />
+));
+
+const ForwardedCardTitle = React.forwardRef((props, ref) => (
+  <CardTitle {...props} innerref={ref} />
+));
+
 function ProductCarousel() {
   const [deviceType, setDeviceType] = useState(null);
   const [hoveredCardIndex, setHoveredCardIndex] = useState(null);
@@ -118,7 +126,7 @@ function ProductCarousel() {
               style={{ overflow: "hidden" }}
             >
               <CardHeader>
-                <CardImg
+                <ForwardedCardImg
                   src={product.imageUrl[0].url}
                   alt={product.productName}
                   className="preview-img"
@@ -138,14 +146,14 @@ function ProductCarousel() {
                   }}
                   filter-color="blue"
                 >
-                  <CardTitle
+                  <ForwardedCardTitle
                     className={`product-title ${
                       isHovered ? "normal-title" : "truncated-title"
                     }`}
                     ref={cardTitleRef}
                   >
                     {product.productName}
-                  </CardTitle>
+                  </ForwardedCardTitle>
                   {isHovered && (
                     <div>
                       {product.generalSpecification &&

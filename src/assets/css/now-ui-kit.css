@@ -5311,8 +5311,6 @@ img {
     margin: 0 1rem;
     margin-bottom: 15px;
     padding-top: 0;
-    height: 125px;
-    overflow-y: scroll;
   }
   .sidebar-collapse .navbar .dropdown.show .dropdown-menu:before,
   .sidebar-collapse .navbar .dropdown .dropdown-menu:before {
@@ -5509,8 +5507,6 @@ img {
     margin: 0 1rem;
     margin-bottom: 15px;
     padding-top: 0;
-    height: 125px;
-    overflow-y: scroll;
   }
   .bootstrap-collapse .navbar .dropdown.show .dropdown-menu:before,
   .bootstrap-collapse .navbar .dropdown .dropdown-menu:before {
@@ -5710,8 +5706,6 @@ img {
     margin: 0 1rem;
     margin-bottom: 15px;
     padding-top: 0;
-    height: 125px;
-    overflow-y: scroll;
   }
   .burger-menu .navbar .dropdown.show .dropdown-menu:before,
   .burger-menu .navbar .dropdown .dropdown-menu:before {
@@ -7050,6 +7044,76 @@ td.rdtYear:hover {
 
 .bg-header-carousel {
   filter: blur(0);
+}
+
+/**
+* ----------------------------------------------
+* Demo styles
+* ----------------------------------------------
+**/
+.accordion {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  width: 100%;
+}
+
+.accordion__item + .accordion__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+  background-color: #2c2c2c;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+}
+
+.accordion__button:hover {
+  background-color: #1c1c1c;
+}
+
+.accordion__button:before {
+  display: inline-block;
+  content: "";
+  height: 10px;
+  width: 10px;
+  margin-right: 12px;
+  border-bottom: 2px solid currentColor;
+  border-right: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded=true]::before,
+.accordion__button[aria-selected=true]::before {
+  transform: rotate(45deg);
+}
+
+[hidden] {
+  display: none;
+}
+
+.accordion__panel {
+  padding: 20px;
+  animation: fadein 0.35s ease-in;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.carousel-height {
+  height: fit-content;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=now-ui-kit.css.map */

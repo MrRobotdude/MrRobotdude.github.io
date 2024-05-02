@@ -7,12 +7,12 @@ import { services } from "constants/services";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1200 },
     items: 2,
     slidesToSlide: 1,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1200, min: 464 },
     items: 1,
     slidesToSlide: 1,
   },
@@ -71,17 +71,17 @@ function ServiceCarousel() {
         return (
           <Link to={`/services/${service.serviceId}`} key={index}>
             <Card
-              className={`px-5 ${bgColor}`}
+              className={`px-md-5 ${bgColor}`}
               style={{ overflow: "hidden", height: "300px" }}
             >
               <CardTitle
-                className={`h3 font-weight-bold px-5 mx-5 pt-5 ${textTitle}`}
+                className={`h3 font-weight-bold px-5 pt-5 ${textTitle}`}
               >
                 {service.serviceName}
               </CardTitle>
               <div>
                 {service.serviceSummary && (
-                  <h5 className={`px-5 mx-5 ${textDesc}`}>
+                  <h5 className={`px-5 ${textDesc}`}>
                     {service.serviceSummary}
                   </h5>
                 )}
@@ -93,15 +93,15 @@ function ServiceCarousel() {
       })}
       <Link to={`/services`}>
         <Card
-          className={`px-5 bg-light`}
+          className={`px-md-5 bg-light`}
           style={{ overflow: "hidden", height: "300px" }}
         >
-          <CardTitle className={`h3 font-weight-bold px-5 mx-5 pt-5 text-info`}>
+          <CardTitle className={`h3 font-weight-bold px-5 pt-5 text-info`}>
             Learn More
           </CardTitle>
           <div>
-            <h5 className={`px-5 mx-5 text-black`}>
-              View all our services here
+            <h5 className={`px-5 text-black`}>
+              Interested to see more? Click here
             </h5>
             <br />
           </div>

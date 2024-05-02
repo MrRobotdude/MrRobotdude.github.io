@@ -10,7 +10,7 @@ function ItemSidebar({ items, handleItemClick, itemType }) {
   };
 
   return (
-    <Nav vertical tabs className="d-none d-md-block">
+    <Nav vertical tabs>
       <NavItem className="mx-auto mt-3">
         <NavLink
           tag={Link}

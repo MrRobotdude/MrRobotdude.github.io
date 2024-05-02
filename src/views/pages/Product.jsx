@@ -42,9 +42,9 @@ function Product() {
         <div className="main" style={{ backgroundColor: "#eee" }}>
           <Row>
             <Col
-              sm={3}
+              lg={3}
               style={{ minHeight: "100%" }}
-              className="bg-dark text-white"
+              className="bg-dark text-white d-none d-lg-block"
             >
               <ItemSidebar
                 items={products}
@@ -53,7 +53,7 @@ function Product() {
                 itemType="products"
               />
             </Col>
-            <Col sm={9}>
+            <Col lg={9} xs={12} className="p-5">
               <ItemCard activeItem={activeItem} items={products} itemType="products" />
             </Col>
           </Row>
