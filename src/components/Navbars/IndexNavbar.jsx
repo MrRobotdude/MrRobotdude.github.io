@@ -212,7 +212,7 @@ function IndexNavbar() {
         className="btn-icon"
         color="success"
         type="button"
-        onClick={scrollToTop}
+        onClick={() => (window.location.href = "https://wa.me/628159088829")}
         style={{
           position: "fixed",
           bottom: "50%",

@@ -127,7 +127,7 @@ function ProductCarousel() {
             >
               <CardHeader>
                 <ForwardedCardImg
-                  src={product.imageUrl[0].url}
+                  src={require(`assets/img/ATS/${product.imageUrl[0].url}`)}
                   alt={product.productName}
                   className="preview-img"
                   ref={cardRef}

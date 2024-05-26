@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
+import PartnerCarousel from "components/Carousels/PartnerCarousel";
 
 function Partner() {
   return (
@@ -20,6 +21,11 @@ function Partner() {
               </h4>
             </Col>
           </Row>
+        </Container>
+      </div>
+      <div className="section section-partners pt-0" id="products-section">
+        <Container fluid className="p-5 d-inline">
+          <PartnerCarousel />
         </Container>
       </div>
     </>

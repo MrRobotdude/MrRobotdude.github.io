@@ -15,7 +15,7 @@ function AllItems({ itemType, items }) {
               }`}
             >
               <Card>
-                <img alt="Sample" src={item.imageUrl[0].url} />
+                <img alt="Sample" src={require(`assets/img/ATS/${item.imageUrl[0].url}`)} style={{height: '20vh', objectFit: 'contain', }}/>
                 <CardBody>
                   <CardTitle tag="h6" className="m-0">
                     {itemType === "products"

@@ -6,7 +6,7 @@ import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 const allItems = {
   imageUrl: [
     {
-      url: "https://picsum.photos/1280/720?random=25",
+      url: "pharmaceutical production.jpg",
       caption: null,
     },
   ],
@@ -54,9 +54,6 @@ function HeaderCarousel({ item }) {
       className="clear-filter"
       filter-color="blue"
       style={{
-        backgroundImage: `url(${
-          imageUrl[activeIndex]?.url || setActiveIndex(0)
-        })`,
         backgroundSize: "cover",
         minWidth: "100vw",
         minHeight: "100vh",
@@ -80,7 +77,10 @@ function HeaderCarousel({ item }) {
             key={index}
             className="header-image"
           >
-            <img src={item.url} alt={item.caption} />
+            <img
+              src={require(`assets/img/ATS/${item.url}`)}
+              alt={item.caption}
+            />
           </CarouselItem>
         ))}
         <a

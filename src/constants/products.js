@@ -3,6 +3,7 @@ const products = [
     productId: 1,
     productName: "Clean Air Conditioner",
     productDesc: [
+      "Clean Air-Conditioner will provide a hygienic environment with excellent air quality for workplaces that are in a confined space. People who do activities mostly indoors (such as office building, hospitals, restaurants, malls, etc.) are more prone to have their health compromised due to viruses and bacterias in the air circulation. Therefore, cleaner and safer air quality should be top priority.",
       "Talking about health issue, especially in commercial building and any close area room, there is no air condition product that concerns the air quality that is breathed in and out by any living things in the closed system circulation. Our clean air condition is the first air condition cassette type that is using a HEPA / ILPA filter. By this filter, the target is to filter any bacteria, dust virus by the HEPA / ULPA Filter.",
       "There are 2 advantages of this product that others' do not have:",
       "1. The product will spread not only cool air and dehumidified, but also clean air. Resulting cleaner and healthier air environment inside the room.",
@@ -29,15 +30,11 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=1",
-        caption: "Air Conditioner Sample 1",
-      },
-      {
-        url: "https://picsum.photos/1280/720?random=26",
-        caption: "Air Conditioner Sample 2",
+        url: "product/Clean Air Condition.jpg",
+        caption: "Clean Air Condition",
       },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
   {
     productId: 2,
@@ -73,19 +70,19 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=2",
+        url: "product/dehumidifier/Dehumidifier 2 edit.jpg",
         caption: "Dehumidifier Sample 1",
       },
       {
-        url: "https://picsum.photos/1280/720?random=3",
+        url: "product/dehumidifier/Dehumidifier 3 edit.jpg",
         caption: "Dehumidifier Sample 2",
       },
       {
-        url: "https://picsum.photos/1280/720?random=4",
+        url: "product/dehumidifier/Dehumidifier edit.jpg",
         caption: "Dehumidifier Sample 3",
       },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/dehumidifier/OK Brochure Dehumidifier NEW 2020.pdf",
   },
   {
     productId: 3,
@@ -116,19 +113,19 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=5",
+        url: "product/Direct Expansion AHU/Direct Expansion AHU 1 edit.jpg",
         caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 1",
       },
       {
-        url: "https://picsum.photos/1280/720?random=6",
+        url: "product/Direct Expansion AHU/Direct Expansion AHU (2) edit.jpg",
         caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 2",
       },
       {
-        url: "https://picsum.photos/1280/720?random=7",
+        url: "product/Direct Expansion AHU/Direct Expansion  Chiller Air Handling Unit (AHU) Edit.jpg",
         caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 3",
       },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/AHU/OK Brochure AHU NEW 2020.pdf",
   },
   {
     productId: 4,
@@ -153,19 +150,11 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=8",
+        url: "product/refrigration/refrigeration.png",
         caption: "Cool & Dry Storage Refrigeration Sample 1",
       },
-      {
-        url: "https://picsum.photos/1280/720?random=9",
-        caption: "Cool & Dry Storage Refrigeration Sample 2",
-      },
-      {
-        url: "https://picsum.photos/1280/720?random=10",
-        caption: "Cool & Dry Storage Refrigeration Sample 3",
-      },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/storage/OK Brochure Cold Storage NEW 2020.pdf",
   },
   {
     productId: 5,
@@ -194,27 +183,27 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=11",
+        url: "product/stability/Stability Test 2 edit.jpg",
         caption: "Stability Test Sample 1",
       },
       {
-        url: "https://picsum.photos/1280/720?random=12",
+        url: "product/stability/Stability Test 3 edit.jpg",
         caption: "Stability Test Sample 2",
       },
       {
-        url: "https://picsum.photos/1280/720?random=13",
+        url: "product/stability/Stability Test 4 edit.jpg",
         caption: "Stability Test Sample 3",
       },
       {
-        url: "https://picsum.photos/1280/720?random=14",
+        url: "product/stability/Stability Test 5 edit.jpg",
         caption: "Stability Test Sample 4",
       },
       {
-        url: "https://picsum.photos/1280/720?random=15",
+        url: "product/stability/Stability Test 6 edit.jpg",
         caption: "Stability Test Sample 5",
       },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
   {
     productId: 6,
@@ -241,17 +230,12 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=16",
+        url: "product/Laminar Air Flow edit.jpg",
         caption:
           "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem) Sample 1",
       },
-      {
-        url: "https://picsum.photos/1280/720?random=17",
-        caption:
-          "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem) Sample 2",
-      },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
   {
     productId: 7,
@@ -281,19 +265,19 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=18",
+        url: "product/chiller/chiller1 edit.jpg",
         caption: "Water / Brine Chiller Sample 1",
       },
       {
-        url: "https://picsum.photos/1280/720?random=19",
+        url: "product/chiller/chiller2 edit.jpg",
         caption: "Water / Brine Chiller Sample 2",
       },
       {
-        url: "https://picsum.photos/1280/720?random=20",
+        url: "product/chiller/chiller3 edit.jpg",
         caption: "Water / Brine Chiller Sample 3",
       },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
   {
     productId: 8,
@@ -305,15 +289,11 @@ const products = [
     generalSpecification: null,
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=21",
+        url: "product/Scrubber Dust Collector.jpg",
         caption: "Bag / Scrubber Dust Collector Sample 1",
       },
-      {
-        url: "https://picsum.photos/1280/720?random=24",
-        caption: "Bag / Scrubber Dust Collector Sample 2",
-      },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
   {
     productId: 9,
@@ -346,19 +326,11 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "https://picsum.photos/1280/720?random=22",
+        url: "product/timber kiln.png",
         caption: "Timber Kiln / Dryer Sample 1",
       },
-      {
-        url: "https://picsum.photos/1280/720?random=23",
-        caption: "Timber Kiln / Dryer Sample 2",
-      },
-      {
-        url: "https://picsum.photos/1280/720?random=24",
-        caption: "Timber Kiln / Dryer Sample 3",
-      },
     ],
-    pdfUrl: "https://lorempdf.com/140/85/1",
+    pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
   },
 ];
 

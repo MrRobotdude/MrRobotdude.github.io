@@ -15,11 +15,11 @@ function Contact() {
   );
 
   const handleMarketingButtonClick = useCallback(() => {
-    toggleModal("marketing");
+    toggleModal("CP-002");
   }, [toggleModal]);
 
   const handleCustomerServiceButtonClick = useCallback(() => {
-    toggleModal("customer_service");
+    toggleModal("CP-001");
   }, [toggleModal]);
 
   return (
