@@ -32,7 +32,7 @@ function About() {
                   className="image-container image-left"
                   style={{
                     backgroundImage:
-                      "url(https://picsum.photos/720/480?random=2)",
+                      "url(" + require("assets/img/ATS/OK-Unit.jpg") + ")",
                   }}
                 >
                   <p className="blockquote blockquote-info">
@@ -46,7 +46,7 @@ function About() {
                   className="image-container image-right"
                   style={{
                     backgroundImage:
-                      "url(https://picsum.photos/1049/880?random=3)",
+                      "url(" + require("assets/img/ATS/dehumidifier.jpg") + ")",
                   }}
                 ></div>
                 <h3 className="mb-0 mt-5 text-center">

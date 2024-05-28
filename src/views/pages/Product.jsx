@@ -11,6 +11,7 @@ import { products } from "constants/products";
 function Product() {
   const { activeId } = useParams();
   const [activeItem, setActiveItem] = useState(null);
+
   useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
@@ -21,7 +22,7 @@ function Product() {
       document.body.classList.remove("index-page");
       document.body.classList.remove("sidebar-collapse");
     };
-  });
+  }, []);
 
   useEffect(() => {
     const product = products.find(
@@ -29,11 +30,19 @@ function Product() {
     );
 
     setActiveItem(product);
-  }, [activeId]); // Add products to dependencies array to ensure it's updated
+  }, [activeId]);
 
   const handleItemClick = (product) => {
     setActiveItem(product);
   };
+
+  const backgroundStyle =
+    activeItem && activeItem.bgImage
+      ? {
+          backgroundImage: `url(${require(`assets/img/ATS/${activeItem.bgImage}`)})`,
+          backgroundSize: "cover",
+        }
+      : {};
 
   return (
     <>
@@ -53,8 +62,12 @@ function Product() {
                 itemType="products"
               />
             </Col>
-            <Col lg={9} xs={12} className="p-5">
-              <ItemCard activeItem={activeItem} items={products} itemType="products" />
+            <Col lg={9} xs={12} className="p-5" style={backgroundStyle}>
+              <ItemCard
+                activeItem={activeItem}
+                items={products}
+                itemType="products"
+              />
             </Col>
           </Row>
         </div>

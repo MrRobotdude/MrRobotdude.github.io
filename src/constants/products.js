@@ -1,6 +1,7 @@
 const products = [
   {
     productId: 1,
+    bgImage: "background/clean-air-conditioner.jpg",
     productName: "Clean Air Conditioner",
     productDesc: [
       "Clean Air-Conditioner will provide a hygienic environment with excellent air quality for workplaces that are in a confined space. People who do activities mostly indoors (such as office building, hospitals, restaurants, malls, etc.) are more prone to have their health compromised due to viruses and bacterias in the air circulation. Therefore, cleaner and safer air quality should be top priority.",
@@ -38,6 +39,7 @@ const products = [
   },
   {
     productId: 2,
+    bgImage: "background/precision-humidifier.jpg",
     productName: "Dehumidifier",
     productDesc: [
       "Dehumidifier is a unit that will condition the moisture inlet air so that the outlet air will have a certain targeted moisture content. Out product system is by outing the inlet temperature down, until it condensates and resulting the decrement of moisture content of the process air, then it will be heated up in order to get certain humidity.",
@@ -86,6 +88,7 @@ const products = [
   },
   {
     productId: 3,
+    bgImage: "background/air-handling-unit.jpg",
     productName: "Direct Expansion / Chiller Air Handling Unit (AHU)",
     productDesc: [
       "Concerning about the air quality of a building, storage, process room in industry or any other enclose room, our air handling unit will provide any inquiries regarding air parameter.",
@@ -129,6 +132,7 @@ const products = [
   },
   {
     productId: 4,
+    bgImage: "background/cold-storage.jpg",
     productName: "Cool & Dry Storage Refrigeration",
     productDesc: [
       "Storing material or product, could be tricky sometimes. Usually for keeping material or product, the parameter required is temperature only. However, sometimes, when the product or material is in open condition, without any primary packaging, then sometimes it needs also humidity parameter.",
@@ -158,6 +162,7 @@ const products = [
   },
   {
     productId: 5,
+    bgImage: "background/cold-storage.jpg",
     productName: "Stability Test",
     productDesc: [
       "Having trouble with such narrow tolerance in temperature and Humidity? Our product could deliver with 2oC of tolerance and 5% humidity tolerance.",
@@ -207,6 +212,7 @@ const products = [
   },
   {
     productId: 6,
+    bgImage: "background/air-handling-unit.jpg",
     productName: "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem)",
     productDesc: [
       "Laminar air flow is a device that is needed in order to make sure that any process being done in such a very clean environment class 100, either in process condition or in rest condition.",
@@ -239,6 +245,7 @@ const products = [
   },
   {
     productId: 7,
+    bgImage: "background/cold-storage.jpg",
     productName: "Water / Brine Chiller",
     productDesc: [
       "Our cost-efficient chiller will provide the chilled water with such low energy produced. Also, if needed, could be combined with any Building Automation System.",
@@ -281,6 +288,7 @@ const products = [
   },
   {
     productId: 8,
+    bgImage: "background/clean-air-conditioner.jpg",
     productName: "Bag / Scrubber Dust Collector",
     productDesc: [
       "Dust collection in some process activity become very crucial, since due to room cleanness, dust will lower machine reliability and will cause a cross contamination, and etc. But handling dust sometimes can be tricky, it could be needed at dry or wet condition. Different type of material being collected, different type of dust collector needed.",
@@ -297,6 +305,7 @@ const products = [
   },
   {
     productId: 9,
+    bgImage: "background/cold-storage.jpg",
     productName: "Timber Kiln / Dryer",
     productDesc: [
       "Drying process parameter needed is temperature and humidity. These two parameters could be provide by Air Handling Unit. The only thing that it makes different with Air Handling unit in process room, storage, commercial building is that the temperature is higher but the humidity is as low as possible.",

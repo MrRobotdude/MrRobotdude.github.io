@@ -49,14 +49,18 @@ function HeaderCarousel({ item }) {
     key: index,
   }));
 
+  if (!imageUrl[activeIndex]) setActiveIndex(0);
+
   return (
     <div
       className="clear-filter"
       filter-color="blue"
       style={{
-        backgroundSize: "cover",
-        minWidth: "100vw",
-        minHeight: "100vh",
+        // backgroundImage:
+        //   "url(" + require("assets/img/ATS/background/1345-dew-glass-hd-wallpaper-2560x1600.jpg") + ")",
+        // backgroundSize: "contain",
+        // minWidth: "100vw",
+        // minHeight: "100vh",
       }}
     >
       <Carousel

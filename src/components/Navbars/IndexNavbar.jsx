@@ -209,7 +209,7 @@ function IndexNavbar() {
         </Button>
       )}
       <Button
-        className="btn-icon"
+        className="btn-icon whatsapp-button"
         color="success"
         type="button"
         onClick={() => (window.location.href = "https://wa.me/628159088829")}

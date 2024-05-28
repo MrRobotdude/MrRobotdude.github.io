@@ -1,13 +1,21 @@
 import React from "react";
-import { Row, Col, Card, CardBody, CardTitle } from "reactstrap";
+import {
+  Row,
+  Col,
+  Card,
+  CardBody,
+  CardTitle,
+  CardImg,
+  CardHeader,
+} from "reactstrap";
 import { Link } from "react-router-dom";
 
 function AllItems({ itemType, items }) {
   return (
-    <Row className="my-5 mx-5">
+    <Row>
       {items &&
         items.map((item, index) => (
-          <Col key={index} lg="4" md="12">
+          <Col key={index} lg="4" md="6" sm="12">
             <Link
               className="h6 text-dark"
               to={`/${itemType}/${
@@ -15,7 +23,13 @@ function AllItems({ itemType, items }) {
               }`}
             >
               <Card>
-                <img alt="Sample" src={require(`assets/img/ATS/${item.imageUrl[0].url}`)} style={{height: '20vh', objectFit: 'contain', }}/>
+                <CardHeader style={{height: "200px"}}>
+                  <CardImg
+                    alt="Sample"
+                    src={require(`assets/img/ATS/${item.imageUrl[0].url}`)}
+                    style={{height: "100%", objectFit: "cover"}}
+                  />
+                </CardHeader>
                 <CardBody>
                   <CardTitle tag="h6" className="m-0">
                     {itemType === "products"
