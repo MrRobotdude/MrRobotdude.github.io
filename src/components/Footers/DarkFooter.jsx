@@ -125,9 +125,6 @@ function DarkFooter() {
               <Link to={"products"}>Products</Link>
             </li>
             <li>
-              <Link to={"news"}>News</Link>
-            </li>
-            <li>
               <Link to={"partners"}>Partners</Link>
             </li>
             <li>

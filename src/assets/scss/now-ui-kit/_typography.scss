@@ -416,3 +416,9 @@ p {
     border-width: 2px;
   }
 }
+
+@media (min-width: 576px) {
+  .text-justify-desktop {
+    text-align: justify;
+  }
+}

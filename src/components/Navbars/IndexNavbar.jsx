@@ -59,7 +59,7 @@ function IndexNavbar() {
               to="/"
               tag={Link}
               id="navbar-brand"
-              style={{ fontSize: "20px", fontWeight: "bold" }}
+              style={{ fontSize: "2vh", fontWeight: "bold" }}
             >
               <img
                 alt="logo"
@@ -123,7 +123,12 @@ function IndexNavbar() {
                       key={product.productId}
                       tag={Link}
                       to={`/products/${product.productId}`}
-                      style={{ fontSize: "14px", fontWeight: "bold" }}
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        whiteSpace: "normal",
+                        wordBreak: "break-word",
+                      }}
                     >
                       {product.productName}
                     </DropdownItem>
@@ -152,7 +157,12 @@ function IndexNavbar() {
                       key={service.serviceId}
                       tag={Link}
                       to={`/services/${service.serviceId}`}
-                      style={{ fontSize: "14px", fontWeight: "bold" }}
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: "bold",
+                        whiteSpace: "normal",
+                        wordBreak: "break-word",
+                      }}
                     >
                       {service.serviceName}
                     </DropdownItem>

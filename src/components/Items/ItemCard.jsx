@@ -17,12 +17,16 @@ function ItemCard({ activeItem, items, itemType }) {
         <TabContent activeTab={activeItem ? activeItem.productId : "0"}>
           {activeItem ? (
             <TabPane tabId={activeItem.productId}>
-              <Card body className="p-5 text-justify">
+              <Card body className="p-5">
                 <CardTitle tag="h3" className="font-weight-bold">
                   {activeItem.productName}
                 </CardTitle>
                 {activeItem.productDesc.map((desc, index) => (
-                  <CardText key={index} tag={"h5"}>
+                  <CardText
+                    key={index}
+                    tag={"h5"}
+                    className="text-justify-desktop"
+                  >
                     {desc}
                   </CardText>
                 ))}
@@ -84,7 +88,11 @@ function ItemCard({ activeItem, items, itemType }) {
                   {activeItem.serviceName}
                 </CardTitle>
                 {activeItem.serviceDesc.map((desc, index) => (
-                  <CardText key={index} tag={"h5"}>
+                  <CardText
+                    key={index}
+                    tag={"h5"}
+                    className="text-justify-desktop"
+                  >
                     {desc}
                   </CardText>
                 ))}

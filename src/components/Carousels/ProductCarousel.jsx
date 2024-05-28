@@ -131,6 +131,7 @@ function ProductCarousel() {
                   alt={product.productName}
                   className="preview-img"
                   ref={cardRef}
+                  style={{ objectFit: "contain" }}
                 />
                 <CardImgOverlay
                   className={
