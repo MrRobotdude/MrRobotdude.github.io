@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a65e4d5e.css",
-    "main.js": "/static/js/main.fffafdfe.js",
+    "main.css": "/static/css/main.b96e89bc.css",
+    "main.js": "/static/js/main.038751e0.js",
     "static/media/Designing.jpg": "/static/media/Designing.208e152f756d9486cd5c.jpg",
     "static/media/air-handling-unit.jpg": "/static/media/air-handling-unit.1f059d5b1764285db98a.jpg",
     "static/media/Manufacturing 3.jpg": "/static/media/Manufacturing 3.a13a8c57e4383c5a67be.jpg",
@@ -72,7 +72,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.a65e4d5e.css",
-    "static/js/main.fffafdfe.js"
+    "static/css/main.b96e89bc.css",
+    "static/js/main.038751e0.js"
   ]
 }
