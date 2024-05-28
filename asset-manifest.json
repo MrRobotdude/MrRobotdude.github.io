@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.16cbe521.css",
-    "main.js": "/static/js/main.1ff375a0.js",
+    "main.css": "/static/css/main.a65e4d5e.css",
+    "main.js": "/static/js/main.fffafdfe.js",
     "static/media/Designing.jpg": "/static/media/Designing.208e152f756d9486cd5c.jpg",
+    "static/media/air-handling-unit.jpg": "/static/media/air-handling-unit.1f059d5b1764285db98a.jpg",
     "static/media/Manufacturing 3.jpg": "/static/media/Manufacturing 3.a13a8c57e4383c5a67be.jpg",
     "static/media/Manufacturing 4.jpg": "/static/media/Manufacturing 4.13296e92d62d42ef3538.jpg",
+    "static/media/OK-Unit.jpg": "/static/media/OK-Unit.d515bc0ac8350f7c5860.jpg",
+    "static/media/clean-air-conditioner.jpg": "/static/media/clean-air-conditioner.f8690f19c13ed73bb4f4.jpg",
     "static/media/pharmaceutical production.jpg": "/static/media/pharmaceutical production.22ce1708a4b10c64c6c1.jpg",
+    "static/media/cold-storage.jpg": "/static/media/cold-storage.796380522381f8fdf52a.jpg",
     "static/media/partners-header.jpg": "/static/media/partners-header.6f2ac87a20bcd9c4dbd7.jpg",
     "static/media/bg6.jpg": "/static/media/bg6.dc603b7416966b84ac68.jpg",
     "static/media/Direct Expansion  Chiller Air Handling Unit (AHU) Edit.jpg": "/static/media/Direct Expansion  Chiller Air Handling Unit (AHU) Edit.bf37a3a3688ca362eacd.jpg",
@@ -13,13 +17,16 @@
     "static/media/Dehumidifier edit.jpg": "/static/media/Dehumidifier edit.2540670f3320a88f40c2.jpg",
     "static/media/Certification.jpg": "/static/media/Certification.43c9a8318dac17357e9b.jpg",
     "static/media/Direct Expansion AHU (2) edit.jpg": "/static/media/Direct Expansion AHU (2) edit.b30536a6d865fb48de69.jpg",
+    "static/media/precision-humidifier.jpg": "/static/media/precision-humidifier.4fb557aa3b488a88cf31.jpg",
     "static/media/Direct Expansion AHU 1 edit.jpg": "/static/media/Direct Expansion AHU 1 edit.bc2101432803a459dfa3.jpg",
     "static/media/Stability Test 5 edit.jpg": "/static/media/Stability Test 5 edit.b0943fde20dc3ced0483.jpg",
+    "static/media/refrigerant-humidifier.jpg": "/static/media/refrigerant-humidifier.4e0a72099be54d0b110a.jpg",
     "static/media/chiller3 edit.jpg": "/static/media/chiller3 edit.cd0f4b49023d017d1774.jpg",
     "static/media/Stability Test 3 edit.jpg": "/static/media/Stability Test 3 edit.d3a9a6954ad5beff5b0e.jpg",
     "static/media/chiller1 edit.jpg": "/static/media/chiller1 edit.b32651093317b68b905a.jpg",
     "static/media/Clean Air Condition.jpg": "/static/media/Clean Air Condition.04ad443b83ebfe6bcd57.jpg",
     "static/media/Laminar Air Flow edit.jpg": "/static/media/Laminar Air Flow edit.30656306af291e7037cd.jpg",
+    "static/media/dehumidifier.jpg": "/static/media/dehumidifier.8398b22628102543fa54.jpg",
     "static/media/Stability Test 4 edit.jpg": "/static/media/Stability Test 4 edit.1841fd328f5bc2dcccf0.jpg",
     "static/media/chiller2 edit.jpg": "/static/media/chiller2 edit.5fb8a6d5b4dec31efc8b.jpg",
     "static/media/Stability Test 6 edit.jpg": "/static/media/Stability Test 6 edit.36888050973bd729b9c1.jpg",
@@ -65,7 +72,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.16cbe521.css",
-    "static/js/main.1ff375a0.js"
+    "static/css/main.a65e4d5e.css",
+    "static/js/main.fffafdfe.js"
   ]
 }
