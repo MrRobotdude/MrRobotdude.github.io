@@ -1,0 +1,10 @@
+.align-items-stretch {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-stretch .flex-fill {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

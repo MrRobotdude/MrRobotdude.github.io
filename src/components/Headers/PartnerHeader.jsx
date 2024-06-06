@@ -29,6 +29,7 @@ function PartnerHeader() {
       <div
         className="page-header page-header-small clear-filter"
         filter-color="blue"
+        id="header-section"
       >
         <div
           className="page-header-image"
@@ -46,11 +47,9 @@ function PartnerHeader() {
               className="content-center brand py-5"
               style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
             >
-              <h1 className="slide-in-bottom">
-                Discover Our Network Of Trusted Partners
-              </h1>
+              <h1 className="slide-in-bottom">Our Projects</h1>
               <h3 className="slide-in-bottom mb-0">
-                Unlock new opportunities and drive mutual success
+                Delivering Excellence Across Indonesia
               </h3>
             </div>
           </Container>

@@ -26,7 +26,11 @@ function ContactUsHeader() {
 
   return (
     <>
-      <div className="page-header page-header-small clear-filter" filter-color="blue">
+      <div
+        className="page-header page-header-small clear-filter"
+        filter-color="blue"
+        id="header-section"
+      >
         <div
           className="page-header-image"
           style={{

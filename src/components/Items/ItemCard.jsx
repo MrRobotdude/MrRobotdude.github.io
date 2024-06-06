@@ -7,6 +7,7 @@ import {
   CardText,
   CardLink,
   CardImg,
+  Row,
 } from "reactstrap";
 import AllItems from "./AllItems";
 
@@ -45,23 +46,28 @@ function ItemCard({ activeItem, items, itemType }) {
                 <CardTitle tag="h3" className="font-weight-bold mt-3">
                   Photo of Products
                 </CardTitle>
-
-                {activeItem.imageUrl.map((image, index) => (
-                  <div key={index}>
-                    <CardText tag="h5">{image.caption}</CardText>
+                <Row>
+                  {activeItem.imageUrl.map((image, index) => (
+                    // <Col key={index}>
                     <CardImg
                       src={require(`assets/img/ATS/${image.url}`)}
-                      alt={image.caption}
                       className="mb-4"
+                      style={{
+                        height: "200px",
+                        width: "auto",
+                        margin: "auto",
+                      }}
                     />
-                  </div>
-                ))}
+                    // </Col>
+                  ))}
+                </Row>
 
                 <CardTitle tag="h3" className="font-weight-bold">
                   For detailed information
                 </CardTitle>
                 <CardText tag={"h5"}>
                   Please check our documentation:
+                  <br />
                   <CardLink
                     href={activeItem.pdfUrl}
                     download={activeItem.pdfUrl.split("/").pop()}
@@ -96,15 +102,21 @@ function ItemCard({ activeItem, items, itemType }) {
                     {desc}
                   </CardText>
                 ))}
-                {activeItem.imageUrl.map((image, index) => (
-                  <CardText key={index} tag={"h5"}>
-                    {image.caption}
+                <Row>
+                  {activeItem.imageUrl.map((image, index) => (
+                    // <Col key={index}>
                     <CardImg
                       src={require(`assets/img/ATS/${image.url}`)}
-                      alt=""
+                      className="mb-4"
+                      style={{
+                        height: "200px",
+                        width: "auto",
+                        margin: "auto",
+                      }}
                     />
-                  </CardText>
-                ))}
+                    // </Col>
+                  ))}
+                </Row>
               </Card>
             </TabPane>
           ) : (

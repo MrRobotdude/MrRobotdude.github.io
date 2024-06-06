@@ -40,9 +40,8 @@ class CopyToClipboard extends Component {
   };
 
   resetTooltip = () => {
-    
-        this.setState({ clicked: "Click to Copy Number" });
-  }
+    this.setState({ clicked: "Click to Copy Number" });
+  };
 
   render() {
     return (
@@ -104,13 +103,7 @@ function HomeHeader() {
         style={{ height: "100vh" }}
         ref={pageHeader}
       >
-        <div
-          className="page-header-image"
-          style={{
-            backgroundImage: "url(https://picsum.photos/1049/880?random=1)",
-          }}
-          ref={pageHeader}
-        ></div>
+        <div className="page-header-image home-header-image" ref={pageHeader}></div>
         <Container>
           <div
             className="content-center brand pt-5 mt-5"
@@ -122,7 +115,7 @@ function HomeHeader() {
               src={require("assets/img/ats-logo-only.png")}
             ></img>
             <h1 className="h1-seo slide-in-bottom">Alam Tehnik Semesta</h1>
-            <h3 className="slide-in-bottom">Air Specialist Company</h3>
+            <h3 className="slide-in-bottom">Customize For Compliance</h3>
           </div>
         </Container>
         <div className="text-center">

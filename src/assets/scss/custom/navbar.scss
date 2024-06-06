@@ -1,0 +1,47 @@
+/* IndexNavbar.css */
+
+.navbar-brand-custom {
+  font-size: 2vh !important;
+  font-weight: bold !important;
+}
+
+.navbar-logo {
+  height: 25px !important;
+  width: 25px !important;
+}
+
+.nav-item-text {
+  font-size: 14px !important;
+  font-weight: bold !important;
+}
+
+
+@media (max-width: 992px) {
+  .dropdown-item-custom {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
+
+.nav-contact-button {
+  padding: 0.5rem 1rem;
+}
+
+.scroll-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  color: white;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 50%;
+  right: 0;
+  z-index: 9999;
+  color: white;
+  font-size: 30px;
+  padding: 20px;
+  padding-right: 40px;
+}

@@ -15,22 +15,22 @@ function AllItems({ itemType, items }) {
     <Row>
       {items &&
         items.map((item, index) => (
-          <Col key={index} lg="4" md="6" sm="12">
+          <Col key={index} lg="4" md="6" sm="12" className="mb-4">
             <Link
               className="h6 text-dark"
               to={`/${itemType}/${
                 itemType === "products" ? item.productId : item.serviceId
               }`}
             >
-              <Card>
-                <CardHeader style={{height: "200px"}}>
+              <Card className="h-100">
+                <CardHeader className="p-0" style={{ height: "200px" }}>
                   <CardImg
                     alt="Sample"
                     src={require(`assets/img/ATS/${item.imageUrl[0].url}`)}
-                    style={{height: "100%", objectFit: "cover"}}
+                    style={{ height: "100%", objectFit: "cover" }}
                   />
                 </CardHeader>
-                <CardBody>
+                <CardBody className="d-flex flex-column">
                   <CardTitle tag="h6" className="m-0">
                     {itemType === "products"
                       ? item.productName

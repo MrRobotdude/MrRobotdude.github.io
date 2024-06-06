@@ -103,9 +103,9 @@ function DarkFooter() {
             <br />
             <span className="mb-0">Fax.: (021) 3803072</span>
             <br />
-            <span>
-              Whatsapp <Link to={"https://wa.me/628159088829"}>Click here</Link>
-            </span>
+            <Link to={"https://wa.me/628159088829"}>
+              <span>Whatsapp Click here</span>
+            </Link>
           </Col>
         </Row>
       </Container>

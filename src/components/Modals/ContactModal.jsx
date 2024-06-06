@@ -1,10 +1,23 @@
-import { useCallback, useState } from "react";
-import { Modal, ModalBody, FormGroup, Label, Input, Button } from "reactstrap";
+import React, { useCallback, useState } from "react";
+import {
+  Modal,
+  ModalBody,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+  Alert,
+  Container,
+  Row,
+  Col,
+} from "reactstrap";
 import ReCAPTCHA from "react-google-recaptcha";
 import { createMessage } from "api";
 
 export default function ContactModal(props) {
-  const { modal, toggleModal, selectedEmail, setSelectedEmail } = props;
+  const [alert, setAlert] = useState(false);
+  const { modal, toggleModal, selectedEmail, setSelectedEmail, onSuccess } =
+    props;
   const [formData, setFormData] = useState({
     name: "",
     phoneNumber: "",
@@ -13,7 +26,7 @@ export default function ContactModal(props) {
   });
   const [captchaToken, setCaptchaToken] = useState("");
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [errors, setErrors] = useState([]);
 
   const handleInputChange = useCallback((e) => {
     const { name, value } = e.target;
@@ -33,28 +46,31 @@ export default function ContactModal(props) {
 
   const validateForm = useCallback(() => {
     const { name, phoneNumber, email, message } = formData;
+    const validationErrors = [];
+
     if (!name.trim()) {
-      alert("Please enter your name.");
-      return false;
+      validationErrors.push("Please enter your name.");
     }
 
     if (!/^\d{7,15}$/.test(phoneNumber)) {
-      alert("Please enter a valid phone number.");
-      return false;
+      validationErrors.push("Please enter a valid phone number.");
     }
 
     if (!/\S+@\S+\.\S+/.test(email)) {
-      alert("Please enter a valid email address.");
-      return false;
+      validationErrors.push("Please enter a valid email address.");
     }
 
     if (!message.trim()) {
-      alert("Please enter your message.");
-      return false;
+      validationErrors.push("Please enter your message.");
     }
 
     if (!captchaToken) {
-      alert("Please complete the CAPTCHA.");
+      validationErrors.push("Please complete the CAPTCHA.");
+    }
+
+    if (validationErrors.length > 0) {
+      setErrors(validationErrors);
+      setAlert(true);
       return false;
     }
 
@@ -70,6 +86,8 @@ export default function ContactModal(props) {
     });
     setCaptchaToken("");
     setSelectedEmail("");
+    setErrors([]);
+    setAlert(false);
   }, [setSelectedEmail]);
 
   const handleSubmit = async (e) => {
@@ -79,9 +97,7 @@ export default function ContactModal(props) {
     }
 
     setLoading(true);
-    setError(null);
-
-    
+    setErrors([]);
 
     try {
       await createMessage(
@@ -91,20 +107,28 @@ export default function ContactModal(props) {
         formData.email,
         formData.message
       );
-      alert("Message sent successfully!");
-      toggleModal();
+      onSuccess(
+        "Your message has been sent successfully! 🚀 We're thrilled to assist you and will get back to you as soon as possible. Thank you for reaching out to us!"
+      );
+      handleToggleModal();
       resetForm();
     } catch (err) {
-      setError("Failed to send message. Please try again.");
+      setErrors(["Failed to send message. Please try again later."]);
+      setAlert(true);
     } finally {
       setLoading(false);
     }
   };
 
+  const handleToggleModal = () => {
+    setAlert(false);
+    toggleModal();
+  };
+
   return (
-    <Modal isOpen={modal} toggle={toggleModal}>
+    <Modal isOpen={modal} toggle={handleToggleModal}>
       <div className="modal-header justify-content-center">
-        <button className="close" type="button" onClick={toggleModal}>
+        <button className="close" type="button" onClick={handleToggleModal}>
           <i className="now-ui-icons ui-1_simple-remove"></i>
         </button>
         <h4 className="title title-up">Contact Us</h4>
@@ -164,14 +188,39 @@ export default function ContactModal(props) {
             />
           </FormGroup>
           <ReCAPTCHA
-            sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+            sitekey={process.env.REACT_APP_SITE_KEY}
             onChange={handleCaptchaChange}
           />
-          {error && <p className="text-danger">{error}</p>}
+          {alert && (
+            <Alert color="danger" isOpen={alert}>
+              <Container>
+                <Row>
+                  <Col xs="11" className="m-0 p-0">
+                    <ul className="m-0 p-0 ml-3">
+                      {errors.map((error, index) => (
+                        <li key={index}>{error}</li>
+                      ))}
+                    </ul>
+                  </Col>
+                  <Col xs="1" className="m-0 p-0">
+                    <button
+                      type="button"
+                      className="close"
+                      onClick={() => setAlert(false)}
+                    >
+                      <span aria-hidden="true">
+                        <i className="now-ui-icons ui-1_simple-remove"></i>
+                      </span>
+                    </button>
+                  </Col>
+                </Row>
+              </Container>
+            </Alert>
+          )}
           <Button color="info" type="submit" disabled={loading}>
             {loading ? "Sending..." : "Submit"}
           </Button>
-          <Button color="danger" type="button" onClick={toggleModal}>
+          <Button color="danger" type="button" onClick={handleToggleModal}>
             Cancel
           </Button>
         </form>

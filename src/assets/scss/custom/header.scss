@@ -52,4 +52,39 @@
   }
 }
 
+@keyframes changeBackground {
+  0% {
+    background-image: url('../../img/ATS/header1.jpg');
+  }
+  24% {
+    background-image: url('../../img/ATS/header1.jpg');
+  }
+  25% {
+    background-image: url('../../img/ATS/header2.jpg');
+  }
+  49% {
+    background-image: url('../../img/ATS/header2.jpg');
+  }
+  50% {
+    background-image: url('../../img/ATS/header3.jpg');
+  }
+  74% {
+    background-image: url('../../img/ATS/header3.jpg');
+  }
+  75% {
+    background-image: url('../../img/ATS/header4.jpg');
+  }
+  99% {
+    background-image: url('../../img/ATS/header4.jpg');
+  }
+  100% {
+    background-image: url('../../img/ATS/header1.jpg');
+  }
+}
+
+.home-header-image {
+  animation: changeBackground 20s ease-in-out infinite ;
+}
+
+
 

@@ -32,7 +32,6 @@ const products = [
     imageUrl: [
       {
         url: "product/Clean Air Condition.jpg",
-        caption: "Clean Air Condition",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
@@ -73,15 +72,12 @@ const products = [
     imageUrl: [
       {
         url: "product/dehumidifier/Dehumidifier 2 edit.jpg",
-        caption: "Dehumidifier Sample 1",
       },
       {
         url: "product/dehumidifier/Dehumidifier 3 edit.jpg",
-        caption: "Dehumidifier Sample 2",
       },
       {
         url: "product/dehumidifier/Dehumidifier edit.jpg",
-        caption: "Dehumidifier Sample 3",
       },
     ],
     pdfUrl: "assets/pdf/dehumidifier/OK Brochure Dehumidifier NEW 2020.pdf",
@@ -117,15 +113,12 @@ const products = [
     imageUrl: [
       {
         url: "product/Direct Expansion AHU/Direct Expansion AHU 1 edit.jpg",
-        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 1",
       },
       {
         url: "product/Direct Expansion AHU/Direct Expansion AHU (2) edit.jpg",
-        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 2",
       },
       {
         url: "product/Direct Expansion AHU/Direct Expansion  Chiller Air Handling Unit (AHU) Edit.jpg",
-        caption: "Direct Expansion / Chiller Air Handling Unit (AHU) Sample 3",
       },
     ],
     pdfUrl: "assets/pdf/AHU/OK Brochure AHU NEW 2020.pdf",
@@ -155,7 +148,6 @@ const products = [
     imageUrl: [
       {
         url: "product/refrigration/refrigeration.png",
-        caption: "Cool & Dry Storage Refrigeration Sample 1",
       },
     ],
     pdfUrl: "assets/pdf/storage/OK Brochure Cold Storage NEW 2020.pdf",
@@ -188,24 +180,10 @@ const products = [
     ],
     imageUrl: [
       {
-        url: "product/stability/Stability Test 2 edit.jpg",
-        caption: "Stability Test Sample 1",
-      },
-      {
-        url: "product/stability/Stability Test 3 edit.jpg",
-        caption: "Stability Test Sample 2",
-      },
-      {
-        url: "product/stability/Stability Test 4 edit.jpg",
-        caption: "Stability Test Sample 3",
-      },
-      {
         url: "product/stability/Stability Test 5 edit.jpg",
-        caption: "Stability Test Sample 4",
       },
       {
         url: "product/stability/Stability Test 6 edit.jpg",
-        caption: "Stability Test Sample 5",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
@@ -237,8 +215,7 @@ const products = [
     imageUrl: [
       {
         url: "product/Laminar Air Flow edit.jpg",
-        caption:
-          "Laminar Air Flow / Sampling Booth / Weighing Booth (Idem) Sample 1",
+        caption: "",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
@@ -273,15 +250,12 @@ const products = [
     imageUrl: [
       {
         url: "product/chiller/chiller1 edit.jpg",
-        caption: "Water / Brine Chiller Sample 1",
       },
       {
         url: "product/chiller/chiller2 edit.jpg",
-        caption: "Water / Brine Chiller Sample 2",
       },
       {
         url: "product/chiller/chiller3 edit.jpg",
-        caption: "Water / Brine Chiller Sample 3",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
@@ -298,7 +272,6 @@ const products = [
     imageUrl: [
       {
         url: "product/Scrubber Dust Collector.jpg",
-        caption: "Bag / Scrubber Dust Collector Sample 1",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
@@ -336,7 +309,6 @@ const products = [
     imageUrl: [
       {
         url: "product/timber kiln.png",
-        caption: "Timber Kiln / Dryer Sample 1",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",

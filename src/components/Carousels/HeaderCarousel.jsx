@@ -55,19 +55,14 @@ function HeaderCarousel({ item }) {
     <div
       className="clear-filter"
       filter-color="blue"
-      style={{
-        // backgroundImage:
-        //   "url(" + require("assets/img/ATS/background/1345-dew-glass-hd-wallpaper-2560x1600.jpg") + ")",
-        // backgroundSize: "contain",
-        // minWidth: "100vw",
-        // minHeight: "100vh",
-      }}
+      style={{ height: "100%" }}
     >
       <Carousel
         activeIndex={activeIndex}
         next={next}
         previous={previous}
         className="carousel-height"
+        
       >
         <CarouselIndicators
           items={carouselItems}

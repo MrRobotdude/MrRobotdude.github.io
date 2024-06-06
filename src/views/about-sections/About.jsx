@@ -36,8 +36,7 @@ function About() {
                   }}
                 >
                   <p className="blockquote blockquote-info">
-                    "Giving all the best from us, we can achieve customers'
-                    satisfactions. And that is what we really care about."
+                    "Customize For Compliance"
                   </p>
                 </div>
               </Col>

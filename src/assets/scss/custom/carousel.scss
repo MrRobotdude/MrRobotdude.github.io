@@ -1,4 +1,16 @@
-// .carousel-height{
-//     height: 640px;
-//     min-width: 100vw;
-// }
+.carousel-height{
+    height: 100% !important;
+}
+
+.carousel-inner {
+  display: flex;
+//   justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-inner img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain; /* Ensure image scales correctly */
+}

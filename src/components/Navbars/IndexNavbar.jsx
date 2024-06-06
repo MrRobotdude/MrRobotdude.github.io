@@ -59,13 +59,12 @@ function IndexNavbar() {
               to="/"
               tag={Link}
               id="navbar-brand"
-              style={{ fontSize: "2vh", fontWeight: "bold" }}
+              className="navbar-brand-custom"
             >
               <img
                 alt="logo"
                 src={require("assets/img/ats-logo-only.png")}
-                style={{ height: 25, width: 25 }}
-                className="mx-3"
+                className="mx-3 navbar-logo"
               />
               Alam Tehnik Semesta
             </NavbarBrand>
@@ -91,14 +90,12 @@ function IndexNavbar() {
             <Nav navbar>
               <NavItem>
                 <NavLink tag={Link} to="/">
-                  <p style={{ fontSize: "14px", fontWeight: "bold" }}>Home</p>
+                  <p className="nav-item-text">Home</p>
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink tag={Link} to="/about-us">
-                  <p style={{ fontSize: "14px", fontWeight: "bold" }}>
-                    About Us
-                  </p>
+                  <p className="nav-item-text">About</p>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>
@@ -106,7 +103,7 @@ function IndexNavbar() {
                   caret
                   color="default"
                   nav
-                  style={{ fontSize: "14px", fontWeight: "bold" }}
+                  className="nav-item-text"
                 >
                   <p>Products</p>
                 </DropdownToggle>
@@ -114,7 +111,7 @@ function IndexNavbar() {
                   <DropdownItem
                     tag={Link}
                     to="/products"
-                    style={{ fontSize: "14px", fontWeight: "bold" }}
+                    className="nav-item-text"
                   >
                     All products
                   </DropdownItem>
@@ -123,12 +120,7 @@ function IndexNavbar() {
                       key={product.productId}
                       tag={Link}
                       to={`/products/${product.productId}`}
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                        whiteSpace: "normal",
-                        wordBreak: "break-word",
-                      }}
+                      className="nav-item-text dropdown-item-custom"
                     >
                       {product.productName}
                     </DropdownItem>
@@ -140,7 +132,7 @@ function IndexNavbar() {
                   caret
                   color="default"
                   nav
-                  style={{ fontSize: "14px", fontWeight: "bold" }}
+                  className="nav-item-text"
                 >
                   <p>Services</p>
                 </DropdownToggle>
@@ -148,7 +140,7 @@ function IndexNavbar() {
                   <DropdownItem
                     tag={Link}
                     to="/services"
-                    style={{ fontSize: "14px", fontWeight: "bold" }}
+                    className="nav-item-text"
                   >
                     All services
                   </DropdownItem>
@@ -157,12 +149,7 @@ function IndexNavbar() {
                       key={service.serviceId}
                       tag={Link}
                       to={`/services/${service.serviceId}`}
-                      style={{
-                        fontSize: "14px",
-                        fontWeight: "bold",
-                        whiteSpace: "normal",
-                        wordBreak: "break-word",
-                      }}
+                      className="nav-item-text dropdown-item-custom"
                     >
                       {service.serviceName}
                     </DropdownItem>
@@ -171,14 +158,12 @@ function IndexNavbar() {
               </UncontrolledDropdown>
               {/* <NavItem>
                 <NavLink tag={Link} to="/news">
-                  <p style={{ fontSize: "14px", fontWeight: "bold" }}>News</p>
+                  <p className="nav-item-text">News</p>
                 </NavLink>
               </NavItem> */}
               <NavItem>
                 <NavLink tag={Link} to="/partners">
-                  <p style={{ fontSize: "14px", fontWeight: "bold" }}>
-                    Partners
-                  </p>
+                  <p className="nav-item-text">Projects</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -192,9 +177,7 @@ function IndexNavbar() {
                     className="now-ui-icons ui-1_send mr-2 "
                     style={{ fontSize: "12px" }}
                   ></i>
-                  <p style={{ fontSize: "14px", fontWeight: "bold" }}>
-                    Contact Us
-                  </p>
+                  <p className="nav-item-text">Contact Us</p>
                 </Button>
               </NavItem>
             </Nav>

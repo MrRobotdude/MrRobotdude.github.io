@@ -1,21 +1,26 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
+import LoadingScreen from "react-loading-screen"
 
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
 import "assets/demo/demo.css?v=1.5.0";
 import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 
-import Home from "views/pages/Home";
-import Service from "views/pages/Service";
-import Product from "views/pages/Product";
-import AboutUs from "views/pages/AboutUs";
-import ContactUs from "views/pages/ContactUs";
-import Partners from "views/pages/Partners";
-import NotFound from "views/pages/NotFound";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import DarkFooter from "components/Footers/DarkFooter";
+
+
+
+// Lazy load the components
+const Home = lazy(() => import("views/pages/Home"));
+const Service = lazy(() => import("views/pages/Service"));
+const Product = lazy(() => import("views/pages/Product"));
+const AboutUs = lazy(() => import("views/pages/AboutUs"));
+const ContactUs = lazy(() => import("views/pages/ContactUs"));
+const Partners = lazy(() => import("views/pages/Partners"));
+const NotFound = lazy(() => import("views/pages/NotFound"));
 
 const routes = [
   { path: "/", component: Home },
@@ -30,15 +35,6 @@ const routes = [
 ];
 
 const Content = () => {
-  const [loadedPages, setLoadedPages] = useState({});
-
-  const handleLoad = (pageName) => {
-    setLoadedPages((prevPages) => ({
-      ...prevPages,
-      [pageName]: true,
-    }));
-  };
-
   return (
     <div
       style={{
@@ -57,14 +53,21 @@ const Content = () => {
                 key={index}
                 path={route.path}
                 element={
-                  <Suspense fallback={<div>Loading...</div>}>
-                    {loadedPages[route.component.name]
-                      ? React.createElement(route.component, null, null)
-                      : React.createElement(
-                          route.component,
-                          { onLoad: () => handleLoad(route.component.name) },
-                          null
-                        )}
+                  <Suspense
+                    fallback={
+                      <LoadingScreen
+                        loading={true}
+                        bgColor="rgba(255,255,255,0.8)"
+                        spinnerColor="#9ee5f8"
+                        textColor="#676767"
+                        logoSrc=""
+                        text=""
+                      >
+                        {" "}
+                      </LoadingScreen>
+                    }
+                  >
+                    {React.createElement(route.component)}
                   </Suspense>
                 }
               />
