@@ -205,7 +205,7 @@ function IndexNavbar() {
         className="btn-icon whatsapp-button"
         color="success"
         type="button"
-        onClick={() => (window.location.href = "https://wa.me/628159088829")}
+        onClick={() => window.open("https://wa.me/628159088829")}
         style={{
           position: "fixed",
           bottom: "50%",

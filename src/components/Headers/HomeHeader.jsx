@@ -129,7 +129,7 @@ function HomeHeader() {
           >
             Call Center
             <CopyToClipboard />. or Contact Us
-            <a href="contact-us">&nbsp;Now</a>.
+            <a href="#/contact-us">&nbsp;Now</a>.
           </h4>
         </div>
       </div>
