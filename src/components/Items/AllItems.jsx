@@ -15,7 +15,7 @@ function AllItems({ itemType, items }) {
     <Row>
       {items &&
         items.map((item, index) => (
-          <Col key={index} lg="4" md="6" sm="12" className="mb-4">
+          <Col key={index} md="4" sm="12" className="mb-4">
             <Link
               className="h6 text-dark"
               to={`/${itemType}/${
@@ -24,11 +24,15 @@ function AllItems({ itemType, items }) {
             >
               <Card className="h-100">
                 <CardHeader className="p-0" style={{ height: "200px" }}>
-                  <CardImg
-                    alt="Sample"
-                    src={require(`assets/img/ATS/${item.imageUrl[0].url}`)}
-                    style={{ height: "100%", objectFit: "cover" }}
-                  />
+                  <div className="image-container">
+                    <div className="image-wrapper">
+                      <CardImg
+                        alt="Sample"
+                        src={require(`assets/img/ATS/${item.imageUrl[0].url}`)}
+                        className="custom-card-img"
+                      />
+                    </div>
+                  </div>
                 </CardHeader>
                 <CardBody className="d-flex flex-column">
                   <CardTitle tag="h6" className="m-0">

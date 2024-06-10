@@ -13,14 +13,13 @@ import { products } from "constants/products";
 
 const responsive = {
   desktop: {
-    breakpoint: { max: 3000, min: 1024 },
+    breakpoint: { max: 3000, min: 1200 },
     items: 3,
     partialVisibilityGutter: 40,
   },
   tablet: {
-    breakpoint: { max: 1024, min: 464 },
+    breakpoint: { max: 1200, min: 464 },
     items: 2,
-    partialVisibilityGutter: 20,
   },
   mobile: {
     breakpoint: { max: 464, min: 0 },
@@ -55,7 +54,7 @@ function ProductCarousel() {
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
-      if (width >= 1024) {
+      if (width >= 1200) {
         setDeviceType("desktop");
       } else if (width >= 464) {
         setDeviceType("tablet");
@@ -102,7 +101,6 @@ function ProductCarousel() {
       swipeable={true}
       draggable={true}
       showDots={true}
-      partialVisible={false}
       responsive={responsive}
       ssr={true}
       infinite={true}
@@ -113,8 +111,11 @@ function ProductCarousel() {
       removeArrowOnDeviceType={["tablet", "mobile"]}
       deviceType={deviceType}
       dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px mx-2 "
-      centerMode={true}
+      itemClass={`carousel-item-padding-40-px ${
+        deviceType === "desktop" ? "mx-2" : ""
+      }`}
+      centerMode={false}
+      partialVisible={true}
     >
       {products.map((product, index) => {
         const isHovered = hoveredCardIndex === index;

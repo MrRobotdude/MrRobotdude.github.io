@@ -29,7 +29,7 @@ function ServiceCarousel() {
   useEffect(() => {
     function handleResize() {
       const width = window.innerWidth;
-      if (width >= 1024) {
+      if (width >= 1200) {
         setDeviceType("desktop");
       } else if (width >= 464) {
         setDeviceType("tablet");

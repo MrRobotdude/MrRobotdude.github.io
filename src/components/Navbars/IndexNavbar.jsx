@@ -162,7 +162,7 @@ function IndexNavbar() {
                 </NavLink>
               </NavItem> */}
               <NavItem>
-                <NavLink tag={Link} to="/partners">
+                <NavLink tag={Link} to="/projects">
                   <p className="nav-item-text">Projects</p>
                 </NavLink>
               </NavItem>

@@ -101,10 +101,9 @@ function HomeHeader() {
         filter-color="blue"
         id="header-section"
         style={{ height: "100vh" }}
-        ref={pageHeader}
       >
-        <div className="page-header-image home-header-image" ref={pageHeader}></div>
-        <Container>
+        <div className="page-header-image home-header-image" ref={pageHeader}/>
+        {/* <Container>
           <div
             className="content-center brand pt-5 mt-5"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
@@ -117,7 +116,7 @@ function HomeHeader() {
             <h1 className="h1-seo slide-in-bottom">Alam Tehnik Semesta</h1>
             <h3 className="slide-in-bottom">Customize For Compliance</h3>
           </div>
-        </Container>
+        </Container> */}
         <div className="text-center">
           <h4
             className="category category-absolute"

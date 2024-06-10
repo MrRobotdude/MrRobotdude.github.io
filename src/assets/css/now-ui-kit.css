@@ -5638,24 +5638,6 @@ img {
     -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
   }
-  .sidebar-collapse #bodyClick {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    opacity: 1;
-    top: 0;
-    left: auto;
-    right: 300px;
-    content: "";
-    z-index: 9999;
-    overflow-x: hidden;
-    background-color: transparent;
-    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
   .sidebar-collapse.menu-on-left .navbar-collapse {
     right: auto;
     left: 0;
@@ -5706,10 +5688,6 @@ img {
     -o-transform: translate3d(150px, 0, 0);
     -ms-transform: translate3d(150px, 0, 0);
     transform: translate3d(150px, 0, 0);
-  }
-  .nav-open .sidebar-collapse.menu-on-left #bodyClick {
-    right: auto;
-    left: 300px;
   }
   .navbar-nav .nav-link i.fab,
   .navbar-nav .nav-link i.now-ui-icons {
@@ -6029,24 +6007,6 @@ img {
     width: 300px;
   }
   .burger-menu .wrapper {
-    -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    -ms-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-    transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
-  }
-  .burger-menu #bodyClick {
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    opacity: 1;
-    top: 0;
-    left: auto;
-    right: 300px;
-    content: "";
-    z-index: 9999;
-    overflow-x: hidden;
-    background-color: transparent;
     -webkit-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
@@ -7222,9 +7182,36 @@ td.rdtYear:hover {
     max-height: 100%;
   }
 }
+.image-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.custom-card-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: scale-down;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.image-container:hover .custom-card-img {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
 .slide-in-bottom {
-  -webkit-animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-in-bottom 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  -webkit-animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-bottom 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 /* ----------------------------------------------
@@ -7240,7 +7227,7 @@ td.rdtYear:hover {
  */
 @keyframes slide-in-bottom {
   0% {
-    transform: translateY(1000px);
+    transform: translateY(100px);
     opacity: 0;
   }
   100% {
@@ -7315,6 +7302,30 @@ td.rdtYear:hover {
 
 .bg-header-carousel {
   filter: blur(0);
+}
+
+.gradient-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.gradient-wrapper .gradient-overlay {
+  background: rgba(44, 44, 44, 0.2); /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.6)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.6)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(90deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.6)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(3, 161, 224, 0.6)); /* Standard syntax */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.gradient-wrapper .gradient-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /**
@@ -7399,8 +7410,8 @@ td.rdtYear:hover {
 }
 
 .whatsapp-button {
-  -webkit-animation: wobble-ver-right 5s both infinite;
-  animation: wobble-ver-right 5s both infinite;
+  -webkit-animation: wobble-ver-right 2.5s both infinite;
+  animation: wobble-ver-right 2.5s both infinite;
 }
 
 /* ----------------------------------------------
@@ -7415,57 +7426,57 @@ td.rdtYear:hover {
  * ----------------------------------------
  */
 @-webkit-keyframes wobble-ver-right {
-  0%, 17%, 100% {
+  0%, 34%, 100% {
     -webkit-transform: translateY(0) rotate(0);
     transform: translateY(0) rotate(0);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
-  3% {
+  6% {
     -webkit-transform: translateY(-30px) rotate(6deg);
     transform: translateY(-30px) rotate(6deg);
   }
-  6% {
+  12% {
     -webkit-transform: translateY(15px) rotate(-6deg);
     transform: translateY(15px) rotate(-6deg);
   }
-  9% {
+  18% {
     -webkit-transform: translateY(-15px) rotate(3.6deg);
     transform: translateY(-15px) rotate(3.6deg);
   }
-  12% {
+  24% {
     -webkit-transform: translateY(9px) rotate(-2.4deg);
     transform: translateY(9px) rotate(-2.4deg);
   }
-  15% {
+  30% {
     -webkit-transform: translateY(-6px) rotate(1.2deg);
     transform: translateY(-6px) rotate(1.2deg);
   }
 }
 @keyframes wobble-ver-right {
-  0%, 17%, 100% {
+  0%, 34%, 100% {
     -webkit-transform: translateY(0) rotate(0);
     transform: translateY(0) rotate(0);
     -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
   }
-  3% {
+  6% {
     -webkit-transform: translateY(-30px) rotate(6deg);
     transform: translateY(-30px) rotate(6deg);
   }
-  6% {
+  12% {
     -webkit-transform: translateY(15px) rotate(-6deg);
     transform: translateY(15px) rotate(-6deg);
   }
-  9% {
+  18% {
     -webkit-transform: translateY(-15px) rotate(3.6deg);
     transform: translateY(-15px) rotate(3.6deg);
   }
-  12% {
+  24% {
     -webkit-transform: translateY(9px) rotate(-2.4deg);
     transform: translateY(9px) rotate(-2.4deg);
   }
-  15% {
+  30% {
     -webkit-transform: translateY(-6px) rotate(1.2deg);
     transform: translateY(-6px) rotate(1.2deg);
   }

@@ -1,11 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
-import PartnerCarousel from "components/Carousels/PartnerCarousel";
+import ProjectCarousel from "components/Carousels/ProjectCarousel";
 
-function Partner() {
+function Project() {
   return (
     <>
-      <div className="section section-partner text-center">
+      <div className="section section-project text-center">
         <Container>
           <Row>
             <Col>
@@ -27,12 +27,12 @@ function Partner() {
           </Row>
         </Container>
       </div>
-      <div className="section section-partners pt-0" id="products-section">
+      <div className="section section-projects pt-0" id="products-section">
         <Container fluid className="p-5 d-inline">
-          <PartnerCarousel />
+          <ProjectCarousel />
         </Container>
       </div>
-      <div className="section section-partner text-center pt-0">
+      <div className="section section-project text-center pt-0">
         <Container>
           <Row>
             <Col>
@@ -50,4 +50,4 @@ function Partner() {
   );
 }
 
-export default Partner;
+export default Project;

@@ -5,7 +5,7 @@ import { Container } from "reactstrap";
 
 // core components
 
-function PartnerHeader() {
+function ProjectHeader() {
   let pageHeader = createRef();
 
   useEffect(() => {
@@ -35,23 +35,16 @@ function PartnerHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/partners-header.jpg") + ")",
+              "url(" + require("assets/img/projects-header.jpg") + ")",
             filter: "blur(2px)",
             backgroundSize: "cover",
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
-          <Container>
-            <div
-              className="content-center brand py-5"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              <h1 className="slide-in-bottom">Our Projects</h1>
-              <h3 className="slide-in-bottom mb-0">
-                Delivering Excellence Across Indonesia
-              </h3>
-            </div>
+          <Container className=" slide-in-bottom">
+            <h1 className="title">Our Projects</h1>
+            <h3 className="mb-0">Delivering Excellence Across Indonesia</h3>
           </Container>
         </div>
       </div>
@@ -59,4 +52,4 @@ function PartnerHeader() {
   );
 }
 
-export default PartnerHeader;
+export default ProjectHeader;

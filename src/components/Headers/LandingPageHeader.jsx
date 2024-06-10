@@ -32,7 +32,7 @@ function LandingPageHeader() {
           ref={pageHeader}
         ></div>
         <div className="content-center">
-          <Container>
+          <Container className="p-5 slide-in-bottom">
             <h1 className="title">Products</h1>
           </Container>
         </div>

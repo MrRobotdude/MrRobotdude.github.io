@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import LoadingScreen from "react-loading-screen"
+import LoadingScreen from "react-loading-screen";
 
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
@@ -11,15 +11,13 @@ import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 import DarkFooter from "components/Footers/DarkFooter";
 
-
-
 // Lazy load the components
 const Home = lazy(() => import("views/pages/Home"));
 const Service = lazy(() => import("views/pages/Service"));
 const Product = lazy(() => import("views/pages/Product"));
 const AboutUs = lazy(() => import("views/pages/AboutUs"));
 const ContactUs = lazy(() => import("views/pages/ContactUs"));
-const Partners = lazy(() => import("views/pages/Partners"));
+const Projects = lazy(() => import("views/pages/Projects"));
 const NotFound = lazy(() => import("views/pages/NotFound"));
 
 const routes = [
@@ -30,7 +28,7 @@ const routes = [
   { path: "/services/:activeId", component: Service },
   { path: "/about-us", component: AboutUs },
   { path: "/contact-us", component: ContactUs },
-  { path: "/partners", component: Partners },
+  { path: "/projects", component: Projects },
   { path: "/not-found", component: NotFound },
 ];
 

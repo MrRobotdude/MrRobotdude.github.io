@@ -39,7 +39,7 @@ function AboutUsHeader() {
           ref={pageHeader}
         ></div>
         <div className="content-center">
-          <Container>
+          <Container className="p-5 slide-in-bottom">
             <h1 className="title">This is our great company.</h1>
           </Container>
         </div>

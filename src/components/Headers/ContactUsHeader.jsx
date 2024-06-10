@@ -42,16 +42,9 @@ function ContactUsHeader() {
           ref={pageHeader}
         ></div>
         <div className="content-center">
-          <Container>
-            <div
-              className="content-center brand py-5"
-              style={{ backgroundColor: "rgba(0, 0, 0, 0.3)" }}
-            >
-              <h1 className="slide-in-bottom">Reach Out To Us!</h1>
-              <h3 className="slide-in-bottom mb-0">
-                We'd love to hear from you
-              </h3>
-            </div>
+          <Container className="slide-in-bottom">
+            <h1 className="title">Reach Out To Us!</h1>
+            <h3 className="mb-0 ">We'd love to hear from you</h3>
           </Container>
         </div>
       </div>

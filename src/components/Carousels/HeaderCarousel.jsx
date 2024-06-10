@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-
-// reactstrap components
 import { Carousel, CarouselItem, CarouselIndicators } from "reactstrap";
 
 const allItems = {
@@ -52,62 +50,59 @@ function HeaderCarousel({ item }) {
   if (!imageUrl[activeIndex]) setActiveIndex(0);
 
   return (
-    <div
-      className="clear-filter"
-      filter-color="blue"
-      style={{ height: "100%" }}
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      className="carousel-height"
     >
-      <Carousel
+      <CarouselIndicators
+        items={carouselItems}
         activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        className="carousel-height"
-        
-      >
-        <CarouselIndicators
-          items={carouselItems}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {imageUrl.map((item, index) => (
-          <CarouselItem
-            onExiting={onExiting}
-            onExited={onExited}
-            key={index}
-            className="header-image"
-          >
+        onClickHandler={goToIndex}
+      />
+      {imageUrl.map((item, index) => (
+        <CarouselItem
+          onExiting={onExiting}
+          onExited={onExited}
+          key={index}
+          className="header-image"
+        >
+          <div className="gradient-wrapper">
             <img
               src={require(`assets/img/ATS/${item.url}`)}
               alt={item.caption}
+              className="gradient-image"
             />
-          </CarouselItem>
-        ))}
-        <a
-          className="carousel-control-prev"
-          data-slide="prev"
-          href="#pablo"
-          onClick={(e) => {
-            e.preventDefault();
-            previous();
-          }}
-          role="button"
-        >
-          <i className="now-ui-icons arrows-1_minimal-left"></i>
-        </a>
-        <a
-          className="carousel-control-next"
-          data-slide="next"
-          href="#pablo"
-          onClick={(e) => {
-            e.preventDefault();
-            next();
-          }}
-          role="button"
-        >
-          <i className="now-ui-icons arrows-1_minimal-right"></i>
-        </a>
-      </Carousel>
-    </div>
+            <div className="gradient-overlay"></div>
+          </div>
+        </CarouselItem>
+      ))}
+      <a
+        className="carousel-control-prev"
+        data-slide="prev"
+        href="#pablo"
+        onClick={(e) => {
+          e.preventDefault();
+          previous();
+        }}
+        role="button"
+      >
+        <i className="now-ui-icons arrows-1_minimal-left"></i>
+      </a>
+      <a
+        className="carousel-control-next"
+        data-slide="next"
+        href="#pablo"
+        onClick={(e) => {
+          e.preventDefault();
+          next();
+        }}
+        role="button"
+      >
+        <i className="now-ui-icons arrows-1_minimal-right"></i>
+      </a>
+    </Carousel>
   );
 }
 

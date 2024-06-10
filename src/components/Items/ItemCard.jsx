@@ -48,8 +48,7 @@ function ItemCard({ activeItem, items, itemType }) {
                 </CardTitle>
                 <Row>
                   {activeItem.imageUrl.map((image, index) => (
-                    // <Col key={index}>
-                    <CardImg
+                    <CardImg key={index}
                       src={require(`assets/img/ATS/${image.url}`)}
                       className="mb-4"
                       style={{

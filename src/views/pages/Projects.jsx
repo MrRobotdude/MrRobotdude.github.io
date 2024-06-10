@@ -1,9 +1,9 @@
 import { useEffect } from "react";
 
-import PartnerHeader from "components/Headers/PartnerHeader";
-import Partner from "views/partner-sections/Partner";
+import ProjectHeader from "components/Headers/ProjectHeader";
+import Project from "views/project-sections/Project";
 
-function Partners() {
+function Projects() {
   useEffect(() => {
     document.body.classList.add("index-page");
     document.body.classList.add("sidebar-collapse");
@@ -18,11 +18,11 @@ function Partners() {
   return (
     <>
       <div className="wrapper">
-        <PartnerHeader />
-        <Partner />
+        <ProjectHeader />
+        <Project />
       </div>
     </>
   );
 }
 
-export default Partners;
+export default Projects;
