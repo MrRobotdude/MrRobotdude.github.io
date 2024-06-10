@@ -125,7 +125,7 @@ function Contact() {
                       <p className="description text-justify">
                         We warmly welcome you to utilize our dedicated form for
                         any inquiries you may have. Please feel free to click on
-                        any of the buttons below, as we're here to assist you
+                        any of the buttons above, as we're here to assist you
                         with anything you need.
                       </p>
                     </div>
