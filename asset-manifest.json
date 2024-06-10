@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.80316d98.css",
-    "main.js": "/static/js/main.8c8c887c.js",
+    "main.css": "/static/css/main.ff4aff96.css",
+    "main.js": "/static/js/main.e363ad53.js",
     "static/css/581.2e8f5272.chunk.css": "/static/css/581.2e8f5272.chunk.css",
-    "static/js/581.ea0e6fd9.chunk.js": "/static/js/581.ea0e6fd9.chunk.js",
-    "static/js/728.1316e89d.chunk.js": "/static/js/728.1316e89d.chunk.js",
-    "static/js/516.36111aa3.chunk.js": "/static/js/516.36111aa3.chunk.js",
-    "static/js/190.9480ce74.chunk.js": "/static/js/190.9480ce74.chunk.js",
-    "static/js/420.3d7d8589.chunk.js": "/static/js/420.3d7d8589.chunk.js",
-    "static/css/824.2e8f5272.chunk.css": "/static/css/824.2e8f5272.chunk.css",
-    "static/js/824.e3b56a41.chunk.js": "/static/js/824.e3b56a41.chunk.js",
+    "static/js/581.5b7d1367.chunk.js": "/static/js/581.5b7d1367.chunk.js",
+    "static/js/728.32eacef9.chunk.js": "/static/js/728.32eacef9.chunk.js",
+    "static/js/516.37b44344.chunk.js": "/static/js/516.37b44344.chunk.js",
+    "static/js/190.6871efae.chunk.js": "/static/js/190.6871efae.chunk.js",
+    "static/js/420.49574efc.chunk.js": "/static/js/420.49574efc.chunk.js",
+    "static/css/879.2e8f5272.chunk.css": "/static/css/879.2e8f5272.chunk.css",
+    "static/js/879.ab163b67.chunk.js": "/static/js/879.ab163b67.chunk.js",
     "static/js/304.f5568f63.chunk.js": "/static/js/304.f5568f63.chunk.js",
     "static/js/23.ac901f98.chunk.js": "/static/js/23.ac901f98.chunk.js",
     "static/js/293.7e718892.chunk.js": "/static/js/293.7e718892.chunk.js",
     "static/js/881.a339bf52.chunk.js": "/static/js/881.a339bf52.chunk.js",
-    "static/js/382.22817f93.chunk.js": "/static/js/382.22817f93.chunk.js",
+    "static/js/598.e734f3b0.chunk.js": "/static/js/598.e734f3b0.chunk.js",
     "static/media/Designing.jpg": "/static/media/Designing.208e152f756d9486cd5c.jpg",
     "static/media/air-handling-unit.jpg": "/static/media/air-handling-unit.1f059d5b1764285db98a.jpg",
     "static/media/Manufacturing 3.jpg": "/static/media/Manufacturing 3.a13a8c57e4383c5a67be.jpg",
@@ -23,7 +23,7 @@
     "static/media/clean-air-conditioner.jpg": "/static/media/clean-air-conditioner.f8690f19c13ed73bb4f4.jpg",
     "static/media/pharmaceutical production.jpg": "/static/media/pharmaceutical production.22ce1708a4b10c64c6c1.jpg",
     "static/media/cold-storage.jpg": "/static/media/cold-storage.796380522381f8fdf52a.jpg",
-    "static/media/partners-header.jpg": "/static/media/partners-header.6f2ac87a20bcd9c4dbd7.jpg",
+    "static/media/projects-header.jpg": "/static/media/projects-header.6f2ac87a20bcd9c4dbd7.jpg",
     "static/media/bg6.jpg": "/static/media/bg6.dc603b7416966b84ac68.jpg",
     "static/media/precision-humidifier.jpg": "/static/media/precision-humidifier.4fb557aa3b488a88cf31.jpg",
     "static/media/refrigerant-humidifier.jpg": "/static/media/refrigerant-humidifier.4e0a72099be54d0b110a.jpg",
@@ -87,7 +87,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.80316d98.css",
-    "static/js/main.8c8c887c.js"
+    "static/css/main.ff4aff96.css",
+    "static/js/main.e363ad53.js"
   ]
 }
