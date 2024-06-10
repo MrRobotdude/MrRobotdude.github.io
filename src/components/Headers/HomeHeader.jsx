@@ -98,7 +98,6 @@ function HomeHeader() {
     <>
       <div
         className="page-header clear-filter"
-        filter-color="blue"
         id="header-section"
         style={{ height: "100vh" }}
       >
