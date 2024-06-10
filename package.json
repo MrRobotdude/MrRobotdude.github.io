@@ -4,24 +4,34 @@
   "private": true,
   "dependencies": {
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "axios": "^1.6.8",
+    "ajv": "^8.16.0",
+    "axios": "^1.7.2",
     "bootstrap": "^5.3.3",
     "dotenv": "^16.4.5",
+    "fbjs": "^3.0.5",
     "gh-pages": "^6.1.1",
+    "isomorphic-fetch": "^3.0.0",
+    "json5": "^2.2.3",
+    "loader-utils": "^3.3.1",
     "moment": "2.29.4",
     "nouislider": "15.4.0",
-    "react": ">=16.8.0",
+    "postcss": "^8.4.38",
+    "react": "^18.3.1",
     "react-accessible-accordion": "^5.0.0",
     "react-bootstrap-switch": "15.5.3",
     "react-datetime": "3.2.0",
-    "react-dom": ">=16.8.0",
+    "react-dom": "^18.3.1",
     "react-google-recaptcha": "^3.1.0",
-    "react-loading-screen": "^0.0.17",
     "react-multi-carousel": "^2.8.4",
     "react-router-dom": "6.11.1",
     "react-scripts": "^5.0.1",
+    "react-spinners": "^0.13.8",
     "reactstrap": "^8.10.0",
-    "sass": "1.62.1"
+    "resolve-url-loader": "^5.0.0",
+    "sass": "1.62.1",
+    "webpack": "^5.91.0",
+    "yargs": "^17.7.2",
+    "yargs-parser": "^21.1.1"
   },
   "scripts": {
     "predeploy": "npm run build",
@@ -48,10 +58,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
   },
   "optionalDependencies": {
     "@babel/core": "7.18.9",

@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import ReactDOM from "react-dom/client";
 import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import LoadingScreen from "react-loading-screen";
+import { PulseLoader } from "react-spinners";
 
 import "assets/css/bootstrap.min.css";
 import "assets/scss/now-ui-kit.scss?v=1.5.0";
@@ -40,6 +40,7 @@ const Content = () => {
         flexDirection: "column",
         minHeight: "100vh",
         maxWidth: "100vw",
+        position: "relative", // Add position relative to position the loader
       }}
     >
       <HashRouter>
@@ -53,16 +54,20 @@ const Content = () => {
                 element={
                   <Suspense
                     fallback={
-                      <LoadingScreen
-                        loading={true}
-                        bgColor="rgba(255,255,255,0.8)"
-                        spinnerColor="#9ee5f8"
-                        textColor="#676767"
-                        logoSrc=""
-                        text=""
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: "50%",
+                          left: "50%",
+                          transform: "translate(-50%, -50%)",
+                          zIndex: 9999, // Ensure it's on top of other content
+                          backgroundColor: "rgba(255, 255, 255, 0.5)", // Semi-transparent white background
+                          borderRadius: "8px",
+                          padding: "20px",
+                        }}
                       >
-                        {" "}
-                      </LoadingScreen>
+                        <PulseLoader color="#9ee5f8" size={15} margin={6} />
+                      </div>
                     }
                   >
                     {React.createElement(route.component)}
@@ -78,6 +83,7 @@ const Content = () => {
     </div>
   );
 };
+
 
 const App = () => (
   <>
