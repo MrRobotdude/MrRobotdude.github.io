@@ -32,7 +32,7 @@ function About() {
                   className="image-container image-left"
                   style={{
                     backgroundImage:
-                      "url(" + require("assets/img/ATS/OK-Unit.jpg") + ")",
+                      "url(" + require("assets/img/ATS/blower.jpg") + ")",
                   }}
                 >
                   <p className="blockquote blockquote-info">
@@ -45,7 +45,7 @@ function About() {
                   className="image-container image-right"
                   style={{
                     backgroundImage:
-                      "url(" + require("assets/img/ATS/dehumidifier.jpg") + ")",
+                      "url(" + require("assets/img/ATS/dessicant.jpg") + ")",
                   }}
                 ></div>
                 <h3 className="mb-0 mt-5 text-center">

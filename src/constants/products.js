@@ -71,6 +71,9 @@ const products = [
     ],
     imageUrl: [
       {
+        url: "product/dehumidifier/ATS Precision Packshot_page-0001.jpg",
+      },
+      {
         url: "product/dehumidifier/Dehumidifier 2 edit.jpg",
       },
       {
@@ -112,6 +115,9 @@ const products = [
     ],
     imageUrl: [
       {
+        url: "product/Direct Expansion AHU/ATS AHU Packshot_page-0001.jpg",
+      },
+      {
         url: "product/Direct Expansion AHU/Direct Expansion AHU 1 edit.jpg",
       },
       {
@@ -146,6 +152,9 @@ const products = [
       },
     ],
     imageUrl: [
+      {
+        url: "product/refrigration/ATS Cold Storage Packshot_page-0001.jpg",
+      },
       {
         url: "product/refrigration/refrigeration.png",
       },
@@ -271,7 +280,10 @@ const products = [
     generalSpecification: null,
     imageUrl: [
       {
-        url: "product/Scrubber Dust Collector.jpg",
+        url: "product/dust collector/ATS Dust Collector.png",
+      },
+      {
+        url: "product/dust collector/Scrubber Dust Collector.jpg",
       },
     ],
     pdfUrl: "assets/pdf/Clean AC/ATS Brochure Clean AC FA Final OK.pdf",
