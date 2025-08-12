@@ -11,7 +11,6 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/designing/Designing.jpg",
       },
     ],
@@ -28,15 +27,12 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/manufacture/manufacture1.jpg",
       },
       {
-        
         url: "Service/manufacture/manufacture2.jpg",
       },
       {
-        
         url: "Service/manufacture/Manufacturing 4.jpg",
       },
     ],
@@ -53,11 +49,9 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/training/training1.jpg",
       },
       {
-        
         url: "Service/training/training2 (2).jpg",
       },
     ],
@@ -74,7 +68,6 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/validation/validation2.jpg",
       },
     ],
@@ -91,7 +84,6 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/certification/Certification.jpg",
       },
     ],
@@ -109,11 +101,9 @@ const services = [
     ],
     imageUrl: [
       {
-        
         url: "Service/construction/construction3.jpg",
       },
       {
-        
         url: "Service/construction/construction4.jpg",
       },
     ],

@@ -11,6 +11,8 @@ import {
 } from "reactstrap";
 import AllItems from "./AllItems";
 
+const hasValidArray = (arr) => Array.isArray(arr) && arr.length > 0;
+
 function ItemCard({ activeItem, items, itemType }) {
   return (
     <>
@@ -22,16 +24,20 @@ function ItemCard({ activeItem, items, itemType }) {
                 <CardTitle tag="h3" className="font-weight-bold">
                   {activeItem.productName}
                 </CardTitle>
-                {activeItem.productDesc.map((desc, index) => (
-                  <CardText
-                    key={index}
-                    tag={"h5"}
-                    className="text-justify-desktop"
-                  >
-                    {desc}
-                  </CardText>
-                ))}
-                {activeItem.generalSpecification && (
+
+                {hasValidArray(activeItem.productDesc) && (
+                  activeItem.productDesc.map((desc, index) => (
+                    <CardText
+                      key={index}
+                      tag={"h5"}
+                      className="text-justify-desktop"
+                    >
+                      {desc}
+                    </CardText>
+                  ))
+                )}
+
+                {hasValidArray(activeItem.generalSpecification) && (
                   <>
                     <CardTitle tag="h3" className="font-weight-bold">
                       General Specification
@@ -43,37 +49,45 @@ function ItemCard({ activeItem, items, itemType }) {
                     ))}
                   </>
                 )}
-                <CardTitle tag="h3" className="font-weight-bold mt-3">
-                  Photo of Products
-                </CardTitle>
-                <Row>
-                  {activeItem.imageUrl.map((image, index) => (
-                    <CardImg key={index}
-                      src={require(`assets/img/ATS/${image.url}`)}
-                      className="mb-4"
-                      style={{
-                        height: "200px",
-                        width: "auto",
-                        margin: "auto",
-                      }}
-                    />
-                    // </Col>
-                  ))}
-                </Row>
 
-                <CardTitle tag="h3" className="font-weight-bold">
-                  For detailed information
-                </CardTitle>
-                <CardText tag={"h5"}>
-                  Please check our documentation:
-                  <br />
-                  <CardLink
-                    href={activeItem.pdfUrl}
-                    download={activeItem.pdfUrl.split("/").pop()}
-                  >
-                    Download PDF
-                  </CardLink>
-                </CardText>
+                {hasValidArray(activeItem.imageUrl) && (
+                  <>
+                    <CardTitle tag="h3" className="font-weight-bold mt-3">
+                      Photo of Products
+                    </CardTitle>
+                    <Row>
+                      {activeItem.imageUrl.map((image, index) => (
+                        <CardImg key={index}
+                          src={require(`assets/img/ATS/${image.url}`)}
+                          className="mb-4"
+                          style={{
+                            height: "200px",
+                            width: "auto",
+                            margin: "auto",
+                          }}
+                        />
+                      ))}
+                    </Row>
+                  </>
+                )}
+
+                {activeItem.pdfUrl && activeItem.pdfUrl.trim() && (
+                  <>
+                    <CardTitle tag="h3" className="font-weight-bold">
+                      For detailed information
+                    </CardTitle>
+                    <CardText tag="h5">
+                      Please check our documentation:
+                      <br />
+                      <CardLink
+                        href={activeItem.pdfUrl.trim()}
+                        download={activeItem.pdfUrl.trim().split("/").pop()}
+                      >
+                        Download PDF
+                      </CardLink>
+                    </CardText>
+                  </>
+                )}
               </Card>
             </TabPane>
           ) : (
@@ -92,30 +106,35 @@ function ItemCard({ activeItem, items, itemType }) {
                 <CardTitle tag="h3" className="font-weight-bold">
                   {activeItem.serviceName}
                 </CardTitle>
-                {activeItem.serviceDesc.map((desc, index) => (
-                  <CardText
-                    key={index}
-                    tag={"h5"}
-                    className="text-justify-desktop"
-                  >
-                    {desc}
-                  </CardText>
-                ))}
-                <Row>
-                  {activeItem.imageUrl.map((image, index) => (
-                    // <Col key={index}>
-                    <CardImg
-                      src={require(`assets/img/ATS/${image.url}`)}
-                      className="mb-4"
-                      style={{
-                        height: "200px",
-                        width: "auto",
-                        margin: "auto",
-                      }}
-                    />
-                    // </Col>
-                  ))}
-                </Row>
+
+                {hasValidArray(activeItem.serviceDesc) && (
+                  activeItem.serviceDesc.map((desc, index) => (
+                    <CardText
+                      key={index}
+                      tag={"h5"}
+                      className="text-justify-desktop"
+                    >
+                      {desc}
+                    </CardText>
+                  ))
+                )}
+
+                {hasValidArray(activeItem.imageUrl) && (
+                  <Row>
+                    {activeItem.imageUrl.map((image, index) => (
+                      <CardImg
+                        key={index}
+                        src={require(`assets/img/ATS/${image.url}`)}
+                        className="mb-4"
+                        style={{
+                          height: "200px",
+                          width: "auto",
+                          margin: "auto",
+                        }}
+                      />
+                    ))}
+                  </Row>
+                )}
               </Card>
             </TabPane>
           ) : (
