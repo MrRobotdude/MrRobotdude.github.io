@@ -99,7 +99,7 @@ function HomeHeader() {
       <div
         className="page-header clear-filter"
         id="header-section"
-        style={{ height: "100vh" }}
+        style={{ height: "min(78vh, 760px)", minHeight: "420px" }}
       >
         <div className="page-header-image home-header-image" ref={pageHeader}/>
         {/* <Container>

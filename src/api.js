@@ -1,20 +1,24 @@
 import axios from "axios";
 
-const API_BASE_URL = "http://localhost:8080";
+export const API_BASE_URL = (process.env.REACT_APP_API_BASE_URL || "").replace(/\/+$/, "");
+export const contactFormAvailable = Boolean(API_BASE_URL && process.env.REACT_APP_SITE_KEY);
 
 export const createMessage = async (
   receiver,
   senderName,
   senderPhone,
   senderEmail,
-  message
+  message,
+  captchaToken
 ) => {
+  if (!contactFormAvailable) throw new Error("Contact form is unavailable.");
   const response = await axios.post(`${API_BASE_URL}/create`, {
     receiver,
     senderName,
     senderPhone,
     senderEmail,
     message,
+    captchaToken,
   });
   return response.data;
 };

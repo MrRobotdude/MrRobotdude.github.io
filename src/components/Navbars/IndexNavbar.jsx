@@ -70,6 +70,7 @@ function IndexNavbar() {
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
+              aria-label="Toggle navigation"
               onClick={() => {
                 document.documentElement.classList.toggle("nav-open");
                 setCollapseOpen(!collapseOpen);
