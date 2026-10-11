@@ -1,3 +1,4 @@
+import { contactFormAvailable } from "api";
 import ContactModal from "components/Modals/ContactModal";
 import React, { useCallback, useState } from "react";
 import { Container, Row, Col, Button, Card, CardBody, Alert } from "reactstrap";
@@ -111,6 +112,7 @@ function Contact() {
                         className="btn-round"
                         color="info"
                         onClick={handleMarketingButtonClick}
+                        disabled={!contactFormAvailable}
                       >
                         Marketing
                       </Button>
@@ -118,16 +120,18 @@ function Contact() {
                         className="btn-round"
                         color="info"
                         onClick={handleCustomerServiceButtonClick}
+                        disabled={!contactFormAvailable}
                       >
                         Customer Service
                       </Button>
                       <p className="category text-info">Contact Form</p>
-                      <p className="description text-justify">
+                      {!contactFormAvailable && <p role="status">The contact form is currently unavailable. Please use the contact details below.</p>}
+                      {contactFormAvailable && <p className="description text-justify">
                         We warmly welcome you to utilize our dedicated form for
                         any inquiries you may have. Please feel free to click on
                         any of the buttons above, as we're here to assist you
                         with anything you need.
-                      </p>
+                      </p>}
                     </div>
                   </div>
                 </CardBody>

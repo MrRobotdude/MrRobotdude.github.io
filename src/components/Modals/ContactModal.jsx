@@ -48,6 +48,10 @@ export default function ContactModal(props) {
     const { name, phoneNumber, email, message } = formData;
     const validationErrors = [];
 
+    if (!["CP-001", "CP-002"].includes(selectedEmail)) {
+      validationErrors.push("Please select a contact department.");
+    }
+
     if (!name.trim()) {
       validationErrors.push("Please enter your name.");
     }
@@ -75,7 +79,7 @@ export default function ContactModal(props) {
     }
 
     return true;
-  }, [formData, captchaToken]);
+  }, [formData, captchaToken, selectedEmail]);
 
   const resetForm = useCallback(() => {
     setFormData({
@@ -105,7 +109,8 @@ export default function ContactModal(props) {
         formData.name,
         formData.phoneNumber,
         formData.email,
-        formData.message
+        formData.message,
+        captchaToken
       );
       onSuccess(
         "Your message has been sent successfully! 🚀 We're thrilled to assist you and will get back to you as soon as possible. Thank you for reaching out to us!"
@@ -128,7 +133,7 @@ export default function ContactModal(props) {
   return (
     <Modal isOpen={modal} toggle={handleToggleModal}>
       <div className="modal-header justify-content-center">
-        <button className="close" type="button" onClick={handleToggleModal}>
+        <button aria-label="Close contact form" className="close" type="button" onClick={handleToggleModal}>
           <i className="now-ui-icons ui-1_simple-remove"></i>
         </button>
         <h4 className="title title-up">Contact Us</h4>
@@ -190,6 +195,8 @@ export default function ContactModal(props) {
           <ReCAPTCHA
             sitekey={process.env.REACT_APP_SITE_KEY}
             onChange={handleCaptchaChange}
+            onExpired={() => setCaptchaToken("")}
+            onErrored={() => setCaptchaToken("")}
           />
           {alert && (
             <Alert color="danger" isOpen={alert}>

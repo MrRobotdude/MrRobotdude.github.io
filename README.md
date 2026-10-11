@@ -1,51 +1,46 @@
-# ATS Kit React
+# ATS Company Website
 
-**ATS Kit React** adalah aplikasi web resmi dari PT Alam Tehnik Semesta (ATS). Aplikasi ini menampilkan profil perusahaan, layanan, dan informasi penting lainnya terkait ATS.
+A public-facing React website for PT Alam Tehnik Semesta, presenting its company profile, HVAC products, services, and project experience.
 
-## Tentang PT Alam Tehnik Semesta
+Implementation by Doddie Prawarjito. The interface builds on Now UI Kit React by Creative Tim and Invision; the original license and notices are retained. Company content and imagery retain their original ownership.
 
-PT Alam Tehnik Semesta (ATS) merupakan produsen AHU (Air Handling Unit) kustom terkemuka di Indonesia, berdiri sejak 1978 sebagai kontraktor dan mulai memproduksi AHU pada 2008. ATS telah memasok lebih dari 1000 unit di seluruh Indonesia, khususnya untuk kebutuhan clean room HVAC yang memenuhi standar regulasi CPOB (BPOM Indonesia), ISO, ISPE, PICS, serta standar WHO untuk fasilitas berbahaya maupun non-berbahaya.
+## Features
 
-Dengan moto "Customize For Compliance", ATS selalu mengutamakan kepuasan pelanggan melalui desain yang disesuaikan dengan kebutuhan tanpa mengabaikan standar regulasi. ATS juga terus berinovasi dengan teknologi tinggi, termasuk sistem monitoring dan kontrol HVAC jarak jauh, serta memastikan daya tahan dan kualitas terbaik pada setiap produk yang dihasilkan.
+- Company introduction and history.
+- Product and service catalogues with reusable cards and carousels.
+- Project showcase and contact information.
+- Responsive navigation and lazy-loaded page routes.
+- Hash routing suitable for static hosting.
 
-## Cara Build
+## Run and build
 
-1. **Clone repository:**
-    ```bash
-    git clone https://github.com/username/ats-kit-react.git
-    cd ats-kit-react
-    ```
+```powershell
+npm ci
+npm start
+# Production bundle:
+npm run build
+```
 
-2. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+The repository includes an npm lockfile and keeps legacy peer dependency resolution in .npmrc for its existing Reactstrap / React stack. This preparation does not claim a complete dependency modernization.
 
-3. **Build project:**
-    ```bash
-    npm run build
-    ```
+## Public deployment
 
-## Cara Deploy
+Serve the build directory on a static host. GitHub Pages is compatible with the existing HashRouter; the repository's Pages site is https://mrrobotdude.github.io/. A local successful build does not establish that the current public site contains these changes.
 
-1. Pastikan sudah melakukan build seperti langkah di atas.
-2. Deploy folder `build` ke layanan hosting pilihan Anda (misal: Vercel, Netlify, atau server sendiri).
+## Contact form configuration
 
-## Cara Menjalankan di Lokal
+Copy .env.example to .env.local and configure REACT_APP_API_BASE_URL and REACT_APP_SITE_KEY only when a matching contact backend is available. Rebuild after changing frontend environment values. The frontend submits captchaToken to POST /create; the backend must validate it, validate the recipient, and apply rate limits before sending messages.
 
-1. **Install dependencies:**
-    ```bash
-    npm install
-    ```
+The contact backend is not part of this repository. Without both values, the form is visibly unavailable and existing public contact details remain accessible. No form points at a visitor's localhost by default.
 
-2. **Jalankan aplikasi:**
-    ```bash
-    npm start
-    ```
+## Portfolio
 
-3. Buka browser dan akses `http://localhost:3000` untuk melihat aplikasi.
+Read the [case study](docs/CASE_STUDY.md) and [demo walkthrough](docs/DEMO.md). This company site should keep its company identity; use a separate portfolio project rather than replacing it with personal branding.
 
----
+## Screenshots
 
-**Catatan:**  
-Untuk detail lebih lanjut mengenai perusahaan dan layanan, silakan kunjungi halaman **Home** dan **About** pada aplikasi.
+![Company homepage](docs/screenshots/home.png)
+
+![Contact configuration fallback](docs/screenshots/contact.png)
+
+[Validation record](docs/VALIDATION.md).
