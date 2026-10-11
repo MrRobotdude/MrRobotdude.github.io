@@ -1,5 +1,3 @@
-# Validation — 2026-10-11
+# Validation
 
-Production build passed; 2 API regression tests passed. Desktop homepage and contact screen checked in browser. Contact submission requires an independently configured backend and CAPTCHA. Mobile viewport verification remains pending.
-
-See README for setup and docs/DEMO.md for manual review. These checks describe this preparation, not production readiness.
+JavaScript syntax and local linked assets checked. Desktop and 390px mobile layouts inspected. English/Indonesian toggle, project filters, and case-study dialogs verified. ATS production presentation rebuilt for /ats/. Portfolio contains résumé-derived professional information; private repositories retain their visibility.

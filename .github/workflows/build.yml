@@ -1,24 +1,36 @@
-name: Website build
-on: [push, pull_request]
+name: Portfolio and Pages
+on:
+  push:
+    branches: [main, portfolio/polish]
+  pull_request:
+  workflow_dispatch:
 permissions:
   contents: read
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-      - run: npm ci
-      - run: npm test -- --watchAll=false --runInBand
-        env:
-          CI: true
-      - run: npm run build
-        env:
-          CI: false
-      - uses: actions/upload-artifact@v4
+      - run: npm run check
+      - uses: actions/upload-pages-artifact@v3
         with:
-          name: ats-website
-          path: build
+          path: site
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: validate
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
