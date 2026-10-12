@@ -4,6 +4,10 @@ Career portfolio: **https://mrrobotdude.github.io/**
 
 An editorial portfolio covering business applications, SQL performance, payroll rules, integrations, teaching, and selected academic/personal projects. English and Bahasa Indonesia, project filters and case-study dialogs, downloadable résumés, accessible navigation, and responsive layouts. Project descriptions distinguish delivered work, local demonstrations, ongoing development, and incomplete historical exercises.
 
+## Current curation
+
+Six featured projects lead the site. FisHE, Go Truck and Voila have a separate design/teaching section with independent repositories and live demos. Eight supporting or unfinished projects sit on the learning shelf. FisHE is explicitly a 2026 reconstruction from an earlier brief/logo; Go Truck and Voila are restored HCI designs. See [curation decisions](docs/CURATION.md).
+
 ## Run locally
 
 No install or build dependencies. Run `npm run check`, then serve `site/` using any static HTTP server (for example `python -m http.server 3030 --directory site`).

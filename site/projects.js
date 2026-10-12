@@ -82,6 +82,42 @@ const projects = [
     ]
   },
   {
+    "id": "correctionapp",
+    "title": "CorrectionApp",
+    "tag": "REACT / NODE / MONGODB",
+    "summary": [
+      "Course correction criteria and score workflows.",
+      "Kriteria koreksi mata kuliah dan alur penilaian."
+    ],
+    "story": [
+      "A separate assessment helper containing its frontend and backend. The standalone CorrectionApp_backend repository is an earlier subset; it is not Riviu’s .NET service layer.",
+      "Aplikasi penilaian terpisah dengan frontend dan backend. CorrectionApp_backend adalah versi awal, bukan bagian layanan .NET Riviu."
+    ],
+    "evidence": [
+      "React production demo build and synthetic MongoDB criteria create/read/delete passed. The demo interface saves and deletes criteria; legacy file-execution endpoints are disabled by default. Institutional authentication and complete correction workflows remain unverified.",
+      "Build demo React serta CRUD kriteria dengan MongoDB sintetis lulus. UI menyimpan dan menghapus kriteria; endpoint eksekusi file dinonaktifkan secara default. Autentikasi institusi dan alur koreksi lengkap belum terverifikasi."
+    ],
+    "source": "https://github.com/MrRobotdude/CorrectionApp",
+    "category": "systems",
+    "kind": [
+      "ASSESSMENT TOOL",
+      "ALAT PENILAIAN"
+    ],
+    "status": [
+      "Connected local demonstration",
+      "Demonstrasi lokal terhubung"
+    ],
+    "stack": "REACT / NODE / MONGODB",
+    "cover": "correction",
+    "gallery": [
+      [
+        "correction-demo.png",
+        "Local criteria create/read/delete demonstration · synthetic records",
+        "Demo kriteria create/read/delete lokal · data sintetis"
+      ]
+    ]
+  },
+  {
     "id": "borongboil",
     "title": "BorongBoil",
     "category": "business",
@@ -197,7 +233,128 @@ const projects = [
       "Build Android Debug lulus dengan peringatan lama dan tiga tes regresi trainer lulus. Model prediktif sendiri masih menjadi target. Perilaku perangkat, performa model, dan hasil investasi belum diklaim tervalidasi."
     ],
     "gallery": []
+  }
+];
+const designProjects = [
+  {
+    "id": "fishe",
+    "title": "FisHE",
+    "category": "business",
+    "kind": [
+      "HCI BRIEF RECONSTRUCTION",
+      "REKONSTRUKSI BRIEF HCI"
+    ],
+    "status": [
+      "Completed storefront design demo",
+      "Demo desain storefront selesai"
+    ],
+    "stack": "HTML / CSS / JAVASCRIPT / JQUERY",
+    "source": "https://github.com/MrRobotdude/fishe",
+    "demo": "https://mrrobotdude.github.io/fishe/",
+    "summary": [
+      "A quieter aquarium storefront, reconstructed from an unfinished HCI brief.",
+      "Storefront akuarium yang direkonstruksi dari brief HCI yang belum selesai."
+    ],
+    "story": [
+      "The local 2021/2022 HCI folder contained a FisHE project brief and the original student logo, but no completed website. This is a new 2026 reconstruction of its five-page experience, clearly separated from the original assignment.",
+      "Folder HCI 2021/2022 berisi brief FisHE dan logo asli, tetapi bukan website yang selesai. Ini merupakan rekonstruksi baru pada 2026 untuk pengalaman lima halaman, terpisah jelas dari tugas asli."
+    ],
+    "contribution": [
+      "Home and gallery; categorized fish and equipment; live search; a persistent demo bag with quantity controls and totals; local contact validation; responsive layouts; keyboard controls, a pausable jQuery slider and new SVG illustrations.",
+      "Home dan galeri; kategori ikan/peralatan; pencarian; keranjang demo persisten dengan jumlah dan total; validasi kontak lokal; layout responsif; kontrol keyboard, slider jQuery dengan pause, serta ilustrasi SVG baru."
+    ],
+    "evidence": [
+      "Static checks and desktop/mobile browser checks passed. Verified combined category/search filtering, quantity totals, bag persistence after reload, simulated order completion, and invalid/valid contact states. Products, prices and orders are illustrative. No payment or email backend is implied.",
+      "Pemeriksaan statis dan browser desktop/mobile lulus. Filter kategori/pencarian, jumlah/total, persistensi keranjang setelah reload, pesanan simulasi, dan validasi kontak diuji. Produk, harga, dan pesanan adalah ilustrasi. Tanpa backend pembayaran atau email."
+    ],
+    "gallery": [
+      [
+        "fishe-preview.jpg",
+        "New 2026 reconstruction · illustrative catalogue",
+        "Rekonstruksi baru 2026 · katalog ilustratif"
+      ]
+    ]
   },
+  {
+    "id": "go-truck",
+    "title": "Go Truck",
+    "category": "business",
+    "kind": [
+      "PERSONAL HCI CLASS PROJECT",
+      "PROYEK KELAS HCI PRIBADI"
+    ],
+    "status": [
+      "Restored design demonstration",
+      "Demonstrasi desain dipulihkan"
+    ],
+    "stack": "HTML / CSS / JAVASCRIPT / JQUERY",
+    "source": "https://github.com/MrRobotdude/go-truck",
+    "demo": "https://mrrobotdude.github.io/go-truck/",
+    "summary": [
+      "A five-page logistics-company design with an interactive registration demonstration.",
+      "Desain perusahaan logistik lima halaman dengan demo pendaftaran interaktif."
+    ],
+    "story": [
+      "Recovered from the Semester 7 HCI project folder. The original 2023 pages identify Doddie Prawarjito and include home, promotion, registration, company information and careers. The original layout is retained with targeted repairs.",
+      "Dipulihkan dari folder proyek HCI Semester 7. Halaman asli 2023 mencantumkan Doddie Prawarjito dan meliputi home, promosi, pendaftaran, informasi perusahaan, serta karier. Layout asli dipertahankan dengan perbaikan terarah."
+    ],
+    "contribution": [
+      "Repaired a validator that referenced a missing message field instead of the address; added password checks and useful email-domain validation; prevented submission to a nonexistent server; restored navigation, slideshow controls and responsive layouts; replaced mismatched car imagery with logistics SVG illustrations.",
+      "Memperbaiki validator yang memakai field pesan yang tidak ada, menambah validasi password/email, mencegah submit ke server yang tidak ada, serta memulihkan navigasi, slider, dan layout responsif. Gambar mobil yang tidak sesuai diganti ilustrasi logistik SVG."
+    ],
+    "evidence": [
+      "All five original pages and linked assets pass static checks. Desktop/mobile navigation, form errors and valid demo registration were verified in the browser. No account is created, no password is stored and no logistics operation is represented.",
+      "Lima halaman asli dan aset lulus pemeriksaan statis. Navigasi desktop/mobile, pesan error, dan pendaftaran demo valid diuji di browser. Tidak membuat akun, menyimpan password, atau menjalankan layanan logistik."
+    ],
+    "gallery": [
+      [
+        "go-truck-preview.jpg",
+        "Restored original HCI layout · new logistics illustrations",
+        "Layout HCI asli dipulihkan · ilustrasi logistik baru"
+      ]
+    ]
+  },
+  {
+    "id": "voila",
+    "title": "Voila",
+    "category": "business",
+    "kind": [
+      "HCI TEACHING & DESIGN",
+      "PENGAJARAN & DESAIN HCI"
+    ],
+    "status": [
+      "Preserved teaching design demo",
+      "Demo desain pengajaran tersimpan"
+    ],
+    "stack": "HTML / CSS / JAVASCRIPT / JQUERY",
+    "source": "https://github.com/MrRobotdude/voila",
+    "demo": "https://mrrobotdude.github.io/voila/",
+    "summary": [
+      "A car-company presentation preserved from HCI teaching materials.",
+      "Presentasi perusahaan mobil yang dipulihkan dari materi pengajaran HCI."
+    ],
+    "story": [
+      "Recovered from the HCI course’s third revised project folder alongside a matching Voila brief. Its original Bluejack 20-1 credit is preserved. This is an educational design example, presented separately from professional client delivery.",
+      "Dipulihkan dari revisi ketiga proyek mata kuliah HCI dengan brief Voila yang sesuai. Kredit Bluejack 20-1 dipertahankan. Contoh desain pendidikan ini dipisahkan dari pekerjaan profesional untuk klien."
+    ],
+    "contribution": [
+      "Five-page home/gallery/models/about/contact experience; repaired model links and contact validation; keyboard-accessible navigation and slideshow; responsive overrides; clear local form feedback; removed a script that blocked normal browser keyboard shortcuts.",
+      "Lima halaman home/galeri/model/tentang/kontak; memperbaiki tautan model, validasi kontak, navigasi/slider keyboard, responsivitas, dan feedback formulir lokal; menghapus script yang memblokir shortcut browser."
+    ],
+    "evidence": [
+      "All original pages/assets pass static checks. Navigation and valid/invalid contact behavior were verified in the browser. The fictional brand and demo form are labeled; original media and educational credits remain attributed.",
+      "Halaman/aset asli lulus pemeriksaan statis. Navigasi dan validasi kontak diuji di browser. Brand fiktif serta formulir demo diberi label; media asli dan kredit pendidikan tetap dicantumkan."
+    ],
+    "gallery": [
+      [
+        "voila-preview.jpg",
+        "Preserved original teaching layout · historical product imagery",
+        "Layout pengajaran asli · gambar produk historis"
+      ]
+    ]
+  }
+];
+const learningProjects = [
   {
     "id": "localez",
     "title": "Localez",
@@ -229,7 +386,8 @@ const projects = [
       "Debug APK and the original JVM smoke test pass. Current on-device UI, Firebase sign-in, and live news access require separate verification with owned service configuration.",
       "APK Debug dan tes JVM awal lulus. UI perangkat, login Firebase, serta berita live perlu verifikasi dengan konfigurasi layanan sendiri."
     ],
-    "gallery": []
+    "gallery": [],
+    "tag": "JAVA / FIREBASE / RETROFIT"
   },
   {
     "id": "underthesea",
@@ -262,43 +420,8 @@ const projects = [
       "WPF build and LocalDB integration checks pass. The reconstruction covers ticketing; hotel, finance, HR, and other workflows are not restored. Desktop UI interaction still needs manual verification.",
       "Build WPF dan pemeriksaan integrasi LocalDB lulus. Rekonstruksi mencakup ticketing; hotel, keuangan, HR, dan alur lain belum dipulihkan. Interaksi UI desktop masih perlu pemeriksaan manual."
     ],
-    "gallery": []
-  },
-  {
-    "id": "correctionapp",
-    "title": "CorrectionApp",
-    "tag": "REACT / NODE / MONGODB",
-    "summary": [
-      "Course correction criteria and score workflows.",
-      "Kriteria koreksi mata kuliah dan alur penilaian."
-    ],
-    "story": [
-      "A separate assessment helper containing its frontend and backend. The standalone CorrectionApp_backend repository is an earlier subset; it is not Riviu’s .NET service layer.",
-      "Aplikasi penilaian terpisah dengan frontend dan backend. CorrectionApp_backend adalah versi awal, bukan bagian layanan .NET Riviu."
-    ],
-    "evidence": [
-      "React production demo build and synthetic MongoDB criteria create/read/delete passed. The demo interface saves and deletes criteria; legacy file-execution endpoints are disabled by default. Institutional authentication and complete correction workflows remain unverified.",
-      "Build demo React serta CRUD kriteria dengan MongoDB sintetis lulus. UI menyimpan dan menghapus kriteria; endpoint eksekusi file dinonaktifkan secara default. Autentikasi institusi dan alur koreksi lengkap belum terverifikasi."
-    ],
-    "source": "https://github.com/MrRobotdude/CorrectionApp",
-    "category": "systems",
-    "kind": [
-      "ASSESSMENT TOOL",
-      "ALAT PENILAIAN"
-    ],
-    "status": [
-      "Connected local demonstration",
-      "Demonstrasi lokal terhubung"
-    ],
-    "stack": "REACT / NODE / MONGODB",
-    "cover": "correction",
-    "gallery": [
-      [
-        "correction-demo.png",
-        "Local criteria create/read/delete demonstration · synthetic records",
-        "Demo kriteria create/read/delete lokal · data sintetis"
-      ]
-    ]
+    "gallery": [],
+    "tag": "WPF / DAPPER / SQL SERVER"
   },
   {
     "id": "knights-vow",
@@ -333,9 +456,7 @@ const projects = [
       "Script C# mencakup gerakan/statistik karakter, damage pedang, perilaku musuh, UI item/potion, save, perpindahan scene, dan pembuatan map. PDF desain asli memastikan brief RPG fantasi third-person. Keberadaan fitur diperiksa melalui source, belum diuji ulang lewat gameplay."
     ],
     "gallery": []
-  }
-];
-const learningProjects = [
+  },
   {
     "id": "yourjube",
     "title": "youRJube",
@@ -349,8 +470,8 @@ const learningProjects = [
       "TPAWeb berisi frontend Angular dan backend Go GraphQL/PostgreSQL. Pasangan root menjadi source utama; Rev1 adalah snapshot historis."
     ],
     "evidence": [
-      "Repository roles and configuration are documented. Firebase identity, database schema, and media storage remain setup requirements.",
-      "Peran repositori dan konfigurasi didokumentasikan. Identitas Firebase, schema database, dan penyimpanan media masih perlu disiapkan."
+      "Angular production build and Go API regression tests pass. Fixed sidebar toggling, premature watch-page rendering, upload dates, category/comment queries, case-insensitive search and password exposure. Historical writes are disabled until authentication and ownership checks exist. Full PostgreSQL/media/browser workflows remain incomplete.",
+      "Build produksi Angular dan tes regresi API Go lulus. Toggle sidebar, render watch, tanggal upload, query kategori/komentar, pencarian, dan paparan password diperbaiki. Write historis dinonaktifkan sampai autentikasi/otorisasi tersedia. Alur PostgreSQL/media/browser menyeluruh masih belum lengkap."
     ],
     "gallery": []
   },
@@ -403,10 +524,16 @@ const learningProjects = [
       "Spesifikasi lokal InSOgram.docx menyebut platform sosial foto/video. Repositori berisi UI React yang sesuai; Go GraphQL, PostgreSQL, Redis, dan OAuth pada brief belum dapat dianggap selesai dari frontend ini."
     ],
     "evidence": [
-      "Specification and frontend identity matched. Complete backend and end-to-end social features remain unverified.",
-      "Identitas spesifikasi dan frontend cocok. Backend lengkap dan fitur sosial menyeluruh belum diverifikasi."
+      "React production build and browser navigation now pass after restoring direct dependencies, switching to Dart Sass, correcting raster asset imports and repairing hash routing. Login-to-home preview, profile and caption/comment views are frontend demonstrations. The original Go/PostgreSQL/Redis/OAuth and realtime requirements remain unimplemented.",
+      "Build produksi React dan navigasi browser lulus setelah perbaikan dependency, Dart Sass, import aset raster, dan hash routing. Preview login/home, profil, caption/komentar adalah demo frontend. Go/PostgreSQL/Redis/OAuth serta realtime dari brief belum diimplementasikan."
     ],
-    "gallery": []
+    "gallery": [
+      [
+        "insogram-preview.jpg",
+        "Locally running original React interface · sample content",
+        "UI React asli berjalan lokal · konten contoh"
+      ]
+    ]
   },
   {
     "id": "creditapp",
