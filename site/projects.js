@@ -139,8 +139,8 @@ const projects = [
     ],
     "stack": "REACT / STATIC HOSTING",
     "cover": "ats",
-    "demo": "ats/",
-    "source": "https://github.com/MrRobotdude/MrRobotdude.github.io/tree/main/site/ats",
+    "demo": "https://mrrobotdude.github.io/ats-company-website/",
+    "source": "https://github.com/MrRobotdude/ats-company-website",
     "summary": [
       "A public catalogue for HVAC products, services, and company experience.",
       "Katalog publik produk HVAC, layanan, dan pengalaman perusahaan."
@@ -154,8 +154,8 @@ const projects = [
       "Informasi perusahaan, halaman produk/layanan, proyek, navigasi responsif, serta integrasi kontak. Antarmuka memakai Now UI Kit React; kredit template dan perusahaan dipertahankan."
     ],
     "evidence": [
-      "Production build and API regression tests pass. The company presentation is available under /ats/. Contact submission only becomes available with a configured backend and CAPTCHA; static hosting does not run the Go service.",
-      "Build produksi dan tes regresi API lulus. Website perusahaan tersedia di /ats/. Form kontak hanya aktif jika backend dan CAPTCHA terkonfigurasi; hosting statis tidak menjalankan layanan Go."
+      "Production build and API regression tests pass. The company presentation is hosted independently in the ats-company-website repository. Contact submission only becomes available with a configured backend and CAPTCHA; static hosting does not run the Go service.",
+      "Build produksi dan tes regresi API lulus. Website perusahaan dihost secara terpisah oleh repositori ats-company-website. Form kontak hanya aktif jika backend dan CAPTCHA terkonfigurasi; hosting statis tidak menjalankan layanan Go."
     ],
     "gallery": [
       [
