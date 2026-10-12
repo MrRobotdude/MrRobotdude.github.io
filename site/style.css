@@ -6,3 +6,8 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}.system-art svg circle{display:none}}
 
 .design-section{padding-block:50px 100px;border-top:1px solid var(--line)}.design-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}.design-grid h3{font-size:26px;letter-spacing:-1px;margin:20px 0 10px}.design-grid p{font-size:14px;color:var(--muted)}.design-actions{display:flex;justify-content:space-between;gap:16px;align-items:center;font-size:12px}.design-actions>a{color:var(--red);font-weight:600}.design-grid .project-meta{font-size:9px;letter-spacing:.8px}@media(max-width:850px){.design-grid{grid-template-columns:1fr}.design-section{padding-block:40px 60px}}
+
+/* Show the composition of design work instead of cropping its screenshots. */
+.design-grid .project-cover{height:340px;padding:16px}
+.design-grid .project-cover img{width:100%;height:100%;object-fit:contain;object-position:center;border:0;box-shadow:none}
+.design-grid .project-card:hover .project-cover img{transform:none}
