@@ -11,3 +11,5 @@
 .design-grid .project-cover{height:340px;padding:16px}
 .design-grid .project-cover img{width:100%;height:100%;object-fit:contain;object-position:center;border:0;box-shadow:none}
 .design-grid .project-card:hover .project-cover img{transform:none}
+.project-card[data-project-id="riviu"] .project-cover{background:#e7edf3}
+.project-card[data-project-id="riviu"] .project-cover img{width:94%;height:92%;object-fit:contain;border:0;box-shadow:none;transform:none}

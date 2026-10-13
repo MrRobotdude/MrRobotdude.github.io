@@ -68,46 +68,56 @@ const projects = [
     "stack": "REACT / .NET / SQL SERVER",
     "cover": "riviu",
     "summary": [
-      "Submission, review, and revision — organized around an academic workflow.",
-      "Pengajuan, review, dan revisi dalam sebuah alur kerja akademik."
+      "An academic workspace with role-based navigation and clear administration tools.",
+      "Workspace akademik dengan navigasi peran dan alat administrasi yang jelas."
     ],
     "story": [
-      "During my BINUS web development internship, I developed .NET backend and React frontend features for an academic-writing and revision-tracking pilot used by a professor. I integrated APIs and handed over the pilot to the next intern team. Quixell was an early trial before the project became Riviu, rather than a separate portfolio achievement.",
-      "Saat magang pengembangan web di BINUS, saya mengembangkan backend .NET dan frontend React untuk pilot penulisan akademik dan pelacakan revisi yang digunakan seorang profesor. Saya mengintegrasikan API dan menyerahkan pilot ke tim magang berikutnya. Quixell merupakan percobaan awal sebelum bernama Riviu, sehingga ditampilkan sebagai riwayat proyek yang sama."
+      "Built during my BINUS web development internship, Riviu supports an academic-writing and revision-tracking pilot. I developed React and .NET features, integrated services, and handed the project over to the next intern team.",
+      "Dibangun saat magang pengembangan web di BINUS, Riviu mendukung pilot penulisan akademik dan pelacakan revisi. Saya mengembangkan fitur React dan .NET, mengintegrasikan layanan, serta menyerahkan proyek kepada tim magang berikutnya."
     ],
     "contribution": [
-      "React administration screens, role navigation and .NET APIs for account, article, publication and review data. Shared authentication connects the services to the interface.",
-      "Layar administrasi React, navigasi peran, dan API .NET untuk data akun, artikel, publikasi, serta review. Autentikasi bersama menghubungkan layanan dengan antarmuka."
+      "Role navigation, a searchable researcher directory, and connected user-type administration with validated forms, edit actions, duplicate handling, and deletion confirmation. The refreshed interface adapts to desktop and mobile.",
+      "Navigasi peran, direktori peneliti yang dapat dicari, dan administrasi tipe pengguna terhubung dengan validasi form, pengeditan, penanganan duplikasi, serta konfirmasi penghapusan. Antarmuka diperbarui untuk desktop dan mobile."
     ],
     "evidence": [
-      "Five .NET services and the React frontend build successfully. Demo login, role navigation, and authenticated master-data access work locally. A shared demo JWT is accepted across all four data services using dedicated synthetic databases. The local authentication prototype is single-user and in-memory; institutional SSO and the complete manuscript workflow are not verified, and some service controllers remain placeholders.",
-      "Lima layanan .NET dan frontend React berhasil dibangun. Login demo, navigasi peran, dan akses master data berjalan secara lokal. JWT demo diterima empat layanan data dengan database sintetis terpisah. Autentikasi demo bersifat satu pengguna dalam memori; SSO institusi dan alur dokumen lengkap belum terverifikasi; beberapa controller masih berupa placeholder."
+      "The local preview connects sign-in and user-type management to .NET services and a separate SQL Server demo database. The researcher directory uses fictional profiles. Institutional SSO and the full manuscript workflow are outside this preview.",
+      "Preview lokal menghubungkan login dan pengelolaan tipe pengguna ke layanan .NET dan database demo SQL Server terpisah. Direktori peneliti menggunakan profil fiktif. SSO institusi dan alur manuskrip lengkap di luar cakupan preview ini."
     ],
     "gallery": [
       [
         "riviu-master.jpg",
-        "Connected master-data administration · synthetic records",
-        "Administrasi master data terhubung · data sintetis"
+        "User-type administration · connected demo database",
+        "Administrasi tipe pengguna · database demo terhubung"
       ],
       [
         "riviu-login.jpg",
-        "Local demo sign-in",
-        "Login demo lokal"
+        "Workspace sign-in",
+        "Login workspace"
       ],
       [
         "riviu-users.jpg",
-        "User administration interface · sample profiles",
-        "Antarmuka administrasi pengguna · profil contoh"
+        "Searchable researcher directory · sample profiles",
+        "Direktori peneliti dengan pencarian · profil contoh"
+      ],
+      [
+        "riviu-profile.jpg",
+        "Researcher details and expertise",
+        "Detail dan keahlian peneliti"
       ],
       [
         "riviu-editor.jpg",
-        "User-type editor",
-        "Editor tipe pengguna"
+        "Validated user-type editor",
+        "Editor tipe pengguna dengan validasi"
       ],
       [
         "riviu-result.jpg",
-        "Saved reviewer category",
-        "Kategori reviewer tersimpan"
+        "Saved category and filtered results",
+        "Kategori tersimpan dan hasil pencarian"
+      ],
+      [
+        "riviu-mobile.jpg",
+        "Mobile user-type administration",
+        "Administrasi tipe pengguna pada mobile"
       ]
     ]
   },

@@ -4,7 +4,7 @@
 
 Selected work in business applications, SQL performance, system integration, interface design and machine learning. English and Bahasa Indonesia, accessible project dialogs, feature galleries, and downloadable PDF resumes.
 
-Five business and engineering projects lead the site. FisHE, Go Truck and Voila have a separate design section. InSOgram and Low-light Vision show interactive frontend work and computer-vision results. Ten project galleries contain 39 screenshots and result figures.
+Five business and engineering projects lead the site. FisHE, Go Truck and Voila have a separate design section. InSOgram and Low-light Vision show interactive frontend work and computer-vision results. Ten project galleries contain 41 screenshots and result figures.
 
 The resume buttons download the BRI software-engineer photo PDF in the selected language. The Word and PDF versions contain a clickable portfolio link.
 
