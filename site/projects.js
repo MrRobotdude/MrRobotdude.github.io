@@ -32,14 +32,24 @@ const projects = [
     ],
     "gallery": [
       [
-        "material-dashboard.png",
-        "Local dashboard · synthetic demonstration records",
-        "Dashboard lokal · data demo sintetis"
+        "material-dashboard.jpg",
+        "Request and item dashboard · synthetic data",
+        "Dashboard permintaan/item · data sintetis"
       ],
       [
-        "material-requests.png",
-        "Local request list · synthetic demonstration records",
-        "Daftar permintaan lokal · data demo sintetis"
+        "material-requests.jpg",
+        "Searchable requests with lifecycle states",
+        "Permintaan dengan pencarian dan status"
+      ],
+      [
+        "material-items.jpg",
+        "Item quantities, fulfilment and cost totals",
+        "Jumlah item, pemenuhan, dan total biaya"
+      ],
+      [
+        "material-warehouse.jpg",
+        "Warehouse releases and remaining quantities",
+        "Riwayat pengeluaran gudang dan sisa jumlah"
       ]
     ]
   },
@@ -66,8 +76,8 @@ const projects = [
       "Saat magang pengembangan web di BINUS, saya mengembangkan backend .NET dan frontend React untuk pilot penulisan akademik dan pelacakan revisi yang digunakan seorang profesor. Saya mengintegrasikan API dan menyerahkan pilot ke tim magang berikutnya. Quixell merupakan percobaan awal sebelum bernama Riviu, sehingga ditampilkan sebagai riwayat proyek yang sama."
     ],
     "contribution": [
-      "The repository family separates account, article, publication, review, and authentication responsibilities. Local configuration connects the React UI to these services without treating earlier Laravel experiments as additional microservices.",
-      "Keluarga repositori memisahkan akun, artikel, publikasi, review, dan autentikasi. Konfigurasi lokal menghubungkan UI React dengan layanan tersebut; eksperimen Laravel sebelumnya merupakan implementasi alternatif."
+      "React administration screens, role navigation and .NET APIs for account, article, publication and review data. Shared authentication connects the services to the interface.",
+      "Layar administrasi React, navigasi peran, dan API .NET untuk data akun, artikel, publikasi, serta review. Autentikasi bersama menghubungkan layanan dengan antarmuka."
     ],
     "evidence": [
       "Five .NET services and the React frontend build successfully. Demo login, role navigation, and authenticated master-data access work locally. A shared demo JWT is accepted across all four data services using dedicated synthetic databases. The local authentication prototype is single-user and in-memory; institutional SSO and the complete manuscript workflow are not verified, and some service controllers remain placeholders.",
@@ -75,9 +85,29 @@ const projects = [
     ],
     "gallery": [
       [
-        "riviu-demo.png",
-        "Connected local master-data screen · synthetic records",
-        "Master data lokal terhubung · data sintetis"
+        "riviu-master.jpg",
+        "Connected master-data administration · synthetic records",
+        "Administrasi master data terhubung · data sintetis"
+      ],
+      [
+        "riviu-login.jpg",
+        "Local demo sign-in",
+        "Login demo lokal"
+      ],
+      [
+        "riviu-users.jpg",
+        "User administration interface · sample profiles",
+        "Antarmuka administrasi pengguna · profil contoh"
+      ],
+      [
+        "riviu-editor.jpg",
+        "User-type editor",
+        "Editor tipe pengguna"
+      ],
+      [
+        "riviu-result.jpg",
+        "Saved reviewer category",
+        "Kategori reviewer tersimpan"
       ]
     ]
   },
@@ -90,8 +120,8 @@ const projects = [
       "Kriteria koreksi mata kuliah dan alur penilaian."
     ],
     "story": [
-      "A separate assessment helper containing its frontend and backend. The standalone CorrectionApp_backend repository is an earlier subset; it is not Riviu’s .NET service layer.",
-      "Aplikasi penilaian terpisah dengan frontend dan backend. CorrectionApp_backend adalah versi awal, bukan bagian layanan .NET Riviu."
+      "An assessment helper for defining course criteria and maximum scores. The React interface connects to a Node API and MongoDB, keeping grading setup in one place.",
+      "Alat bantu penilaian untuk mendefinisikan kriteria mata kuliah dan skor maksimum. Antarmuka React terhubung ke API Node dan MongoDB untuk menyatukan pengaturan penilaian."
     ],
     "evidence": [
       "React production demo build and synthetic MongoDB criteria create/read/delete passed. The demo interface saves and deletes criteria; legacy file-execution endpoints are disabled by default. Institutional authentication and complete correction workflows remain unverified.",
@@ -111,9 +141,19 @@ const projects = [
     "cover": "correction",
     "gallery": [
       [
-        "correction-demo.png",
-        "Local criteria create/read/delete demonstration · synthetic records",
-        "Demo kriteria create/read/delete lokal · data sintetis"
+        "correction-criteria.jpg",
+        "Assessment criteria with synthetic records",
+        "Assessment criteria with synthetic records"
+      ],
+      [
+        "correction-create.jpg",
+        "Criterion creation and weight configuration",
+        "Criterion creation and weight configuration"
+      ],
+      [
+        "correction-results.jpg",
+        "Saved criteria and point totals",
+        "Saved criteria and point totals"
       ]
     ]
   },
@@ -151,13 +191,13 @@ const projects = [
     "gallery": [
       [
         "borong-live.jpg",
-        "Live homepage · captured 12 October 2026",
-        "Homepage live · 12 Oktober 2026"
+        "Vehicle marketplace homepage",
+        "Vehicle marketplace homepage"
       ],
       [
         "borong-catalogue.jpg",
-        "Live public vehicle catalogue · 12 October 2026",
-        "Katalog kendaraan publik live · 12 Oktober 2026"
+        "Vehicle catalogue and filters",
+        "Vehicle catalogue and filters"
       ]
     ]
   },
@@ -195,44 +235,21 @@ const projects = [
     ],
     "gallery": [
       [
-        "ats-home.png",
-        "Actual company presentation homepage",
-        "Homepage website perusahaan"
+        "ats-home.jpg",
+        "Company presentation",
+        "Company presentation"
+      ],
+      [
+        "ats-services.jpg",
+        "Service offering",
+        "Service offering"
+      ],
+      [
+        "ats-contact.jpg",
+        "Contact and location",
+        "Contact and location"
       ]
     ]
-  },
-  {
-    "id": "stockmate",
-    "title": "StockMate",
-    "category": "mobile",
-    "kind": [
-      "ONGOING PERSONAL PROJECT",
-      "PROYEK PRIBADI BERJALAN"
-    ],
-    "status": [
-      "Work in progress",
-      "Dalam pengembangan"
-    ],
-    "stack": "C# / .NET MAUI / PYTHON",
-    "cover": "stock",
-    "source": "https://github.com/MrRobotdude/StockMate",
-    "summary": [
-      "Portfolio records, market snapshots, and explainable rule-based analysis.",
-      "Catatan portofolio, snapshot pasar, dan analisis berbasis aturan yang dapat dijelaskan."
-    ],
-    "story": [
-      "An ongoing personal Android project for Indonesian stock portfolio records and market analysis. Current achievements are data import, portfolio reconciliation, scanning, recovery, and explanations.",
-      "Proyek Android pribadi untuk catatan portofolio saham Indonesia dan analisis pasar. Pekerjaan saat ini meliputi impor data, rekonsiliasi, pemindaian, pemulihan, dan penjelasan."
-    ],
-    "contribution": [
-      "CSV/TSV and supported statement import; position/cash/fee tracking; Android foreground scanning; cached snapshots and retry/checkpoint recovery; strategy versioning and a Python walk-forward trainer.",
-      "Impor CSV/TSV dan format laporan yang didukung, pencatatan posisi/kas/biaya, pemindaian foreground Android, cache dan retry/checkpoint, versi strategi, serta trainer Python walk-forward."
-    ],
-    "evidence": [
-      "Android Debug build passed, with existing warnings, and three trainer regression tests passed. A custom predictive model is a future milestone. Device behavior, model performance, and investment returns are not claimed as validated.",
-      "Build Android Debug lulus dengan peringatan lama dan tiga tes regresi trainer lulus. Model prediktif sendiri masih menjadi target. Perilaku perangkat, performa model, dan hasil investasi belum diklaim tervalidasi."
-    ],
-    "gallery": []
   }
 ];
 const designProjects = [
@@ -241,8 +258,8 @@ const designProjects = [
     "title": "FisHE",
     "category": "business",
     "kind": [
-      "HCI BRIEF RECONSTRUCTION",
-      "REKONSTRUKSI BRIEF HCI"
+      "AQUARIUM STOREFRONT",
+      "STOREFRONT AKUARIUM"
     ],
     "status": [
       "Completed storefront design demo",
@@ -252,12 +269,12 @@ const designProjects = [
     "source": "https://github.com/MrRobotdude/fishe",
     "demo": "https://mrrobotdude.github.io/fishe/",
     "summary": [
-      "A quieter aquarium storefront, reconstructed from an unfinished HCI brief.",
-      "Storefront akuarium yang direkonstruksi dari brief HCI yang belum selesai."
+      "An aquarium storefront with a calm visual identity and an interactive shopping bag.",
+      "Storefront akuarium dengan identitas visual tenang dan keranjang belanja interaktif."
     ],
     "story": [
-      "The local 2021/2022 HCI folder contained a FisHE project brief and the original student logo, but no completed website. This is a new 2026 reconstruction of its five-page experience, clearly separated from the original assignment.",
-      "Folder HCI 2021/2022 berisi brief FisHE dan logo asli, tetapi bukan website yang selesai. Ini merupakan rekonstruksi baru pada 2026 untuk pengalaman lima halaman, terpisah jelas dari tugas asli."
+      "FisHE brings fish, aquascaping and equipment into one browsing experience. Its five-page frontend uses an aquatic palette and custom illustrations, with a refreshed implementation completed in 2026.",
+      "FisHE menyatukan ikan, aquascaping, dan peralatan dalam satu pengalaman browsing. Frontend lima halaman menggunakan palet akuatik dan ilustrasi khusus, dengan implementasi diperbarui pada 2026."
     ],
     "contribution": [
       "Home and gallery; categorized fish and equipment; live search; a persistent demo bag with quantity controls and totals; local contact validation; responsive layouts; keyboard controls, a pausable jQuery slider and new SVG illustrations.",
@@ -270,8 +287,33 @@ const designProjects = [
     "gallery": [
       [
         "fishe-preview.jpg",
-        "New 2026 reconstruction · illustrative catalogue",
-        "Rekonstruksi baru 2026 · katalog ilustratif"
+        "Aquarium storefront home",
+        "Aquarium storefront home"
+      ],
+      [
+        "fishe-fish.jpg",
+        "Fish categories and product catalogue",
+        "Fish categories and product catalogue"
+      ],
+      [
+        "fishe-equipment.jpg",
+        "Equipment discovery",
+        "Equipment discovery"
+      ],
+      [
+        "fishe-cart.jpg",
+        "Shopping bag, quantities and totals",
+        "Shopping bag, quantities and totals"
+      ],
+      [
+        "fishe-receipt.jpg",
+        "Simulated order result",
+        "Simulated order result"
+      ],
+      [
+        "fishe-contact.jpg",
+        "Contact form and validation",
+        "Contact form and validation"
       ]
     ]
   },
@@ -295,8 +337,8 @@ const designProjects = [
       "Desain perusahaan logistik lima halaman dengan demo pendaftaran interaktif."
     ],
     "story": [
-      "Recovered from the Semester 7 HCI project folder. The original 2023 pages identify Doddie Prawarjito and include home, promotion, registration, company information and careers. The original layout is retained with targeted repairs.",
-      "Dipulihkan dari folder proyek HCI Semester 7. Halaman asli 2023 mencantumkan Doddie Prawarjito dan meliputi home, promosi, pendaftaran, informasi perusahaan, serta karier. Layout asli dipertahankan dengan perbaikan terarah."
+      "A logistics website presenting moving services, promotions and registration in a consistent five-page design. Custom transport illustrations give the interface a clear visual theme.",
+      "Website logistik yang menampilkan layanan pindahan, promosi, dan registrasi dalam desain lima halaman yang konsisten. Ilustrasi transportasi memberi tema visual yang jelas."
     ],
     "contribution": [
       "Repaired a validator that referenced a missing message field instead of the address; added password checks and useful email-domain validation; prevented submission to a nonexistent server; restored navigation, slideshow controls and responsive layouts; replaced mismatched car imagery with logistics SVG illustrations.",
@@ -309,8 +351,23 @@ const designProjects = [
     "gallery": [
       [
         "go-truck-preview.jpg",
-        "Restored original HCI layout · new logistics illustrations",
-        "Layout HCI asli dipulihkan · ilustrasi logistik baru"
+        "Home and logistics services",
+        "Home and logistics services"
+      ],
+      [
+        "go-truck-services.jpg",
+        "Service catalogue",
+        "Service catalogue"
+      ],
+      [
+        "go-truck-order.jpg",
+        "Order form and validation",
+        "Order form and validation"
+      ],
+      [
+        "go-truck-about.jpg",
+        "Company information",
+        "Company information"
       ]
     ]
   },
@@ -334,12 +391,12 @@ const designProjects = [
       "Presentasi perusahaan mobil yang dipulihkan dari materi pengajaran HCI."
     ],
     "story": [
-      "Recovered from the HCI course’s third revised project folder alongside a matching Voila brief. Its original Bluejack 20-1 credit is preserved. This is an educational design example, presented separately from professional client delivery.",
-      "Dipulihkan dari revisi ketiga proyek mata kuliah HCI dengan brief Voila yang sesuai. Kredit Bluejack 20-1 dipertahankan. Contoh desain pendidikan ini dipisahkan dari pekerjaan profesional untuk klien."
+      "A five-page automotive website created for teaching interface design. Large photography, a full-width carousel and three balanced feature columns build a clear brand presentation.",
+      "Website otomotif lima halaman untuk pengajaran desain antarmuka. Foto besar, carousel lebar penuh, dan tiga kolom fitur membentuk presentasi merek yang jelas."
     ],
     "contribution": [
-      "Five-page home/gallery/models/about/contact experience; repaired model links and contact validation; keyboard-accessible navigation and slideshow; responsive overrides; clear local form feedback; removed a script that blocked normal browser keyboard shortcuts.",
-      "Lima halaman home/galeri/model/tentang/kontak; memperbaiki tautan model, validasi kontak, navigasi/slider keyboard, responsivitas, dan feedback formulir lokal; menghapus script yang memblokir shortcut browser."
+      "Home, gallery, model catalogue, company information and a contact form. Responsive layouts, keyboard navigation and slideshow controls preserve the original visual composition.",
+      "Home, galeri, katalog model, informasi perusahaan, dan form kontak. Layout responsif, navigasi keyboard, dan kontrol slideshow mempertahankan komposisi visual asli."
     ],
     "evidence": [
       "All original pages/assets pass static checks. Navigation and valid/invalid contact behavior were verified in the browser. The fictional brand and demo form are labeled; original media and educational credits remain attributed.",
@@ -348,209 +405,119 @@ const designProjects = [
     "gallery": [
       [
         "voila-preview.jpg",
-        "Preserved original teaching layout · historical product imagery",
-        "Layout pengajaran asli · gambar produk historis"
+        "Full-width home design",
+        "Full-width home design"
+      ],
+      [
+        "voila-models.jpg",
+        "Model catalogue",
+        "Model catalogue"
+      ],
+      [
+        "voila-gallery.jpg",
+        "Photography gallery",
+        "Photography gallery"
+      ],
+      [
+        "voila-contact.jpg",
+        "Contact form and company details",
+        "Contact form and company details"
       ]
     ]
   }
 ];
 const learningProjects = [
   {
-    "id": "localez",
-    "title": "Localez",
-    "category": "mobile",
-    "kind": [
-      "ANDROID CLASS PROJECT",
-      "PROYEK KELAS ANDROID"
-    ],
-    "status": [
-      "Classroom application",
-      "Aplikasi kelas"
-    ],
-    "stack": "JAVA / FIREBASE / RETROFIT",
-    "cover": "news",
-    "source": "https://github.com/MrRobotdude/Localez",
-    "summary": [
-      "A category-based news reader with shared loading and recovery states.",
-      "Pembaca berita per kategori dengan status loading dan pemulihan yang konsisten."
-    ],
-    "story": [
-      "A short Android programming class project exploring authentication, news APIs, article cards, and in-app reading. Historical academic documentation and attribution are retained.",
-      "Proyek singkat kelas Android yang mengeksplorasi autentikasi, API berita, kartu artikel, dan pembacaan dalam aplikasi. Dokumentasi dan kredit akademik lama dipertahankan."
-    ],
-    "contribution": [
-      "Java Android UI, Firebase sign-in, Retrofit requests, Glide images, shared loading/error/empty/retry behavior, and article navigation. API configuration stays local.",
-      "UI Android Java, login Firebase, request Retrofit, gambar Glide, loading/error/kosong/retry yang konsisten, serta navigasi artikel. Konfigurasi API disimpan secara lokal."
-    ],
-    "evidence": [
-      "Debug APK and the original JVM smoke test pass. Current on-device UI, Firebase sign-in, and live news access require separate verification with owned service configuration.",
-      "APK Debug dan tes JVM awal lulus. UI perangkat, login Firebase, serta berita live perlu verifikasi dengan konfigurasi layanan sendiri."
-    ],
-    "gallery": [],
-    "tag": "JAVA / FIREBASE / RETROFIT"
-  },
-  {
-    "id": "underthesea",
-    "title": "UnderTheSea",
-    "category": "mobile",
-    "kind": [
-      "DESKTOP TRAINING",
-      "PELATIHAN DESKTOP"
-    ],
-    "status": [
-      "Scoped reconstructed demo",
-      "Demo rekonstruksi terbatas"
-    ],
-    "stack": "WPF / DAPPER / SQL SERVER",
-    "cover": "tickets",
-    "source": "https://github.com/MrRobotdude/UnderTheSea",
-    "summary": [
-      "A desktop operations exercise, with a reconstructed ticketing demonstration.",
-      "Latihan operasional desktop dengan demo ticketing hasil rekonstruksi."
-    ],
-    "story": [
-      "A WPF training project organizing views and view models for different operational departments. The original database is lost, so the portfolio demonstration is deliberately scoped.",
-      "Proyek pelatihan WPF untuk memisahkan view dan view model berbagai departemen operasional. Database asli hilang, sehingga cakupan demo portofolio dibatasi dengan jelas."
-    ],
-    "contribution": [
-      "Caliburn.Micro conventions and Dapper data access. A separate synthetic LocalDB schema supports attraction login, ticket sales, lookup, cancellation, and admission checks.",
-      "Konvensi Caliburn.Micro dan akses data Dapper. Schema LocalDB sintetis mendukung login atraksi, penjualan tiket, pencarian, pembatalan, serta pemeriksaan masuk."
-    ],
-    "evidence": [
-      "WPF build and LocalDB integration checks pass. The reconstruction covers ticketing; hotel, finance, HR, and other workflows are not restored. Desktop UI interaction still needs manual verification.",
-      "Build WPF dan pemeriksaan integrasi LocalDB lulus. Rekonstruksi mencakup ticketing; hotel, keuangan, HR, dan alur lain belum dipulihkan. Interaksi UI desktop masih perlu pemeriksaan manual."
-    ],
-    "gallery": [],
-    "tag": "WPF / DAPPER / SQL SERVER"
-  },
-  {
-    "id": "knights-vow",
-    "title": "Knight’s Vow",
-    "tag": "UNITY / C#",
-    "summary": [
-      "Combat, saves, UI, and map-generation scripts.",
-      "Script pertarungan, save, UI, dan pembuatan peta."
-    ],
-    "story": [
-      "A Unity game training project with C# scripts and a preserved Windows build.",
-      "Proyek pelatihan game Unity dengan script C# dan build Windows yang dipertahankan."
-    ],
-    "evidence": [
-      "The local original design PDF matches the game name and source systems. Historical Windows builds are preserved, including one named Knight’s Vow.exe on this PC. The complete Unity editor project and scenes were not found in the searched training folders. Gameplay screenshots and a reproducible editor build remain unavailable.",
-      "PDF desain lokal sesuai dengan nama game dan sistem pada source. Build Windows historis tersimpan, termasuk Knight’s Vow.exe di PC. Proyek editor Unity lengkap dan scene tidak ditemukan pada folder pelatihan yang diperiksa. Screenshot gameplay dan build editor yang dapat direproduksi belum tersedia."
-    ],
-    "source": "https://github.com/MrRobotdude/Knights-Vow",
-    "category": "systems",
-    "kind": [
-      "GAME DEVELOPMENT",
-      "PENGEMBANGAN GAME"
-    ],
-    "status": [
-      "Preserved Unity training project",
-      "Proyek pelatihan Unity tersimpan"
-    ],
-    "stack": "UNITY / C#",
-    "cover": "game",
-    "contribution": [
-      "C# scripts cover character movement and stats, sword damage, enemy behavior, item/potion UI, saves, scene transitions, and map generation. The original Knight’s Vow design PDF confirms the third-person fantasy RPG brief. Source inspection establishes feature presence, not a fresh gameplay test.",
-      "Script C# mencakup gerakan/statistik karakter, damage pedang, perilaku musuh, UI item/potion, save, perpindahan scene, dan pembuatan map. PDF desain asli memastikan brief RPG fantasi third-person. Keberadaan fitur diperiksa melalui source, belum diuji ulang lewat gameplay."
-    ],
-    "gallery": []
-  },
-  {
-    "id": "yourjube",
-    "title": "youRJube",
-    "tag": "ANGULAR / GO / GRAPHQL",
-    "summary": [
-      "A video-platform training project.",
-      "Proyek pelatihan platform video."
-    ],
-    "story": [
-      "The TPAWeb repository includes an Angular frontend and Go GraphQL/PostgreSQL backend. The root pair is the preferred source; Rev1 is a historical snapshot.",
-      "TPAWeb berisi frontend Angular dan backend Go GraphQL/PostgreSQL. Pasangan root menjadi source utama; Rev1 adalah snapshot historis."
-    ],
-    "evidence": [
-      "Angular production build and Go API regression tests pass. Fixed sidebar toggling, premature watch-page rendering, upload dates, category/comment queries, case-insensitive search and password exposure. Historical writes are disabled until authentication and ownership checks exist. Full PostgreSQL/media/browser workflows remain incomplete.",
-      "Build produksi Angular dan tes regresi API Go lulus. Toggle sidebar, render watch, tanggal upload, query kategori/komentar, pencarian, dan paparan password diperbaiki. Write historis dinonaktifkan sampai autentikasi/otorisasi tersedia. Alur PostgreSQL/media/browser menyeluruh masih belum lengkap."
-    ],
-    "gallery": []
-  },
-  {
-    "id": "watchnow",
-    "title": "WatchNow",
-    "tag": "JAVA / ANDROID",
-    "summary": [
-      "Movie discovery through now-playing and coming-soon lists.",
-      "Eksplorasi film melalui daftar tayang dan segera hadir."
-    ],
-    "story": [
-      "Android movie-list and detail screens using a configurable movie API.",
-      "Daftar dan detail film Android menggunakan API film yang dapat dikonfigurasi."
-    ],
-    "evidence": [
-      "Local API configuration is required; device navigation and live API behavior need verification.",
-      "Konfigurasi API lokal diperlukan; navigasi perangkat dan API live perlu diverifikasi."
-    ],
-    "gallery": []
-  },
-  {
-    "id": "barengin",
-    "title": "Barengin",
-    "tag": "JAVA / FIREBASE",
-    "summary": [
-      "Profile, orders, messaging, and chatroom exploration.",
-      "Eksplorasi profil, pesanan, pesan, dan chatroom."
-    ],
-    "story": [
-      "An Android learning project with authentication and communication screens.",
-      "Proyek pembelajaran Android dengan autentikasi dan layar komunikasi."
-    ],
-    "evidence": [
-      "Requires owned Firebase configuration and on-device testing.",
-      "Memerlukan konfigurasi Firebase sendiri dan pengujian perangkat."
-    ],
-    "gallery": []
-  },
-  {
     "id": "insogram",
     "title": "InSOgram",
     "tag": "REACT / SOCIAL UI",
     "summary": [
-      "A photo-sharing interface built from an original training brief.",
-      "Antarmuka berbagi foto berdasarkan brief pelatihan asli."
+      "A photo-sharing experience for small moments and good company.",
+      "Pengalaman berbagi foto untuk momen kecil dan kebersamaan."
     ],
     "story": [
-      "The local InSOgram.docx specification names a photo/video social platform. The repository contains the matching React interface; the brief also requests Go GraphQL, PostgreSQL, Redis, and OAuth, which must not be assumed complete from this frontend.",
-      "Spesifikasi lokal InSOgram.docx menyebut platform sosial foto/video. Repositori berisi UI React yang sesuai; Go GraphQL, PostgreSQL, Redis, dan OAuth pada brief belum dapat dianggap selesai dari frontend ini."
+      "InSOgram explores everyday photo sharing through a feed, creator discovery and personal collections. The interface puts the moment first, with a calm layout and familiar social interactions.",
+      "InSOgram mengeksplorasi berbagi foto melalui feed, pencarian kreator, dan koleksi pribadi. Antarmuka menonjolkan momen dengan layout tenang dan interaksi sosial yang familiar."
     ],
     "evidence": [
-      "React production build and browser navigation now pass after restoring direct dependencies, switching to Dart Sass, correcting raster asset imports and repairing hash routing. Login-to-home preview, profile and caption/comment views are frontend demonstrations. The original Go/PostgreSQL/Redis/OAuth and realtime requirements remain unimplemented.",
-      "Build produksi React dan navigasi browser lulus setelah perbaikan dependency, Dart Sass, import aset raster, dan hash routing. Preview login/home, profil, caption/komentar adalah demo frontend. Go/PostgreSQL/Redis/OAuth serta realtime dari brief belum diimplementasikan."
+      "An interactive frontend demo with sample creators and browser storage. Messaging is a local composition preview; shared accounts and message delivery are outside this release.",
+      "Demo frontend interaktif dengan kreator contoh dan penyimpanan browser. Pesan merupakan preview komposisi lokal; akun bersama dan pengiriman pesan di luar cakupan rilis ini."
     ],
     "gallery": [
       [
-        "insogram-preview.jpg",
-        "Locally running original React interface · sample content",
-        "UI React asli berjalan lokal · konten contoh"
+        "insogram-feed.jpg",
+        "Feed and creator stories",
+        "Feed dan story kreator"
+      ],
+      [
+        "insogram-compose.jpg",
+        "Photo/video composer with caption and preview",
+        "Komposer foto/video dengan caption dan preview"
+      ],
+      [
+        "insogram-profile.jpg",
+        "Published post and editable creator profile",
+        "Posting baru dan profil kreator"
+      ],
+      [
+        "insogram-saved-comments.jpg",
+        "Saved collection and conversation",
+        "Koleksi tersimpan dan percakapan"
+      ],
+      [
+        "insogram-explore.jpg",
+        "Hashtag search across creator posts",
+        "Pencarian hashtag pada posting kreator"
+      ],
+      [
+        "insogram-story.jpg",
+        "Story viewer with playback controls",
+        "Story dengan kontrol pemutaran"
       ]
-    ]
+    ],
+    "contribution": [
+      "Photo and video posts, caption and hashtag search, comments, likes, saved collections, follows, editable profiles and a pausable story viewer. Posts and profile changes persist on the same device.",
+      "Posting foto/video, pencarian caption dan hashtag, komentar, like, koleksi tersimpan, follow, profil yang dapat diedit, dan story dengan pause. Posting dan profil tersimpan pada perangkat yang sama."
+    ],
+    "demo": "https://mrrobotdude.github.io/demos/insogram/",
+    "source": "https://github.com/MrRobotdude/MrRobotdude.github.io/tree/main/demo-source/insogram"
   },
   {
-    "id": "creditapp",
-    "title": "CreditApp",
-    "tag": "JAVA / ANDROID",
+    "id": "lowlight-vision",
+    "title": "Low-light Vision",
+    "tag": "PYTHON / TENSORFLOW / MOBILENETV2",
+    "status": [
+      "Machine-learning experiment",
+      "Eksperimen machine learning"
+    ],
     "summary": [
-      "An Android prototype with login, profile, calendar, and settings.",
-      "Prototipe Android dengan login, profil, kalender, dan pengaturan."
+      "Recognising five vehicle categories in low-light images.",
+      "Mengenali lima kategori kendaraan dalam gambar minim cahaya."
     ],
     "story": [
-      "TPAAndroidDP contains CreditApp. Its Android application label and package match the local CreditApp folder. The available publishing guide is generic, so a detailed original product specification has not yet been confirmed.",
-      "TPAAndroidDP berisi CreditApp. Label aplikasi Android dan package cocok dengan folder CreditApp lokal. Panduan publikasi yang ditemukan bersifat umum, sehingga spesifikasi produk asli yang detail belum dipastikan."
+      "A computer-vision experiment combining contrast enhancement, denoising and transfer learning. MobileNetV2 classifies boats, bicycles, buses, cars and motorbikes.",
+      "Eksperimen computer vision yang menggabungkan peningkatan kontras, pengurangan noise, dan transfer learning. MobileNetV2 mengklasifikasikan boat, bicycle, bus, car, dan motorbike."
+    ],
+    "contribution": [
+      "Image preprocessing, a MobileNetV2 classification head, training callbacks and class-level evaluation. Reproducible inference and evaluation tools expose the model’s strengths and common confusions.",
+      "Preprocessing gambar, classification head MobileNetV2, callback training, dan evaluasi per kelas. Alat inferensi dan evaluasi menunjukkan keunggulan model dan kesalahan umumnya."
     ],
     "evidence": [
-      "Debug APK build passed after refreshing the legacy Gradle toolchain. Fixed the profile navigation opening the calendar. Application name and activities match local source; device behavior and detailed product-specification coverage remain unverified.",
-      "Build APK Debug lulus setelah pembaruan toolchain Gradle lama. Navigasi profil yang membuka kalender telah diperbaiki. Nama aplikasi dan activity sesuai source lokal; perilaku perangkat dan cakupan spesifikasi produk detail belum diverifikasi."
+      "The saved model was rerun on 602 images: 68.6% accuracy on the existing validation split. This split was used during model selection, so it is not an independent test. Car predictions have high recall but many false positives; motorbike and bicycle recall need improvement.",
+      "Model dijalankan ulang pada 602 gambar: akurasi 68.6% pada split validasi yang digunakan saat pemilihan model, bukan tes independen. Prediksi car memiliki recall tinggi tetapi banyak false positive; recall motorbike dan bicycle perlu ditingkatkan."
     ],
-    "gallery": []
+    "source": "https://github.com/MrRobotdude/lowlight-vision",
+    "gallery": [
+      [
+        "lowlight-confusion-matrix.png",
+        "Confusion matrix from 602 validation images",
+        "Confusion matrix dari 602 gambar validasi"
+      ],
+      [
+        "lowlight-class-results.png",
+        "Precision and recall by category",
+        "Precision dan recall per kategori"
+      ]
+    ]
   }
 ];
