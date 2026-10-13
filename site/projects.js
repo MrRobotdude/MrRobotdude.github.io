@@ -85,37 +85,37 @@ const projects = [
     ],
     "gallery": [
       [
-        "riviu-master.jpg",
+        "riviu-master-2026.jpg",
         "User-type administration · connected demo database",
         "Administrasi tipe pengguna · database demo terhubung"
       ],
       [
-        "riviu-login.jpg",
+        "riviu-login-2026.jpg",
         "Workspace sign-in",
         "Login workspace"
       ],
       [
-        "riviu-users.jpg",
+        "riviu-users-2026.jpg",
         "Searchable researcher directory · sample profiles",
         "Direktori peneliti dengan pencarian · profil contoh"
       ],
       [
-        "riviu-profile.jpg",
+        "riviu-profile-2026.jpg",
         "Researcher details and expertise",
         "Detail dan keahlian peneliti"
       ],
       [
-        "riviu-editor.jpg",
+        "riviu-editor-2026.jpg",
         "Validated user-type editor",
         "Editor tipe pengguna dengan validasi"
       ],
       [
-        "riviu-result.jpg",
+        "riviu-result-2026.jpg",
         "Saved category and filtered results",
         "Kategori tersimpan dan hasil pencarian"
       ],
       [
-        "riviu-mobile.jpg",
+        "riviu-mobile-2026.jpg",
         "Mobile user-type administration",
         "Administrasi tipe pengguna pada mobile"
       ]
